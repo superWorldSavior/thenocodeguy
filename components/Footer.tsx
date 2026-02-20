@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { Zap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="border-t border-white/10 bg-gray-950">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -15,22 +18,22 @@ export default function Footer() {
 
           <div className="flex gap-6 text-sm text-gray-400">
             <Link href="/" className="transition-colors hover:text-emerald-400">
-              Accueil
+              {t("home")}
             </Link>
             <Link href="/services" className="transition-colors hover:text-emerald-400">
-              Services
+              {t("services")}
             </Link>
             <Link href="/a-propos" className="transition-colors hover:text-emerald-400">
-              À propos
+              {t("about")}
             </Link>
             <Link href="/contact" className="transition-colors hover:text-emerald-400">
-              Contact
+              {t("contact")}
             </Link>
           </div>
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} TheNoCodeGuy. Tous droits réservés.
+          &copy; {new Date().getFullYear()} TheNoCodeGuy. {t("rights")}
         </div>
       </div>
     </footer>
