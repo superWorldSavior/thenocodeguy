@@ -16,6 +16,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "comment-automatiser-veille-email",
+    title: "Comment j'automatise ma veille email avec GPT-4o",
+    excerpt:
+      "Je lis des centaines d'emails par jour. Pas vraiment — c'est GPT-4o mini qui les lit. Voici le pipeline exact : Graph API, Windmill, et un digest WhatsApp chaque matin à 7h30.",
+    date: "20 février 2026",
+    author: "David Aames",
+    tags: ["Email", "GPT-4o", "Windmill", "Graph API"],
+    readTime: "7 min",
+  },
+  {
     slug: "windmill-vs-n8n",
     title: "Pourquoi j'utilise Windmill et pas n8n (vu de l'intérieur)",
     excerpt:
