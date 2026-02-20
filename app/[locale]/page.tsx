@@ -58,9 +58,9 @@ export default async function HomePage() {
   ];
 
   const testimonials = [
-    { quote: t("testimonial0Quote"), author: t("testimonial0Author"), role: t("testimonial0Role") },
-    { quote: t("testimonial1Quote"), author: t("testimonial1Author"), role: t("testimonial1Role") },
-    { quote: t("testimonial2Quote"), author: t("testimonial2Author"), role: t("testimonial2Role") },
+    { quote: t("testimonial0Quote"), author: t("testimonial0Author"), role: t("testimonial0Role"), company: t("testimonial0Company"), initials: "AL", color: "bg-emerald-500/20 text-emerald-400" },
+    { quote: t("testimonial1Quote"), author: t("testimonial1Author"), role: t("testimonial1Role"), company: t("testimonial1Company"), initials: "KM", color: "bg-sky-500/20 text-sky-400" },
+    { quote: t("testimonial2Quote"), author: t("testimonial2Author"), role: t("testimonial2Role"), company: t("testimonial2Company"), initials: "JC", color: "bg-violet-500/20 text-violet-400" },
   ];
 
   return (
@@ -190,10 +190,16 @@ export default async function HomePage() {
             {testimonials.map((testimonial) => (
               <div key={testimonial.author} className="rounded-xl border border-white/10 bg-white/5 p-6">
                 <Quote className="mb-4 h-6 w-6 text-emerald-500/50" />
-                <p className="mb-4 text-sm text-gray-300 italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div>
-                  <div className="text-sm font-semibold text-white">{testimonial.author}</div>
-                  <div className="text-xs text-gray-500">{testimonial.role}</div>
+                <p className="mb-6 text-sm text-gray-300 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <div className="flex items-center gap-3">
+                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${testimonial.color}`}>
+                    {testimonial.initials}
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-white">{testimonial.author}</div>
+                    <div className="text-xs text-gray-400">{testimonial.role}</div>
+                    <div className="text-xs text-gray-500">{testimonial.company}</div>
+                  </div>
                 </div>
               </div>
             ))}
