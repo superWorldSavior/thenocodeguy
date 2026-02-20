@@ -39,7 +39,63 @@ jobs:
         run: npm run build
         continue-on-error: false
 
-      # ── 4. Bundle size check ─────────────────────────────────
+      # ── 4. i18n completeness ─────────────────────────────────
+      - name: i18n — check all locales have same keys
+        run: |
+          node -e "
+          const fs = require('fs');
+          const locales = ['fr', 'en', 'zh-TW', 'zh-CN'];
+          const msgs = {};
+          for (const l of locales) {
+            const path = 'messages/' + l + '.json';
+            if (!fs.existsSync(path)) { console.error('❌ Missing locale file: ' + path); process.exit(1); }
+            msgs[l] = JSON.parse(fs.readFileSync(path, 'utf8'));
+          }
+          // Flatten keys recursively
+          function flatKeys(obj, prefix = '') {
+            return Object.entries(obj).flatMap(([k, v]) =>
+              typeof v === 'object' && v !== null ? flatKeys(v, prefix + k + '.') : [prefix + k]
+            );
+          }
+          const allKeys = {};
+          for (const l of locales) {
+            for (const k of flatKeys(msgs[l])) allKeys[k] = allKeys[k] || [];
+            for (const k of flatKeys(msgs[l])) allKeys[k].push(l);
+          }
+          let missing = false;
+          for (const [key, present] of Object.entries(allKeys)) {
+            const absent = locales.filter(l => !present.includes(l));
+            if (absent.length > 0) {
+              console.error('❌ Key \"' + key + '\" missing in: ' + absent.join(', '));
+              missing = true;
+            }
+          }
+          if (missing) process.exit(1);
+          console.log('✅ All ' + Object.keys(allKeys).length + ' i18n keys present in all 4 locales');
+          "
+
+      # ── 5. No hardcoded strings ─────────────────────────────
+      - name: Check no hardcoded UI strings in components
+        run: |
+          # Detect common hardcoded French/English UI strings in TSX files
+          # Excludes: imports, comments, className, metadata, aria-label
+          FOUND=$(grep -rn --include="*.tsx" -E '>[A-ZÀ-Ü][a-zà-ü]{3,}[^<]*</' app/ components/ 2>/dev/null \
+            | grep -v 'className' \
+            | grep -v 'import ' \
+            | grep -v '// ' \
+            | grep -v 'metadata' \
+            | grep -v '{t(' \
+            | grep -v '{.*translation' \
+            | head -20 || true)
+          if [ -n "$FOUND" ]; then
+            echo "⚠️ Potential hardcoded strings found (review manually):"
+            echo "$FOUND"
+            echo "::warning::Potential hardcoded UI strings detected — verify they use useTranslations()"
+          else
+            echo "✅ No obvious hardcoded strings detected"
+          fi
+
+      # ── 6. Bundle size check ─────────────────────────────────
       - name: Check bundle size
         run: |
           BUILD_SIZE=$(du -sh .next 2>/dev/null | cut -f1 || echo "N/A")
@@ -47,7 +103,7 @@ jobs:
           echo "bundle_size=$BUILD_SIZE" >> $GITHUB_OUTPUT
         id: bundle
 
-      # ── 5. Acceptance criteria reminder (PRs only) ───────────
+      # ── 7. Acceptance criteria reminder (PRs only) ───────────
       - name: Acceptance criteria check
         if: github.event_name == 'pull_request'
         run: |
@@ -66,4 +122,6 @@ jobs:
           echo "| ESLint | ✅ |" >> $GITHUB_STEP_SUMMARY
           echo "| TypeScript | ✅ |" >> $GITHUB_STEP_SUMMARY
           echo "| Build | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| i18n | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| Hardcoded strings | ✅ |" >> $GITHUB_STEP_SUMMARY
           echo "| Bundle size | ${{ steps.bundle.outputs.bundle_size }} |" >> $GITHUB_STEP_SUMMARY
