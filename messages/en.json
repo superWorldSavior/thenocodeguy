@@ -31,7 +31,9 @@
     "pricing": "Pricing",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "tagline": "AI agents that work for you, 24/7."
+    "tagline": "AI agents that work for you, 24/7.",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy"
   },
   "home": {
     "badge": "Agent-as-a-Service",
@@ -399,7 +401,12 @@
     "benefit2Desc": "Concrete estimate",
     "benefit3Label": "100% free",
     "benefit3Desc": "No commitment",
-    "stepLabels": ["Tasks", "Time", "Results", "Contact"],
+    "stepLabels": [
+      "Tasks",
+      "Time",
+      "Results",
+      "Contact"
+    ],
     "step1Title": "Which tasks do you repeat?",
     "step1Subtitle": "Select all the tasks that are wasting your time.",
     "step1Button": "Continue — {count} task selected",
@@ -718,5 +725,34 @@
       "bottomNavBack": "All Lab articles",
       "bottomNavNext": "Automating my inbox"
     }
+  },
+  "legal": {
+    "metaTitle": "Legal Notice — The No Code Guys",
+    "metaDesc": "Legal notice for TheNoCodeGuy — TNCG SARL.",
+    "title": "Legal Notice",
+    "editor": "Publisher",
+    "editorContent": "TNCG SARL — Limited liability company\nRegistration: In progress\nLocation: France\nEmail: hello@thenocodeguy.com",
+    "hosting": "Hosting",
+    "hostingContent": "Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, USA\nhttps://vercel.com",
+    "ip": "Intellectual Property",
+    "ipContent": "All content on this website (text, images, logos) is the property of TNCG SARL. Reproduction is prohibited without prior authorization."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — The No Code Guys",
+    "metaDesc": "How we protect your data. GDPR, security, rights.",
+    "title": "Privacy Policy",
+    "intro": "At TheNoCodeGuy, protecting your data is a priority. This policy explains how we collect, use, and protect your information.",
+    "collectTitle": "Data Collected",
+    "collectContent": "We only collect data necessary for our services: name, email, and business data transmitted via WhatsApp for your AI agent's operation.",
+    "useTitle": "Data Usage",
+    "useContent": "Your data is used exclusively to provide the subscribed service. It is never sold, shared, or used for advertising purposes.",
+    "securityTitle": "Security",
+    "securityContent": "Data is encrypted in transit (TLS) and at rest. Each client agent runs in an isolated environment with strictly limited access.",
+    "rightsTitle": "Your Rights (GDPR)",
+    "rightsContent": "Under GDPR, you have the right to access, rectify, delete, and port your data. Contact us at hello@thenocodeguy.com to exercise these rights.",
+    "retentionTitle": "Retention",
+    "retentionContent": "Data is retained for the duration of your subscription and deleted within 30 days of cancellation.",
+    "contactTitle": "Contact",
+    "contactContent": "For any questions about your data: hello@thenocodeguy.com"
   }
 }

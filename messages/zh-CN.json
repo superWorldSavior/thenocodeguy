@@ -31,7 +31,9 @@
     "pricing": "价格",
     "contact": "联系",
     "rights": "保留所有权利。",
-    "tagline": "为您工作的 AI 代理，全年无休。"
+    "tagline": "为您工作的 AI 代理，全年无休。",
+    "legal": "法律声明",
+    "privacy": "隐私政策"
   },
   "home": {
     "badge": "Agent-as-a-Service",
@@ -399,7 +401,12 @@
     "benefit2Desc": "具体估算",
     "benefit3Label": "100% 免费",
     "benefit3Desc": "无需承诺",
-    "stepLabels": ["任务", "时间", "结果", "联系"],
+    "stepLabels": [
+      "任务",
+      "时间",
+      "结果",
+      "联系"
+    ],
     "step1Title": "您重复哪些任务？",
     "step1Subtitle": "选择所有让您浪费时间的任务。",
     "step1Button": "继续 — 已选 {count} 个任务",
@@ -718,5 +725,34 @@
       "bottomNavBack": "实验室所有文章",
       "bottomNavNext": "自动化我的邮箱"
     }
+  },
+  "legal": {
+    "metaTitle": "法律声明 — The No Code Guys",
+    "metaDesc": "TheNoCodeGuy 法律声明 — TNCG SARL。",
+    "title": "法律声明",
+    "editor": "发行者",
+    "editorContent": "TNCG SARL — 有限责任公司\n注册：办理中\n地点：法国\n电子邮件：hello@thenocodeguy.com",
+    "hosting": "托管服务",
+    "hostingContent": "Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, USA\nhttps://vercel.com",
+    "ip": "知识产权",
+    "ipContent": "本网站所有内容（文字、图片、标志）均为 TNCG SARL 所有。未经事先授权，禁止任何形式的复制。"
+  },
+  "privacy": {
+    "metaTitle": "隐私政策 — The No Code Guys",
+    "metaDesc": "我们如何保护您的数据。GDPR、安全性、权利。",
+    "title": "隐私政策",
+    "intro": "在 TheNoCodeGuy，保护您的数据是首要任务。本政策说明我们如何收集、使用和保护您的信息。",
+    "collectTitle": "收集的数据",
+    "collectContent": "我们仅收集服务所需的数据：姓名、电子邮件，以及通过 WhatsApp 传输的业务数据，用于 AI 代理的运作。",
+    "useTitle": "数据使用",
+    "useContent": "您的数据仅用于提供订阅的服务。绝不会被出售、共享或用于广告目的。",
+    "securityTitle": "安全性",
+    "securityContent": "数据在传输中（TLS）和静态时均已加密。每个客户代理在隔离环境中运行，访问权限严格限制。",
+    "rightsTitle": "您的权利（GDPR）",
+    "rightsContent": "根据 GDPR，您有权访问、更正、删除和转移您的数据。请联系 hello@thenocodeguy.com 行使这些权利。",
+    "retentionTitle": "数据保留",
+    "retentionContent": "数据在订阅期间保留，取消后 30 天内删除。",
+    "contactTitle": "联系方式",
+    "contactContent": "如有任何数据相关问题：hello@thenocodeguy.com"
   }
 }
