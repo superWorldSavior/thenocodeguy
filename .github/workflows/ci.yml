@@ -1,4 +1,4 @@
-name: CI — Build & Type Check
+name: CI — Quality Gate
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    name: Build & TypeScript check
+  quality:
+    name: Code Quality & Build
     runs-on: ubuntu-latest
 
     steps:
@@ -24,12 +24,46 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: TypeScript check
-        run: npx tsc --noEmit
+      # ── 1. Lint ──────────────────────────────────────────────
+      - name: ESLint
+        run: npm run lint
+        continue-on-error: false
 
+      # ── 2. TypeScript strict check ───────────────────────────
+      - name: TypeScript
+        run: npx tsc --noEmit
+        continue-on-error: false
+
+      # ── 3. Build ─────────────────────────────────────────────
       - name: Build
         run: npm run build
+        continue-on-error: false
 
-      - name: Build success
+      # ── 4. Bundle size check ─────────────────────────────────
+      - name: Check bundle size
+        run: |
+          BUILD_SIZE=$(du -sh .next 2>/dev/null | cut -f1 || echo "N/A")
+          echo "📦 Bundle size: $BUILD_SIZE"
+          echo "bundle_size=$BUILD_SIZE" >> $GITHUB_OUTPUT
+        id: bundle
+
+      # ── 5. Acceptance criteria reminder (PRs only) ───────────
+      - name: Acceptance criteria check
+        if: github.event_name == 'pull_request'
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          SPEC_FILES=$(find specs/ -name "*.feature" 2>/dev/null | wc -l)
+          echo "📋 PR: $PR_TITLE"
+          echo "📝 Gherkin specs available: $SPEC_FILES"
+          echo "✅ Quality gate passed — ready for visual review"
+
+      - name: Summary
         if: success()
-        run: echo "✅ Build OK — ready for Vercel deploy"
+        run: |
+          echo "## ✅ Quality Gate Passed" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| ESLint | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| TypeScript | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| Build | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| Bundle size | ${{ steps.bundle.outputs.bundle_size }} |" >> $GITHUB_STEP_SUMMARY
