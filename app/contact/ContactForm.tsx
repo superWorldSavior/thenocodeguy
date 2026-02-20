@@ -41,7 +41,7 @@ export default function ContactForm() {
             </div>
             <h3 className="font-semibold">Email direct</h3>
           </div>
-          <p className="text-sm text-gray-400">contact@thenocodeguy.com</p>
+          <p className="text-sm text-gray-400">hello@thenocodeguy.com</p>
         </div>
         <div className="rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="mb-3 flex items-center gap-3">
