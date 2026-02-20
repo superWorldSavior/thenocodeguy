@@ -38,7 +38,7 @@ export default async function PricingPage() {
     t(`fairUseItem${i}` as Key)
   );
 
-  const faqs = [0, 1, 2, 3].map((i) => ({
+  const faqs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({
     q: t(`faq${i}Q` as Key),
     a: t(`faq${i}A` as Key),
   }));
@@ -209,6 +209,22 @@ export default async function PricingPage() {
           </Link>
         </div>
       </section>
+
+      {/* FAQ Schema markup for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          }),
+        }}
+      />
     </>
   );
 }

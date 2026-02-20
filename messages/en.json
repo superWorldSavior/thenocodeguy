@@ -220,7 +220,19 @@
     "securityItem1Title": "GDPR compliant",
     "securityItem1Desc": "Data processing compliant with GDPR. Right of access, rectification and deletion guaranteed.",
     "securityItem2Title": "Data isolation",
-    "securityItem2Desc": "Each client has an isolated environment. No data sharing between accounts."
+    "securityItem2Desc": "Each client has an isolated environment. No data sharing between accounts.",
+    "faq4Q": "How does WhatsApp communication work?",
+    "faq4A": "Your AI agent is connected to a dedicated WhatsApp Business number. You send instructions via message and it executes tasks automatically: follow-ups, reports, CRM updates, etc.",
+    "faq5Q": "What languages are supported?",
+    "faq5A": "Our AI agents understand and respond in French, English, Traditional and Simplified Chinese. Additional languages can be added on request.",
+    "faq6Q": "Can I cancel anytime?",
+    "faq6A": "Yes, no commitment. You can cancel at the end of each month. No hidden fees, no penalties.",
+    "faq7Q": "What tools and integrations are available?",
+    "faq7A": "Our agents connect to 100+ tools: CRM (HubSpot, Pipedrive), Google Workspace, Slack, Notion, Airtable, and many more via API or Make/n8n.",
+    "faq8Q": "What support is included?",
+    "faq8A": "Email and WhatsApp support included in all plans. Response time under 24h on business days. Personalized onboarding is provided at setup.",
+    "faq9Q": "How soon can I see results?",
+    "faq9A": "First workflows are operational within 48-72h after kick-off. Concrete results (time saved, qualified leads) are visible within the first week."
   },
   "services": {
     "metaTitle": "Services — Custom AI Automation",

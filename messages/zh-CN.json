@@ -220,7 +220,19 @@
     "securityItem1Title": "GDPR 合规",
     "securityItem1Desc": "数据处理符合 GDPR 规范，保障访问、更正和删除的权利。",
     "securityItem2Title": "数据隔离",
-    "securityItem2Desc": "每位客户拥有独立的环境，账号之间不共享任何数据。"
+    "securityItem2Desc": "每位客户拥有独立的环境，账号之间不共享任何数据。",
+    "faq4Q": "WhatsApp 通讯如何运作？",
+    "faq4A": "您的 AI 代理连接到专属的 WhatsApp Business 号码。您通过消息发送指令，它会自动执行任务：跟进、报告、CRM 更新等。",
+    "faq5Q": "支持哪些语言？",
+    "faq5A": "我们的 AI 代理能理解并回应法语、英语、繁体中文和简体中文。可根据需求添加其他语言。",
+    "faq6Q": "我可以随时取消吗？",
+    "faq6A": "是的，无需长期合同。您可以在每月底取消。没有隐藏费用，没有违约金。",
+    "faq7Q": "有哪些工具和集成可用？",
+    "faq7A": "我们的代理可连接 100+ 种工具：CRM（HubSpot、Pipedrive）、Google Workspace、Slack、Notion、Airtable 等，通过 API 或 Make/n8n。",
+    "faq8Q": "包含哪些支持？",
+    "faq8A": "所有方案均包含电子邮件和 WhatsApp 支持。工作日 24 小时内回复。设置时提供个性化引导。",
+    "faq9Q": "多快可以看到成果？",
+    "faq9A": "首批工作流程在启动后 48-72 小时内即可运行。具体成果（节省时间、合格潜在客户）在第一周内即可见。"
   },
   "services": {
     "metaTitle": "服务 — 定制 AI 自动化",
