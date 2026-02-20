@@ -98,7 +98,7 @@ export default async function AgentDetailPage({
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 py-24 sm:px-6 sm:py-32">
+      <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-950/40 via-gray-950 to-gray-950" />
         <div className="relative mx-auto max-w-4xl text-center">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10">
@@ -115,9 +115,9 @@ export default async function AgentDetailPage({
       </section>
 
       {/* Content */}
-      <section className="px-4 py-20 sm:px-6">
+      <section className="px-4 py-10 sm:px-6 sm:py-12">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid items-start gap-10 lg:grid-cols-2">
             {/* Left: workflows + connectors */}
             <div className="space-y-10">
               <div>
@@ -191,7 +191,7 @@ export default async function AgentDetailPage({
       </section>
 
       {/* CTA */}
-      <section className="px-4 py-24 sm:px-6">
+      <section className="px-4 py-14 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-3xl rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-900/30 to-transparent p-10 text-center">
           <Zap className="mx-auto mb-6 h-10 w-10 text-emerald-400" />
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
