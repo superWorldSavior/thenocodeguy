@@ -1,0 +1,66 @@
+{
+  "path": "f/openclaw/boamp_veille",
+  "summary": "Veille BOAMP automatique",
+  "description": "Récupère les nouvelles publications du BOAMP (Bulletin Officiel des Annonces des Marchés Publics), filtre par mots-clés, qualifie avec GPT-4o mini, et envoie un digest email.",
+  "language": "python3",
+  "kind": "script",
+  "tags": [
+    "automatisation",
+    "veille",
+    "BOAMP",
+    "appels d'offres",
+    "email",
+    "GPT-4o"
+  ],
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 7 * * 1-5",
+    "tz": "Europe/Paris"
+  },
+  "variables": [
+    {
+      "name": "OPENAI_API_KEY",
+      "description": "Clé API OpenAI (pour GPT-4o mini)",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "SMTP_HOST",
+      "description": "Serveur SMTP (ex: smtp.office365.com)",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "SMTP_PORT",
+      "description": "Port SMTP (ex: 587)",
+      "type": "integer",
+      "required": true,
+      "default": 587
+    },
+    {
+      "name": "SMTP_USER",
+      "description": "Adresse email pour l'authentification SMTP",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "SMTP_PASS",
+      "description": "Mot de passe SMTP",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "NOTIFY_EMAIL",
+      "description": "Adresse email destinataire du digest (défaut: SMTP_USER)",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "KEYWORDS",
+      "description": "Mots-clés séparés par virgule (ex: 'automatisation,IA,no-code')",
+      "type": "string",
+      "required": true,
+      "default": "automatisation,IA,intelligence artificielle,no-code,workflow,digital,numérique,dématérialisation"
+    }
+  ]
+}
