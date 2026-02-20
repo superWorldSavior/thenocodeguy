@@ -31,7 +31,9 @@
     "pricing": "Tarifs",
     "contact": "Contact",
     "rights": "Tous droits réservés.",
-    "tagline": "Des agents IA qui travaillent pour vous, 24/7."
+    "tagline": "Des agents IA qui travaillent pour vous, 24/7.",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité"
   },
   "home": {
     "badge": "Agent-as-a-Service",
@@ -399,7 +401,12 @@
     "benefit2Desc": "Estimation concrète",
     "benefit3Label": "100% gratuit",
     "benefit3Desc": "Sans engagement",
-    "stepLabels": ["Tâches", "Temps", "Résultats", "Contact"],
+    "stepLabels": [
+      "Tâches",
+      "Temps",
+      "Résultats",
+      "Contact"
+    ],
     "step1Title": "Quelles tâches répétez-vous ?",
     "step1Subtitle": "Sélectionnez toutes les tâches qui vous font perdre du temps.",
     "step1Button": "Continuer — {count} tâche sélectionnée",
@@ -718,5 +725,34 @@
       "bottomNavBack": "Tous les articles du Lab",
       "bottomNavNext": "Automatiser ma boîte mail"
     }
+  },
+  "legal": {
+    "metaTitle": "Mentions légales — The No Code Guys",
+    "metaDesc": "Mentions légales de TheNoCodeGuy — TNCG SARL.",
+    "title": "Mentions légales",
+    "editor": "Éditeur",
+    "editorContent": "TNCG SARL — Société à responsabilité limitée\nSIRET : En cours d'immatriculation\nAdresse : France\nEmail : hello@thenocodeguy.com",
+    "hosting": "Hébergement",
+    "hostingContent": "Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, USA\nhttps://vercel.com",
+    "ip": "Propriété intellectuelle",
+    "ipContent": "L'ensemble du contenu de ce site (textes, images, logos) est la propriété de TNCG SARL. Toute reproduction est interdite sans autorisation préalable."
+  },
+  "privacy": {
+    "metaTitle": "Politique de confidentialité — The No Code Guys",
+    "metaDesc": "Comment nous protégeons vos données. RGPD, sécurité, droits.",
+    "title": "Politique de confidentialité",
+    "intro": "Chez TheNoCodeGuy, la protection de vos données est une priorité. Cette politique explique comment nous collectons, utilisons et protégeons vos informations.",
+    "collectTitle": "Données collectées",
+    "collectContent": "Nous collectons uniquement les données nécessaires au fonctionnement de nos services : nom, email, et données métier transmises via WhatsApp pour le fonctionnement de votre agent IA.",
+    "useTitle": "Utilisation des données",
+    "useContent": "Vos données sont utilisées exclusivement pour fournir le service souscrit. Elles ne sont jamais vendues, partagées ou utilisées à des fins publicitaires.",
+    "securityTitle": "Sécurité",
+    "securityContent": "Les données sont chiffrées en transit (TLS) et au repos. Chaque agent client fonctionne dans un environnement isolé avec des accès strictement limités.",
+    "rightsTitle": "Vos droits (RGPD)",
+    "rightsContent": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Contactez-nous à hello@thenocodeguy.com pour exercer ces droits.",
+    "retentionTitle": "Conservation",
+    "retentionContent": "Les données sont conservées pendant la durée de votre abonnement et supprimées dans les 30 jours suivant la résiliation.",
+    "contactTitle": "Contact",
+    "contactContent": "Pour toute question relative à vos données : hello@thenocodeguy.com"
   }
 }

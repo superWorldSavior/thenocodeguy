@@ -35,8 +35,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} TheNoCodeGuy. {t("rights")}
+        <div className="mt-8 flex flex-col items-center gap-4 border-t border-white/10 pt-8 text-sm text-gray-500">
+          <div className="flex gap-4">
+            <Link href="/legal" className="transition-colors hover:text-emerald-400">
+              {t("legal")}
+            </Link>
+            <span className="text-gray-700">·</span>
+            <Link href="/privacy" className="transition-colors hover:text-emerald-400">
+              {t("privacy")}
+            </Link>
+          </div>
+          <p>&copy; {new Date().getFullYear()} TheNoCodeGuy. {t("rights")}</p>
         </div>
       </div>
     </footer>
