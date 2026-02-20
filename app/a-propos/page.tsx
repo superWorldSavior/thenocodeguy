@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Zap, Globe, Brain, GitBranch } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -77,18 +78,29 @@ export default function AProposPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { value: "10+", label: "ans d'expérience" },
-              { value: "200+", label: "sessions livrées" },
-              { value: "50+", label: "outils maîtrisés" },
-              { value: "24h", label: "temps de réponse max" },
-            ].map((s) => (
-              <div key={s.label} className="rounded-xl border border-white/10 bg-white/5 p-5 text-center">
-                <div className="mb-1 text-3xl font-bold text-emerald-400">{s.value}</div>
-                <div className="text-xs text-gray-400">{s.label}</div>
-              </div>
-            ))}
+          <div className="space-y-4">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10">
+              <Image
+                src="/images/about.png"
+                alt="Réseau de connexions IA agentique"
+                width={600}
+                height={400}
+                className="w-full object-cover opacity-90"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: "10+", label: "ans d'expérience" },
+                { value: "200+", label: "sessions livrées" },
+                { value: "50+", label: "outils maîtrisés" },
+                { value: "24h", label: "temps de réponse max" },
+              ].map((s) => (
+                <div key={s.label} className="rounded-xl border border-white/10 bg-white/5 p-5 text-center">
+                  <div className="mb-1 text-3xl font-bold text-emerald-400">{s.value}</div>
+                  <div className="text-xs text-gray-400">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

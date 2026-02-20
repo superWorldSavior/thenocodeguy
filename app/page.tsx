@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Zap, GitBranch, BarChart3, Shield, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -60,7 +61,14 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden px-4 py-24 sm:px-6 sm:py-32">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-transparent" />
+        <Image
+          src="/images/hero.png"
+          alt=""
+          fill
+          className="pointer-events-none object-cover opacity-15"
+          priority
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-gray-950/80 via-gray-950/60 to-gray-950/80" />
         <div className="relative mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
             <Zap className="h-3.5 w-3.5" />

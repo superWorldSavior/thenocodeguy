@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BarChart3, GitBranch, Zap, RefreshCw, Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -86,6 +87,19 @@ export default function ServicesPage() {
             Pas de templates génériques. Chaque mission est construite pour votre business,
             votre stack, vos contraintes.
           </p>
+        </div>
+
+        {/* Banner */}
+        <div className="relative mb-16 overflow-hidden rounded-2xl border border-white/10">
+          <Image
+            src="/images/services.png"
+            alt="Automatisation IA agentique"
+            width={1200}
+            height={500}
+            className="w-full object-cover opacity-80"
+            style={{ maxHeight: "320px" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/70 via-transparent to-gray-950/70" />
         </div>
 
         {/* Services */}
