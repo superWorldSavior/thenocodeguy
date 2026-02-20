@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,12 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <Script
+          src="/umami/script.js"
+          data-website-id="1df87a17-4ae1-42cd-8f61-ce1e7a4650b3"
+          data-api="/umami/api/send"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
