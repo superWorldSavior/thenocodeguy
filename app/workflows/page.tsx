@@ -1,306 +1,293 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import {
-  ArrowRight,
-  GitBranch,
-  ExternalLink,
-  Zap,
-  Bell,
-  BarChart3,
   Search,
-  Mail,
-  ArrowUpRight,
+  ShieldCheck,
+  Linkedin,
+  ArrowRight,
+  X,
+  CheckCircle,
+  Clock,
+  Zap,
 } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Workflows — TheNoCodeGuy",
-  description:
-    "Les workflows d'automatisation réels qu'on utilise en production. Open-source, documentés, prêts à déployer sur Windmill.",
-  openGraph: {
-    title: "Workflows | TheNoCodeGuy",
-    description:
-      "Des workflows Windmill open-source pour automatiser votre veille, votre monitoring et votre analytics. Prêts à déployer.",
-    url: "https://thenocodeguy.com/workflows",
-  },
-};
 
 const workflows = [
   {
-    id: "veille-boamp",
+    slug: "boamp-veille",
     icon: Search,
-    title: "Veille BOAMP automatique",
-    tagline: "Ne ratez plus un appel d'offres public",
+    title: "Veille BOAMP automatisée",
+    tagline: "Ne manquez plus un appel d'offres public pertinent",
     description:
-      "Scrape le Bulletin Officiel des Annonces des Marchés Publics chaque matin. Filtre par mots-clés, qualifie les opportunités avec GPT-4o, et envoie un digest email. Zéro surveillance manuelle.",
-    stack: ["Windmill", "Python", "GPT-4o", "SMTP"],
-    useCase: "Agences & prestataires publics",
-    status: "open-source",
-    stats: { runs: "7j/7", time: "< 2 min", saved: "2h/semaine" },
-    githubUrl: "https://github.com/thenocodeguy/workflow-veille-boamp",
-    color: "emerald",
-  },
-  {
-    id: "monitoring-serveur",
-    icon: Bell,
-    title: "Monitoring serveur proactif",
-    tagline: "Alertes intelligentes avant que ça tombe",
-    description:
-      "Surveille CPU, RAM, disque et services critiques sur vos VPS. Analyse les tendances avec un modèle IA pour prédire les incidents avant qu'ils arrivent. Alertes WhatsApp/email avec contexte.",
-    stack: ["Windmill", "Bash", "Claude 3.5", "WhatsApp API"],
-    useCase: "DevOps & infogérance",
-    status: "open-source",
-    stats: { runs: "Toutes les 5 min", time: "< 30s", saved: "1h/jour" },
-    githubUrl: "https://github.com/thenocodeguy/workflow-monitoring-serveur",
+      "Surveillance quotidienne du Bulletin Officiel des Annonces des Marchés Publics. Filtrage par mots-clés, envoi des opportunités par email ou WhatsApp chaque matin.",
+    tags: ["Windmill", "Python", "Email", "API Gov"],
+    metrics: [
+      { label: "Temps économisé", value: "2h/jour" },
+      { label: "Délai de mise en place", value: "< 1h" },
+      { label: "Appels d'offres traités", value: "~800/mois" },
+    ],
     color: "blue",
   },
   {
-    id: "analytics-digest",
-    icon: BarChart3,
-    title: "Analytics digest Umami",
-    tagline: "Vos stats web directement dans WhatsApp",
+    slug: "monitoring-serveur",
+    icon: ShieldCheck,
+    title: "Monitoring serveur 24/7",
+    tagline: "Alerte immédiate si quelque chose cloche",
     description:
-      "Récupère les métriques clés Umami (pages vues, visiteurs uniques, sources) et génère un résumé hebdomadaire lisible. Livré le lundi matin dans WhatsApp avec les tendances vs semaine précédente.",
-    stack: ["Windmill", "TypeScript", "Umami API", "WhatsApp"],
-    useCase: "Fondateurs & marketeurs",
-    status: "open-source",
-    stats: { runs: "1x/semaine", time: "< 1 min", saved: "30 min/semaine" },
-    githubUrl: "https://github.com/thenocodeguy/workflow-analytics-digest",
-    color: "violet",
+      "Vérification automatique toutes les 6h : CPU, RAM, espace disque, statut Docker, connexions SSH suspectes, UFW. Alerte WhatsApp uniquement si anomalie détectée.",
+    tags: ["Bash", "Windmill", "WhatsApp", "Docker"],
+    metrics: [
+      { label: "Vérifications/jour", value: "4×" },
+      { label: "Délai d'alerte", value: "< 5 min" },
+      { label: "Faux positifs", value: "0" },
+    ],
+    color: "emerald",
   },
   {
-    id: "veille-email",
-    icon: Mail,
-    title: "Veille email intelligente",
-    tagline: "GPT lit vos newsletters à votre place",
+    slug: "linkedin-auto-post",
+    icon: Linkedin,
+    title: "LinkedIn Auto-Post",
+    tagline: "Publiez régulièrement sans y penser",
     description:
-      "Trie et résume vos newsletters automatiquement. Classe par pertinence, extrait les infos actionnables, et génère un digest quotidien. Compatible avec Gmail, Outlook et tout IMAP.",
-    stack: ["Windmill", "Python", "GPT-4o mini", "Graph API"],
-    useCase: "Veille concurrentielle & sectorielle",
-    status: "bientôt",
-    stats: { runs: "1x/jour", time: "< 5 min", saved: "1h/jour" },
-    githubUrl: null,
-    color: "orange",
+      "6 templates de posts LinkedIn orientés expert IA/automatisation. Planification hebdomadaire, rotation automatique, personnalisation dynamique. Votre personal branding en pilote automatique.",
+    tags: ["Windmill", "LinkedIn API", "Templates", "Scheduling"],
+    metrics: [
+      { label: "Posts/semaine", value: "3–5" },
+      { label: "Temps de setup", value: "30 min" },
+      { label: "Templates inclus", value: "6" },
+    ],
+    color: "purple",
   },
 ];
 
-const colorMap: Record<string, { badge: string; icon: string; border: string; stat: string }> = {
-  emerald: {
-    badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    icon: "bg-emerald-500/10 text-emerald-400",
-    border: "hover:border-emerald-500/40",
-    stat: "text-emerald-400",
-  },
+const colorMap: Record<string, { border: string; bg: string; icon: string; tag: string }> = {
   blue: {
-    badge: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-    icon: "bg-blue-500/10 text-blue-400",
-    border: "hover:border-blue-500/40",
-    stat: "text-blue-400",
+    border: "border-blue-500/30 hover:border-blue-400/60",
+    bg: "bg-blue-500/10",
+    icon: "text-blue-400",
+    tag: "border-blue-500/20 bg-blue-500/10 text-blue-300",
   },
-  violet: {
-    badge: "bg-violet-500/10 text-violet-400 border-violet-500/20",
-    icon: "bg-violet-500/10 text-violet-400",
-    border: "hover:border-violet-500/40",
-    stat: "text-violet-400",
+  emerald: {
+    border: "border-emerald-500/30 hover:border-emerald-400/60",
+    bg: "bg-emerald-500/10",
+    icon: "text-emerald-400",
+    tag: "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
   },
-  orange: {
-    badge: "bg-orange-500/10 text-orange-400 border-orange-500/20",
-    icon: "bg-orange-500/10 text-orange-400",
-    border: "hover:border-orange-500/40",
-    stat: "text-orange-400",
+  purple: {
+    border: "border-purple-500/30 hover:border-purple-400/60",
+    bg: "bg-purple-500/10",
+    icon: "text-purple-400",
+    tag: "border-purple-500/20 bg-purple-500/10 text-purple-300",
   },
 };
 
 export default function WorkflowsPage() {
+  const [modal, setModal] = useState<{ slug: string; title: string } | null>(null);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!modal) return;
+    setLoading(true);
+
+    try {
+      await fetch("https://formspree.io/f/meolvdkd", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          workflow: modal.title,
+          _subject: `Téléchargement workflow : ${modal.title}`,
+        }),
+      });
+      setDone(true);
+    } catch {
+      // continue anyway
+      setDone(true);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const closeModal = () => {
+    setModal(null);
+    setEmail("");
+    setDone(false);
+    setLoading(false);
+  };
+
   return (
     <main className="min-h-screen bg-gray-950 py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Header */}
-        <div className="mb-16 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
-            <GitBranch className="h-3.5 w-3.5" />
-            Workflows open-source
+        <div className="mb-16">
+          <div className="mb-4 flex items-center gap-2 text-emerald-400">
+            <Zap className="h-5 w-5" />
+            <span className="text-sm font-medium uppercase tracking-widest">Workflows</span>
           </div>
-          <h1 className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            Ce qu&apos;on automatise{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              en vrai
-            </span>
+          <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl">
+            Automatisations prêtes à déployer
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-400">
-            Pas des démos. Des workflows réels qui tournent en production sur{" "}
-            <span className="font-medium text-white">Windmill</span>, open-sourcés et documentés.
-            Forkez, adaptez, déployez.
+          <p className="max-w-2xl text-lg text-gray-400">
+            Des workflows que j&apos;utilise en production — pas des démos. Chaque guide
+            explique le fonctionnement exact, les prérequis, et comment l&apos;adapter à
+            votre contexte.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
-            <span className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Open-source sur GitHub
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Windmill-native
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              README + documentation inclus
-            </span>
-          </div>
         </div>
 
         {/* Workflow cards */}
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-1">
           {workflows.map((wf) => {
             const colors = colorMap[wf.color];
+            const Icon = wf.icon;
             return (
               <div
-                key={wf.id}
-                className={`group relative flex flex-col rounded-2xl border border-white/10 bg-gray-900/50 p-6 transition-all ${colors.border} hover:bg-gray-900 sm:p-8`}
+                key={wf.slug}
+                className={`group rounded-2xl border ${colors.border} bg-gray-900/60 p-6 transition-all sm:p-8`}
               >
-                {/* Status badge */}
-                <div className="mb-5 flex items-start justify-between">
-                  <div className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${colors.icon}`}>
-                    <wf.icon className="h-5 w-5" />
-                  </div>
-                  <span
-                    className={`rounded-full border px-3 py-1 text-xs font-medium ${colors.badge}`}
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                  {/* Icon */}
+                  <div
+                    className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${colors.bg}`}
                   >
-                    {wf.status === "open-source" ? "Open-source" : "Bientôt"}
-                  </span>
-                </div>
+                    <Icon className={`h-7 w-7 ${colors.icon}`} />
+                  </div>
 
-                {/* Title & description */}
-                <h2 className="mb-1 text-xl font-bold text-white">{wf.title}</h2>
-                <p className="mb-3 text-sm font-medium text-gray-400">{wf.tagline}</p>
-                <p className="mb-5 text-sm leading-relaxed text-gray-400">{wf.description}</p>
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h2 className="mb-1 text-xl font-bold text-white">{wf.title}</h2>
+                    <p className="mb-3 text-sm font-medium text-gray-400">{wf.tagline}</p>
+                    <p className="mb-5 text-gray-400">{wf.description}</p>
 
-                {/* Stats */}
-                <div className="mb-5 grid grid-cols-3 gap-3">
-                  {[
-                    { label: "Fréquence", value: wf.stats.runs },
-                    { label: "Durée", value: wf.stats.time },
-                    { label: "Gain", value: wf.stats.saved },
-                  ].map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-lg border border-white/5 bg-white/5 p-3 text-center"
-                    >
-                      <div className={`text-xs font-semibold ${colors.stat}`}>{stat.value}</div>
-                      <div className="mt-0.5 text-xs text-gray-600">{stat.label}</div>
+                    {/* Metrics */}
+                    <div className="mb-5 grid grid-cols-3 gap-3">
+                      {wf.metrics.map((m) => (
+                        <div
+                          key={m.label}
+                          className="rounded-lg border border-white/5 bg-gray-800/60 p-3 text-center"
+                        >
+                          <div className={`text-lg font-bold ${colors.icon}`}>{m.value}</div>
+                          <div className="mt-0.5 text-xs text-gray-500">{m.label}</div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
 
-                {/* Stack tags */}
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {wf.stack.map((s) => (
-                    <span
-                      key={s}
-                      className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-gray-400"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Use case + CTA */}
-                <div className="mt-auto flex items-center justify-between">
-                  <span className="text-xs text-gray-600">
-                    Pour : <span className="text-gray-400">{wf.useCase}</span>
-                  </span>
-                  {wf.githubUrl ? (
-                    <a
-                      href={wf.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-sm font-medium text-emerald-400 transition-colors hover:text-emerald-300"
-                    >
-                      Voir sur GitHub
-                      <ExternalLink className="h-3.5 w-3.5" />
-                    </a>
-                  ) : (
-                    <span className="text-xs text-gray-600 italic">En cours de packaging…</span>
-                  )}
+                    {/* Tags + CTA */}
+                    <div className="flex flex-wrap items-center gap-3">
+                      {wf.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className={`rounded-full border px-3 py-1 text-xs ${colors.tag}`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      <button
+                        onClick={() => setModal({ slug: wf.slug, title: wf.title })}
+                        className="ml-auto flex items-center gap-2 rounded-lg bg-white/10 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/20"
+                      >
+                        Obtenir le guide <ArrowRight className="h-4 w-4" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* How it works */}
-        <section className="mt-20">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold text-white">Windmill — pourquoi ce choix ?</h2>
-            <p className="mt-3 text-gray-400">
-              Pas n8n, pas Make. Windmill est le seul outil qui colle avec notre façon de travailler.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[
-              {
-                title: "Vrai code, vrais scripts",
-                desc: "TypeScript, Python, Bash natifs. Pas de limitations de nœuds fantaisistes. Si ça s'exécute en local, ça tourne sur Windmill.",
-              },
-              {
-                title: "Auto-hébergé & RGPD",
-                desc: "Vos données restent sur votre serveur. On livre le workflow ET l'infrastructure. Zero vendor lock-in.",
-              },
-              {
-                title: "Git-native",
-                desc: "Chaque workflow est du code versionnable. Fork, PR, rollback — le workflow engineering comme du vrai dev.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-white/10 bg-white/5 p-6"
-              >
-                <Zap className="mb-3 h-5 w-5 text-emerald-400" />
-                <h3 className="mb-2 text-base font-semibold text-white">{item.title}</h3>
-                <p className="text-sm text-gray-400">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 text-center">
-            <Link
-              href="/lab/windmill-vs-n8n"
-              className="inline-flex items-center gap-1.5 text-sm text-emerald-400 hover:text-emerald-300"
-            >
-              Lire : Pourquoi j&apos;utilise Windmill et pas n8n
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="mt-20">
-          <div className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-900/30 to-transparent p-10 text-center">
-            <GitBranch className="mx-auto mb-6 h-10 w-10 text-emerald-400" />
-            <h2 className="mb-4 text-3xl font-bold text-white">
-              Besoin d&apos;un workflow sur mesure ?
-            </h2>
-            <p className="mx-auto mb-8 max-w-xl text-gray-400">
-              Ces workflows couvrent nos cas d&apos;usage. Le vôtre est différent ?
-              On le construit, on le documente, on le déploie sur votre infra.
-            </p>
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-gray-950 transition-colors hover:bg-emerald-400"
-              >
-                Décrire mon besoin
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/audit"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-sm text-gray-300 transition-colors hover:border-emerald-500/50 hover:text-white"
-              >
-                Audit gratuit →
-              </Link>
-            </div>
-          </div>
-        </section>
-
+        {/* Bottom CTA */}
+        <div className="mt-16 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center">
+          <p className="mb-2 text-lg font-semibold text-white">
+            Vous voulez ce type d&apos;automatisation dans votre entreprise ?
+          </p>
+          <p className="mb-6 text-gray-400">
+            Je peux l&apos;adapter à votre contexte et le déployer pour vous en quelques
+            heures.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+          >
+            Discuter de votre projet <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
+
+      {/* Modal */}
+      {modal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/80 px-4 backdrop-blur-sm"
+          onClick={closeModal}
+        >
+          <div
+            className="relative w-full max-w-md rounded-2xl border border-white/10 bg-gray-900 p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute right-4 top-4 text-gray-500 transition-colors hover:text-white"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            {done ? (
+              <div className="text-center">
+                <CheckCircle className="mx-auto mb-4 h-12 w-12 text-emerald-400" />
+                <h3 className="mb-2 text-xl font-bold text-white">C&apos;est parti !</h3>
+                <p className="mb-6 text-gray-400">
+                  Votre guide est disponible ci-dessous. Bonne lecture.
+                </p>
+                <Link
+                  href={`/workflows/${modal.slug}/guide`}
+                  onClick={closeModal}
+                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+                >
+                  Accéder au guide <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            ) : (
+              <>
+                <div className="mb-2 flex items-center gap-2 text-emerald-400">
+                  <Clock className="h-4 w-4" />
+                  <span className="text-xs font-medium uppercase tracking-widest">Guide gratuit</span>
+                </div>
+                <h3 className="mb-1 text-xl font-bold text-white">{modal.title}</h3>
+                <p className="mb-6 text-sm text-gray-400">
+                  Entrez votre email pour accéder au guide complet — architecture, code,
+                  déploiement.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <input
+                    type="email"
+                    required
+                    placeholder="votre@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full rounded-lg border border-white/10 bg-gray-800 px-4 py-3 text-white placeholder-gray-500 focus:border-emerald-500/50 focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
+                  />
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400 disabled:opacity-60"
+                  >
+                    {loading ? "Envoi…" : "Accéder au guide"}
+                    {!loading && <ArrowRight className="h-4 w-4" />}
+                  </button>
+                </form>
+
+                <p className="mt-4 text-center text-xs text-gray-600">
+                  Pas de spam. Juste du contenu utile, quand j&apos;en ai.
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </main>
   );
 }
