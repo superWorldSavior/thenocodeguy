@@ -209,7 +209,15 @@
     "faq3A": "Yes. Your data flows through encrypted connections. We only access the data necessary for your workflows to function. Infrastructure hosted in Europe.",
     "ctaTitle": "Ready to delegate?",
     "ctaSubtitle": "Choose your agent and it starts working within 48 hours.",
-    "ctaButton": "Contact the team"
+    "ctaButton": "Contact the team",
+    "securityTitle": "Security & GDPR compliance",
+    "securityDesc": "Your data is protected by strict security standards. Full compliance with European regulations.",
+    "securityItem0Title": "End-to-end encryption",
+    "securityItem0Desc": "All communications and stored data are encrypted with the latest protocols (AES-256, TLS 1.3).",
+    "securityItem1Title": "GDPR compliant",
+    "securityItem1Desc": "Data processing compliant with GDPR. Right of access, rectification and deletion guaranteed.",
+    "securityItem2Title": "Data isolation",
+    "securityItem2Desc": "Each client has an isolated environment. No data sharing between accounts."
   },
   "services": {
     "metaTitle": "Services — Custom AI Automation",
