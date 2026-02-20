@@ -18,26 +18,27 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function VeilleEmailPage() {
   const t = await getTranslations("articles.veilleEmail");
+  type Key = Parameters<typeof t>[0];
 
   const archSteps = [0, 1, 2, 3].map((i) => ({
-    step: t(`arch${i}Step` as any),
-    desc: t(`arch${i}Desc` as any),
+    step: t(`arch${i}Step` as Key),
+    desc: t(`arch${i}Desc` as Key),
   }));
 
   const windmillItems = [0, 1, 2, 3].map((i) => ({
-    title: t(`wi${i}Title` as any),
-    body: t(`wi${i}Body` as any),
+    title: t(`wi${i}Title` as Key),
+    body: t(`wi${i}Body` as Key),
   }));
 
   const impactStats = [0, 1, 2].map((i) => ({
-    label: t(`impactStat${i}Label` as any),
-    before: t(`impactStat${i}Before` as any),
-    after: t(`impactStat${i}After` as any),
+    label: t(`impactStat${i}Label` as Key),
+    before: t(`impactStat${i}Before` as Key),
+    after: t(`impactStat${i}After` as Key),
   }));
 
   const extendItems = [0, 1, 2].map((i) => ({
-    idea: t(`ext${i}Idea` as any),
-    desc: t(`ext${i}Desc` as any),
+    idea: t(`ext${i}Idea` as Key),
+    desc: t(`ext${i}Desc` as Key),
   }));
 
   return (

@@ -18,18 +18,19 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function WindmillVsN8nPage() {
   const t = await getTranslations("articles.windmillVsN8n");
+  type Key = Parameters<typeof t>[0];
 
   const dailyItems = [0, 1, 2, 3].map((i) => ({
-    label: t(`daily${i}Label` as any),
-    detail: t(`daily${i}Detail` as any),
+    label: t(`daily${i}Label` as Key),
+    detail: t(`daily${i}Detail` as Key),
   }));
 
   const wmReasons = [0, 1, 2, 3, 4].map((i) => ({
-    title: t(`wm${i}Title` as any),
-    body: t(`wm${i}Body` as any),
+    title: t(`wm${i}Title` as Key),
+    body: t(`wm${i}Body` as Key),
   }));
 
-  const n8nSteps = [0, 1, 2, 3, 4, 5].map((i) => t(`n8nStep${i}` as any));
+  const n8nSteps = [0, 1, 2, 3, 4, 5].map((i) => t(`n8nStep${i}` as Key));
 
   return (
     <main className="min-h-screen bg-gray-950 py-16 sm:py-24">

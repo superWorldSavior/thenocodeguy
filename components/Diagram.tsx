@@ -8,7 +8,6 @@ interface DiagramProps {
 }
 
 export default function Diagram({ chart, caption }: DiagramProps) {
-  const ref = useRef<HTMLDivElement>(null);
   const [svg, setSvg] = useState<string>("");
   const id = useRef(`mermaid-${Math.random().toString(36).slice(2)}`);
 

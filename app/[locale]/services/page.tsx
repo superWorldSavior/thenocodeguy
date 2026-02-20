@@ -16,15 +16,16 @@ const icons = [BarChart3, GitBranch, Zap, RefreshCw];
 
 export default async function ServicesPage() {
   const t = await getTranslations("services");
+  type Key = Parameters<typeof t>[0];
 
   const services = [0, 1, 2, 3].map((i) => ({
     icon: icons[i],
-    title: t(`service${i}Title` as any),
-    tagline: t(`service${i}Tagline` as any),
-    description: t(`service${i}Desc` as any),
-    deliverables: [0, 1, 2, 3].map((d) => t(`service${i}D${d}` as any)),
-    price: t(`service${i}Price` as any),
-    cta: t(`service${i}Cta` as any),
+    title: t(`service${i}Title` as Key),
+    tagline: t(`service${i}Tagline` as Key),
+    description: t(`service${i}Desc` as Key),
+    deliverables: [0, 1, 2, 3].map((d) => t(`service${i}D${d}` as Key)),
+    price: t(`service${i}Price` as Key),
+    cta: t(`service${i}Cta` as Key),
   }));
 
   return (

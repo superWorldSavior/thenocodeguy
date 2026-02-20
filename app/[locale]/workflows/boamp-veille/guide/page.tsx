@@ -5,12 +5,12 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("guides.boamp");
-  const tc = await getTranslations("common");
   return { title: t("metaTitle"), robots: { index: false } };
 }
 
 export default async function BoampGuidePage() {
   const t = await getTranslations("guides.boamp");
+  type Key = Parameters<typeof t>[0];
   const tc = await getTranslations("common");
 
   const metrics = [
@@ -21,15 +21,15 @@ export default async function BoampGuidePage() {
 
   const archSteps = [0, 1, 2, 3, 4].map((i) => ({
     step: String(i + 1),
-    title: t(`arch${i}Title` as any),
-    desc: t(`arch${i}Desc` as any),
+    title: t(`arch${i}Title` as Key),
+    desc: t(`arch${i}Desc` as Key),
   }));
 
-  const prereqs = [0, 1, 2, 3].map((i) => t(`prereq${i}` as any));
+  const prereqs = [0, 1, 2, 3].map((i) => t(`prereq${i}` as Key));
 
   const adaptItems = [0, 1, 2, 3].map((i) => ({
-    title: t(`adapt${i}Title` as any),
-    desc: t(`adapt${i}Desc` as any),
+    title: t(`adapt${i}Title` as Key),
+    desc: t(`adapt${i}Desc` as Key),
   }));
 
   return (

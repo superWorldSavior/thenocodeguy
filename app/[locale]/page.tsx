@@ -1,33 +1,55 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Zap, GitBranch, BarChart3, Shield, Quote } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  MessageSquare,
+  Briefcase,
+  FileText,
+  Globe,
+  Quote,
+  CircleDot,
+  Link2,
+  Rocket,
+  BadgeCheck,
+} from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home");
   return {
-    title: "TheNoCodeGuy — On automatise ce que vous répétez",
-    description:
-      "Agence d'automatisation IA agentique. Workflows sur mesure, lead gen automatisée, audit process. Livraison clé en main.",
+    title: `TheNoCodeGuy — ${t("heroHighlight")}`,
+    description: t("heroSubtitle"),
     openGraph: {
-      title: "TheNoCodeGuy — On automatise ce que vous répétez",
-      description: "Agence d'automatisation IA agentique. Workflows sur mesure, livraison clé en main.",
+      title: `TheNoCodeGuy — ${t("heroHighlight")}`,
+      description: t("heroSubtitle"),
       url: "https://thenocodeguy.com",
     },
   };
 }
 
-const serviceIcons = [BarChart3, GitBranch, Zap];
+const agentIcons = [Briefcase, FileText, Globe];
+const howIcons = [CircleDot, Link2, Rocket];
 
 export default async function HomePage() {
   const t = await getTranslations("home");
+  type Key = Parameters<typeof t>[0];
 
-  const services = [
-    { icon: serviceIcons[0], title: t("service0Title"), description: t("service0Desc") },
-    { icon: serviceIcons[1], title: t("service1Title"), description: t("service1Desc") },
-    { icon: serviceIcons[2], title: t("service2Title"), description: t("service2Desc") },
-  ];
+  const agents = [0, 1, 2].map((i) => ({
+    icon: agentIcons[i],
+    name: t(`agent${i}Name` as Key),
+    role: t(`agent${i}Role` as Key),
+    desc: t(`agent${i}Desc` as Key),
+    connectors: [0, 1, 2, 3].map((j) => t(`agent${i}Connector${j}` as Key)),
+  }));
+
+  const agentSlugs = ["commercial", "admin", "webmaster"];
+
+  const howSteps = [0, 1, 2].map((i) => ({
+    icon: howIcons[i],
+    title: t(`how${i}Title` as Key),
+    desc: t(`how${i}Desc` as Key),
+  }));
 
   const stats = [
     { value: t("statsValue0"), label: t("statsLabel0") },
@@ -45,38 +67,33 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden px-4 py-24 sm:px-6 sm:py-32">
-        <Image
-          src="/images/hero.png"
-          alt=""
-          fill
-          className="pointer-events-none object-cover opacity-15"
-          priority
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-gray-950/80 via-gray-950/60 to-gray-950/80" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-950/40 via-gray-950 to-gray-950" />
         <div className="relative mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
             <Zap className="h-3.5 w-3.5" />
             {t("badge")}
           </div>
-          <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-            {t("heroTitle")}{" "}
+          <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            {t("heroTitle")}
+          </h1>
+          <p className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               {t("heroHighlight")}
             </span>
-          </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-400 sm:text-xl">
+          </p>
+          <p className="mx-auto mb-10 mt-6 max-w-2xl text-lg text-gray-400 sm:text-xl">
             {t("heroSubtitle")}
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
-              href="/contact"
+              href="/agents"
               className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-base font-semibold text-gray-950 transition-colors hover:bg-emerald-400"
             >
               {t("ctaPrimary")}
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/services"
+              href="/pricing"
               className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-base text-gray-300 transition-colors hover:border-emerald-500/50 hover:text-white"
             >
               {t("ctaSecondary")}
@@ -85,34 +102,66 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Agents */}
       <section className="px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("servicesTitle")}</h2>
-            <p className="text-gray-400">{t("servicesSubtitle")}</p>
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("agentsTitle")}</h2>
+            <p className="text-gray-400">{t("agentsSubtitle")}</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="rounded-xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-emerald-500/30 hover:bg-white/[0.07]"
+            {agents.map((agent, i) => (
+              <Link
+                key={agent.name}
+                href={`/agents/${agentSlugs[i]}`}
+                className="group rounded-xl border border-white/10 bg-white/5 p-6 transition-all hover:border-emerald-500/30 hover:bg-white/[0.07]"
               >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
-                  <s.icon className="h-5 w-5 text-emerald-400" />
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10">
+                  <agent.icon className="h-6 w-6 text-emerald-400" />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold">{s.title}</h3>
-                <p className="text-sm text-gray-400">{s.description}</p>
-              </div>
+                <h3 className="mb-1 text-lg font-bold text-white">{agent.name}</h3>
+                <p className="mb-3 text-sm font-medium text-emerald-400">{agent.role}</p>
+                <p className="mb-4 text-sm text-gray-400">{agent.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {agent.connectors.map((c) => (
+                    <span
+                      key={c}
+                      className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-gray-400"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4 flex items-center gap-1 text-sm text-emerald-400 opacity-0 transition-opacity group-hover:opacity-100">
+                  <span>{t("seeAllAgents")}</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </div>
+              </Link>
             ))}
           </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300"
-            >
-              {t("seeAllServices")} <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("howTitle")}</h2>
+            <p className="text-gray-400">{t("howSubtitle")}</p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-3">
+            {howSteps.map((step, i) => (
+              <div key={step.title} className="text-center">
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10">
+                  <step.icon className="h-6 w-6 text-emerald-400" />
+                </div>
+                <div className="mb-2 text-sm font-bold text-emerald-400">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="mb-2 text-xl font-bold">{step.title}</h3>
+                <p className="text-sm text-gray-400">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -152,10 +201,34 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Pricing teaser */}
+      <section className="px-4 py-12 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col items-center justify-between gap-6 rounded-xl border border-white/10 bg-white/5 p-8 sm:flex-row">
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10">
+                <BadgeCheck className="h-6 w-6 text-emerald-400" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">{t("pricingTeaser")}</p>
+                <p className="text-2xl font-bold text-white">{t("pricingTeaserPrice")}</p>
+              </div>
+            </div>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 rounded-lg border border-emerald-500/50 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/20"
+            >
+              {t("pricingTeaserCta")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="px-4 py-24 sm:px-6">
         <div className="mx-auto max-w-3xl rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-900/30 to-transparent p-10 text-center">
-          <Shield className="mx-auto mb-6 h-10 w-10 text-emerald-400" />
+          <MessageSquare className="mx-auto mb-6 h-10 w-10 text-emerald-400" />
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
             {t("ctaSectionTitle")}
           </h2>

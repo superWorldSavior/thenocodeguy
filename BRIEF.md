@@ -1,42 +1,52 @@
-# TheNoCodeGuy.com — Site Brief
+# TheNoCodeGuy.com — The No Code Guys
 
 ## Positionnement
-Agence d'automatisation IA agentique. Cible : PME, entrepreneurs, indépendants qui veulent automatiser leurs processus répétitifs (lead gen, CRM, contenu, ops) via des workflows no-code sur mesure, livrés clé en main.
+**Agent-as-a-Service.** The No Code Guys vend des agents IA autonomes déployés sur WhatsApp, clé en main.
+'The No Code Guys' = une équipe d'agents IA que tu engages comme des collègues. Ils travaillent 24/7 via WhatsApp.
 
 ## Tagline
-"On automatise ce que vous répétez" (ou variante percutante)
+"N'engagez pas un consultant. Engagez un No Code Guy."
 
-## Services proposés
-1. **Audit automatisation** — analyse des process, recommandations concrètes (offre d'entrée)
-2. **Workflows sur mesure** — n8n, Make, Zapier + couche IA agentique
-3. **Lead Generation automatisée** — pipelines de prospection automatisés
-4. **Maintenance & évolution** — suivi mensuel des flows en prod
+## Agents
+1. **The No Code Commercial** — prospection LinkedIn, relances email, suivi CRM
+2. **The No Code Admin** — tri factures, reporting, rappels échéances, emails admin
+3. **The No Code Webmaster** — gestion site Vercel, dashboards Windmill Apps, analytics Umami
+
+## Pricing
+- **Starter** 99 € HT/mois — 1 agent, fair use, pas de limites fixes
+- Pas d'engagement, annulation à tout moment
+- Fair use : usage normal illimité, pas de quotas artificiels
+
+Angle de vente : "Moins cher qu'un stagiaire, disponible 24/7"
 
 ## Stack technique du site
-- Next.js 15 (App Router)
+- Next.js 16+ (App Router)
 - TypeScript
 - Tailwind CSS v4
 - shadcn/ui components
+- next-intl v4 (4 locales : fr, en, zh-TW, zh-CN)
 - Déploiement : Vercel
 
-## Pages à créer
-1. **Home** — hero fort, value prop claire, 3 services, social proof (testimonial placeholder), CTA
-2. **Services** — détail des 4 offres avec prix (placeholder ou "sur devis")
-3. **À propos** — présentation de l'agence (ton professionnel mais humain)
-4. **Contact** — formulaire simple (nom, email, message, besoin) + lien calendly placeholder
+## Pages
+1. **Home** — hero "Engagez un No Code Guy", 3 agents, comment ça marche, testimonials, CTA
+2. **Agents** — listing des 3 agents avec cards détaillées
+3. **Agents/Commercial** — page dédiée The No Code Commercial
+4. **Agents/Admin** — page dédiée The No Code Admin
+5. **Agents/Webmaster** — page dédiée The No Code Webmaster
+6. **Pricing** — Starter 99 € HT/mois, fair use, FAQ
+7. **Contact** — formulaire de contact
+8. *(legacy, hors nav)* Services, Lab, Workflows, À propos, Audit
 
 ## Style
-- Moderne, tech mais accessible
-- Palette : dark avec accents néon (vert ou violet) — vibe "automatisation IA"
-- Pas de stock photos génériques — utiliser des illustrations SVG ou formes géométriques
+- Dark theme : fond gray-950, accents emerald-400/500
+- Icônes Lucide uniquement
+- Pas de stock photos — illustrations géométriques / SVG
+- Mobile-first responsive
 
 ## Contraintes
-- Entièrement statique/SSG si possible (pas de backend nécessaire pour le formulaire de contact — utiliser formspree.io ou similaire)
-- SEO de base (meta title, description, og tags sur chaque page)
-- Mobile-first responsive
+- Zéro lien GitHub sur le site
+- Zéro placeholder visible
+- Tous textes via i18n (useTranslations / getTranslations)
+- Chaque page : metadata title + description + OpenGraph
 - Performance : Lighthouse > 90
-
-## Livrables attendus
-- Site complet et fonctionnel
-- vercel.json si nécessaire
-- README avec instructions de déploiement
+- npm run build DOIT passer sans erreur
