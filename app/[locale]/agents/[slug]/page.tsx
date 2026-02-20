@@ -40,9 +40,7 @@ const AGENTS: Record<string, {
 
 const VALID_SLUGS = Object.keys(AGENTS);
 
-export async function generateStaticParams() {
-  return VALID_SLUGS.map((slug) => ({ slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
