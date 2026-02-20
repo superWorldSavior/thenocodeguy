@@ -12,34 +12,36 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-const AGENTS = {
+const AGENTS: Record<string, {
+  icon: typeof Briefcase;
+  workflowCount: number;
+  connectorCount: number;
+  chatExchanges: number;
+}> = {
   commercial: {
     icon: Briefcase,
-    key: "commercial" as const,
     workflowCount: 5,
     connectorCount: 6,
     chatExchanges: 2,
   },
   admin: {
     icon: FileText,
-    key: "admin" as const,
     workflowCount: 5,
     connectorCount: 6,
     chatExchanges: 2,
   },
   webmaster: {
     icon: Globe,
-    key: "webmaster" as const,
     workflowCount: 5,
     connectorCount: 6,
     chatExchanges: 2,
   },
 };
 
-type AgentSlug = keyof typeof AGENTS;
+const VALID_SLUGS = Object.keys(AGENTS);
 
 export async function generateStaticParams() {
-  return Object.keys(AGENTS).map((slug) => ({ slug }));
+  return VALID_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -48,12 +50,10 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  if (!(slug in AGENTS)) return {};
+  if (!VALID_SLUGS.includes(slug)) return {};
   const t = await getTranslations("agents");
-  type MetaKey = Parameters<typeof t>[0];
-  const key = slug as AgentSlug;
-  const name = t(`${AGENTS[key].key}.name` as MetaKey);
-  const desc = t(`${AGENTS[key].key}.heroSubtitle` as MetaKey);
+  const name = t.has(`${slug}.name`) ? t(`${slug}.name`) : slug;
+  const desc = t.has(`${slug}.heroSubtitle`) ? t(`${slug}.heroSubtitle`) : "";
   return {
     title: `${name} — The No Code Guys`,
     description: desc,
@@ -67,26 +67,34 @@ export default async function AgentDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  if (!(slug in AGENTS)) notFound();
+  if (!VALID_SLUGS.includes(slug)) notFound();
 
-  const agent = AGENTS[slug as AgentSlug];
+  const agent = AGENTS[slug];
   const t = await getTranslations("agents");
-  type Key = Parameters<typeof t>[0];
   const Icon = agent.icon;
 
-  const name = t(`${agent.key}.name` as Key);
-  const role = t(`${agent.key}.role` as Key);
-  const heroSubtitle = t(`${agent.key}.heroSubtitle` as Key);
+  // Safe translation helper
+  const tr = (key: string, fallback = "") => {
+    try {
+      return t.has(key) ? t(key) : fallback;
+    } catch {
+      return fallback;
+    }
+  };
+
+  const name = tr(`${slug}.name`, slug);
+  const role = tr(`${slug}.role`, "");
+  const heroSubtitle = tr(`${slug}.heroSubtitle`, "");
 
   const workflows = Array.from({ length: agent.workflowCount }, (_, i) =>
-    t(`${agent.key}.workflow${i}` as Key)
+    tr(`${slug}.workflow${i}`, `Workflow ${i + 1}`)
   );
   const connectors = Array.from({ length: agent.connectorCount }, (_, i) =>
-    t(`${agent.key}.connector${i}` as Key)
+    tr(`${slug}.connector${i}`, `Connector ${i + 1}`)
   );
   const chatExchanges = Array.from({ length: agent.chatExchanges }, (_, i) => ({
-    user: t(`${agent.key}.whatsappExample${i}User` as Key),
-    bot: t(`${agent.key}.whatsappExample${i}Bot` as Key),
+    user: tr(`${slug}.whatsappExample${i}User`, "..."),
+    bot: tr(`${slug}.whatsappExample${i}Bot`, "..."),
   }));
 
   return (
@@ -116,11 +124,11 @@ export default async function AgentDetailPage({
             <div className="space-y-10">
               <div>
                 <h2 className="mb-4 text-xl font-bold text-white">
-                  {t("workflowsIncluded")}
+                  {tr("workflowsIncluded", "Workflows inclus")}
                 </h2>
                 <ul className="space-y-3">
-                  {workflows.map((wf) => (
-                    <li key={wf} className="flex items-start gap-3 text-gray-300">
+                  {workflows.map((wf, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-300">
                       <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
                       <span>{wf}</span>
                     </li>
@@ -130,12 +138,12 @@ export default async function AgentDetailPage({
 
               <div>
                 <h2 className="mb-4 text-xl font-bold text-white">
-                  {t("connectorsLabel")}
+                  {tr("connectorsLabel", "Connecteurs compatibles")}
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {connectors.map((c) => (
+                  {connectors.map((c, i) => (
                     <span
-                      key={c}
+                      key={i}
                       className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-gray-300"
                     >
                       {c}
@@ -146,7 +154,7 @@ export default async function AgentDetailPage({
 
               <div className="flex items-center gap-2 text-sm text-gray-400">
                 <MessageSquare className="h-4 w-4 text-emerald-400" />
-                {t("whatsappLabel")}
+                {tr("whatsappLabel", "WhatsApp")}
               </div>
             </div>
 
@@ -159,19 +167,17 @@ export default async function AgentDetailPage({
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white">{name}</div>
-                    <div className="text-xs text-emerald-400">{t("whatsappLabel")}</div>
+                    <div className="text-xs text-emerald-400">{tr("whatsappLabel", "WhatsApp")}</div>
                   </div>
                 </div>
                 <div className="space-y-4">
                   {chatExchanges.map((exchange, i) => (
                     <div key={i} className="space-y-3">
-                      {/* User message */}
                       <div className="flex justify-end">
                         <div className="max-w-[80%] rounded-xl rounded-tr-sm bg-emerald-500/20 px-4 py-2.5">
                           <p className="text-sm text-white">{exchange.user}</p>
                         </div>
                       </div>
-                      {/* Bot response */}
                       <div className="flex justify-start">
                         <div className="max-w-[80%] rounded-xl rounded-tl-sm bg-white/10 px-4 py-2.5">
                           <p className="text-sm text-gray-300">{exchange.bot}</p>
@@ -191,22 +197,22 @@ export default async function AgentDetailPage({
         <div className="mx-auto max-w-3xl rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-900/30 to-transparent p-10 text-center">
           <Zap className="mx-auto mb-6 h-10 w-10 text-emerald-400" />
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            {t("ctaHire")}
+            {tr("ctaHire", "Engager cet agent")}
           </h2>
-          <p className="mb-8 text-gray-400">{t("ctaSubtitle")}</p>
+          <p className="mb-8 text-gray-400">{tr("ctaSubtitle", "")}</p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-8 py-3 text-base font-semibold text-gray-950 transition-colors hover:bg-emerald-400"
             >
-              {t("ctaHire")}
+              {tr("ctaHire", "Engager cet agent")}
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/pricing"
               className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-base text-gray-300 transition-colors hover:border-emerald-500/50 hover:text-white"
             >
-              {t("ctaButton")}
+              {tr("ctaButton", "Voir les tarifs")}
             </Link>
           </div>
         </div>
