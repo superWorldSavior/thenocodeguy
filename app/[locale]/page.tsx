@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   Zap,
-  Users,
   MessageSquare,
   Briefcase,
   FileText,
@@ -12,7 +11,6 @@ import {
   CircleDot,
   Link2,
   Rocket,
-  Clock,
   BadgeCheck,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -35,21 +33,22 @@ const howIcons = [CircleDot, Link2, Rocket];
 
 export default async function HomePage() {
   const t = await getTranslations("home");
+  type Key = Parameters<typeof t>[0];
 
   const agents = [0, 1, 2].map((i) => ({
     icon: agentIcons[i],
-    name: t(`agent${i}Name` as any),
-    role: t(`agent${i}Role` as any),
-    desc: t(`agent${i}Desc` as any),
-    connectors: [0, 1, 2, 3].map((j) => t(`agent${i}Connector${j}` as any)),
+    name: t(`agent${i}Name` as Key),
+    role: t(`agent${i}Role` as Key),
+    desc: t(`agent${i}Desc` as Key),
+    connectors: [0, 1, 2, 3].map((j) => t(`agent${i}Connector${j}` as Key)),
   }));
 
   const agentSlugs = ["commercial", "admin", "webmaster"];
 
   const howSteps = [0, 1, 2].map((i) => ({
     icon: howIcons[i],
-    title: t(`how${i}Title` as any),
-    desc: t(`how${i}Desc` as any),
+    title: t(`how${i}Title` as Key),
+    desc: t(`how${i}Desc` as Key),
   }));
 
   const stats = [

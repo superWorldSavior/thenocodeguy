@@ -25,18 +25,19 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function PricingPage() {
   const t = await getTranslations("pricing");
+  type Key = Parameters<typeof t>[0];
 
   const features = [0, 1, 2, 3, 4, 5].map((i) =>
-    t(`starterFeature${i}` as any)
+    t(`starterFeature${i}` as Key)
   );
 
   const fairUseItems = [0, 1, 2, 3].map((i) =>
-    t(`fairUseItem${i}` as any)
+    t(`fairUseItem${i}` as Key)
   );
 
   const faqs = [0, 1, 2, 3].map((i) => ({
-    q: t(`faq${i}Q` as any),
-    a: t(`faq${i}A` as any),
+    q: t(`faq${i}Q` as Key),
+    a: t(`faq${i}A` as Key),
   }));
 
   return (

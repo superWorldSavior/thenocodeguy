@@ -6,26 +6,26 @@ import { SECURITY_CHECK_BASH } from "@/lib/code-samples/security-check";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("guides.monitoring");
-  const tc = await getTranslations("common");
   return { title: t("metaTitle"), robots: { index: false } };
 }
 
 export default async function MonitoringGuidePage() {
   const t = await getTranslations("guides.monitoring");
+  type Key = Parameters<typeof t>[0];
   const tc = await getTranslations("common");
 
   const checks = [0, 1, 2, 3, 4, 5].map((i) => ({
-    name: t(`check${i}Name` as any),
-    desc: t(`check${i}Desc` as any),
+    name: t(`check${i}Name` as Key),
+    desc: t(`check${i}Desc` as Key),
   }));
 
   const archSteps = [0, 1, 2, 3, 4].map((i) => ({
     step: String(i + 1),
-    title: t(`arch${i}Title` as any),
-    desc: t(`arch${i}Desc` as any),
+    title: t(`arch${i}Title` as Key),
+    desc: t(`arch${i}Desc` as Key),
   }));
 
-  const prereqs = [0, 1, 2, 3].map((i) => t(`prereq${i}` as any));
+  const prereqs = [0, 1, 2, 3].map((i) => t(`prereq${i}` as Key));
 
   return (
     <main className="min-h-screen bg-gray-950 py-16 print:bg-white print:text-black">

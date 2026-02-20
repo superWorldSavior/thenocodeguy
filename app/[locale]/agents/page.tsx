@@ -29,16 +29,17 @@ const agentKeys = ["commercial", "admin", "webmaster"] as const;
 
 export default async function AgentsPage() {
   const t = await getTranslations("agents");
+  type Key = Parameters<typeof t>[0];
 
   const agents = agentKeys.map((key, i) => ({
     icon: agentIcons[i],
     slug: agentSlugs[i],
-    name: t(`${key}.name` as any),
-    role: t(`${key}.role` as any),
-    desc: t(`${key}.desc` as any),
-    heroSubtitle: t(`${key}.heroSubtitle` as any),
-    workflows: [0, 1, 2, 3, 4].map((j) => t(`${key}.workflow${j}` as any)),
-    connectors: [0, 1, 2, 3, 4, 5].map((j) => t(`${key}.connector${j}` as any)),
+    name: t(`${key}.name` as Key),
+    role: t(`${key}.role` as Key),
+    desc: t(`${key}.desc` as Key),
+    heroSubtitle: t(`${key}.heroSubtitle` as Key),
+    workflows: [0, 1, 2, 3, 4].map((j) => t(`${key}.workflow${j}` as Key)),
+    connectors: [0, 1, 2, 3, 4, 5].map((j) => t(`${key}.connector${j}` as Key)),
   }));
 
   return (

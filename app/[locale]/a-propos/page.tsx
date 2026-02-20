@@ -13,19 +13,20 @@ const expertiseIcons = [Brain, GitBranch, Globe, Zap];
 
 export default async function AProposPage() {
   const t = await getTranslations("about");
+  type Key = Parameters<typeof t>[0];
 
   const expertise = [0, 1, 2, 3].map((i) => ({
     icon: expertiseIcons[i],
-    title: t(`exp${i}Title` as any),
-    description: t(`exp${i}Desc` as any),
+    title: t(`exp${i}Title` as Key),
+    description: t(`exp${i}Desc` as Key),
   }));
 
   const stats = [0, 1, 2, 3].map((i) => ({
-    value: t(`stat${i}Value` as any),
-    label: t(`stat${i}Label` as any),
+    value: t(`stat${i}Value` as Key),
+    label: t(`stat${i}Label` as Key),
   }));
 
-  const notItems = [0, 1, 2].map((i) => t(`notItem${i}` as any));
+  const notItems = [0, 1, 2].map((i) => t(`notItem${i}` as Key));
 
   return (
     <div className="px-4 py-20 sm:px-6">

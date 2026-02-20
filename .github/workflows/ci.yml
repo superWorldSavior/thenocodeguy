@@ -39,7 +39,12 @@ jobs:
         run: npm run build
         continue-on-error: false
 
-      # ── 4. i18n completeness ─────────────────────────────────
+      # ── 4. Acceptance Criteria tests ──────────────────────────
+      - name: AC Tests (vitest)
+        run: npx vitest run specs/ac-tests/
+        continue-on-error: false
+
+      # ── 5. i18n completeness ─────────────────────────────────
       - name: i18n — check all locales have same keys
         run: |
           node -e "

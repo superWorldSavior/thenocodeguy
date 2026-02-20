@@ -50,9 +50,10 @@ export async function generateMetadata({
   const { slug } = await params;
   if (!(slug in AGENTS)) return {};
   const t = await getTranslations("agents");
+  type MetaKey = Parameters<typeof t>[0];
   const key = slug as AgentSlug;
-  const name = t(`${AGENTS[key].key}.name` as any);
-  const desc = t(`${AGENTS[key].key}.heroSubtitle` as any);
+  const name = t(`${AGENTS[key].key}.name` as MetaKey);
+  const desc = t(`${AGENTS[key].key}.heroSubtitle` as MetaKey);
   return {
     title: `${name} — The No Code Guys`,
     description: desc,
@@ -70,21 +71,22 @@ export default async function AgentDetailPage({
 
   const agent = AGENTS[slug as AgentSlug];
   const t = await getTranslations("agents");
+  type Key = Parameters<typeof t>[0];
   const Icon = agent.icon;
 
-  const name = t(`${agent.key}.name` as any);
-  const role = t(`${agent.key}.role` as any);
-  const heroSubtitle = t(`${agent.key}.heroSubtitle` as any);
+  const name = t(`${agent.key}.name` as Key);
+  const role = t(`${agent.key}.role` as Key);
+  const heroSubtitle = t(`${agent.key}.heroSubtitle` as Key);
 
   const workflows = Array.from({ length: agent.workflowCount }, (_, i) =>
-    t(`${agent.key}.workflow${i}` as any)
+    t(`${agent.key}.workflow${i}` as Key)
   );
   const connectors = Array.from({ length: agent.connectorCount }, (_, i) =>
-    t(`${agent.key}.connector${i}` as any)
+    t(`${agent.key}.connector${i}` as Key)
   );
   const chatExchanges = Array.from({ length: agent.chatExchanges }, (_, i) => ({
-    user: t(`${agent.key}.whatsappExample${i}User` as any),
-    bot: t(`${agent.key}.whatsappExample${i}Bot` as any),
+    user: t(`${agent.key}.whatsappExample${i}User` as Key),
+    bot: t(`${agent.key}.whatsappExample${i}Bot` as Key),
   }));
 
   return (

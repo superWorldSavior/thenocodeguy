@@ -130,7 +130,7 @@ export default function AuditForm() {
     setSubmitError("");
 
     const taskSummary = results
-      .map((r) => `${r.task.icon} ${t(r.task.labelKey as any)} — ${r.cfg.frequency}, ${formatMinutes(r.cfg.durationMinutes)} → ${Math.round(r.hoursYear)}h/an`)
+      .map((r) => `${r.task.icon} ${t(r.task.labelKey as Parameters<typeof t>[0])} — ${r.cfg.frequency}, ${formatMinutes(r.cfg.durationMinutes)} → ${Math.round(r.hoursYear)}h/an`)
       .join("\n");
 
     const payload = {
@@ -200,7 +200,7 @@ export default function AuditForm() {
         <div className="space-y-2">
           {TASKS.map((task) => {
             const selected = selectedIds.includes(task.id);
-            const label = task.hasTextInput ? t("taskAutre") : t(task.labelKey as any);
+            const label = task.hasTextInput ? t("taskAutre") : t(task.labelKey as Parameters<typeof t>[0]);
             return (
               <div key={task.id} className="space-y-2">
                 <button
@@ -260,7 +260,7 @@ export default function AuditForm() {
         <div className="space-y-6">
           {selectedTasks.map((task) => {
             const cfg = getConfig(task.id);
-            const label = task.id === "autre" && autreText ? autreText : t(task.labelKey as any);
+            const label = task.id === "autre" && autreText ? autreText : t(task.labelKey as Parameters<typeof t>[0]);
             return (
               <div key={task.id} className="rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="mb-4 flex items-center gap-2">
@@ -349,7 +349,7 @@ export default function AuditForm() {
             {results.map(({ task, hoursYear, valueYear }) => {
               const lvl = LEVEL_CONFIG[task.automationLevel];
               const pct = Math.min(100, (hoursYear / (totalHoursYear || 1)) * 100);
-              const label = task.id === "autre" && autreText ? autreText : t(task.labelKey as any);
+              const label = task.id === "autre" && autreText ? autreText : t(task.labelKey as Parameters<typeof t>[0]);
               return (
                 <div key={task.id} className="rounded-xl border border-white/10 bg-white/5 p-4">
                   <div className="mb-2 flex items-center justify-between gap-2">

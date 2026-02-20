@@ -5,7 +5,6 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("guides.linkedin");
-  const tc = await getTranslations("common");
   return { title: t("metaTitle"), robots: { index: false } };
 }
 
@@ -20,21 +19,22 @@ const templateExamples = [
 
 export default async function LinkedinGuidePage() {
   const t = await getTranslations("guides.linkedin");
+  type Key = Parameters<typeof t>[0];
   const tc = await getTranslations("common");
 
   const templates = [0, 1, 2, 3, 4, 5].map((i) => ({
     id: String(i),
-    label: t(`tpl${i}Label` as any),
+    label: t(`tpl${i}Label` as Key),
     example: templateExamples[i],
   }));
 
   const archSteps = [0, 1, 2, 3, 4].map((i) => ({
     step: String(i + 1),
-    title: t(`arch${i}Title` as any),
-    desc: t(`arch${i}Desc` as any),
+    title: t(`arch${i}Title` as Key),
+    desc: t(`arch${i}Desc` as Key),
   }));
 
-  const prereqs = [0, 1, 2, 3].map((i) => t(`prereq${i}` as any));
+  const prereqs = [0, 1, 2, 3].map((i) => t(`prereq${i}` as Key));
 
   return (
     <main className="min-h-screen bg-gray-950 py-16 print:bg-white print:text-black">
