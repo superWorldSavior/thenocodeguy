@@ -125,4 +125,4 @@ Une story est "Ready" (prête pour un sprint) quand :
 ---
 
 *Document vivant — mis à jour par David Aames lors des backlog refinements.*
-*Dernière mise à jour : 2026-02-20*
+*Dernière mise à jour : 2026-02-21*
