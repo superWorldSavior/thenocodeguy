@@ -75,6 +75,13 @@ export default function Navigation() {
             </Link>
           ))}
           <Link
+            href="/audit"
+            onClick={() => setOpen(false)}
+            className="mt-2 block rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-center text-sm font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/20"
+          >
+            Audit gratuit →
+          </Link>
+          <Link
             href="/contact"
             onClick={() => setOpen(false)}
             className="mt-2 block rounded-lg bg-emerald-500 px-4 py-2 text-center text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
