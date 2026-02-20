@@ -12,6 +12,7 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
+
 export default function Navigation() {
   const [open, setOpen] = useState(false);
 
@@ -26,7 +27,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -36,6 +37,12 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
+          <Link
+            href="/audit"
+            className="rounded-lg border border-emerald-500/50 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/20 hover:text-emerald-300"
+          >
+            Audit gratuit →
+          </Link>
           <Link
             href="/contact"
             className="rounded-lg bg-emerald-500 px-4 py-2 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
