@@ -220,7 +220,19 @@
     "securityItem1Title": "GDPR 合規",
     "securityItem1Desc": "資料處理符合 GDPR 規範，保障存取、更正和刪除的權利。",
     "securityItem2Title": "資料隔離",
-    "securityItem2Desc": "每位客戶擁有獨立的環境，帳號之間不共享任何資料。"
+    "securityItem2Desc": "每位客戶擁有獨立的環境，帳號之間不共享任何資料。",
+    "faq4Q": "WhatsApp 通訊如何運作？",
+    "faq4A": "您的 AI 代理連接到專屬的 WhatsApp Business 號碼。您透過訊息發送指令，它會自動執行任務：跟進、報告、CRM 更新等。",
+    "faq5Q": "支援哪些語言？",
+    "faq5A": "我們的 AI 代理能理解並回應法語、英語、繁體中文和簡體中文。可根據需求新增其他語言。",
+    "faq6Q": "我可以隨時取消嗎？",
+    "faq6A": "是的，無需長期合約。您可以在每月底取消。沒有隱藏費用，沒有違約金。",
+    "faq7Q": "有哪些工具和整合可用？",
+    "faq7A": "我們的代理可連接 100+ 種工具：CRM（HubSpot、Pipedrive）、Google Workspace、Slack、Notion、Airtable 等，透過 API 或 Make/n8n。",
+    "faq8Q": "包含哪些支援？",
+    "faq8A": "所有方案均包含電子郵件和 WhatsApp 支援。工作日 24 小時內回覆。設置時提供個人化引導。",
+    "faq9Q": "多快可以看到成果？",
+    "faq9A": "首批工作流程在啟動後 48-72 小時內即可運行。具體成果（節省時間、合格潛在客戶）在第一週內即可見。"
   },
   "services": {
     "metaTitle": "服務 — 客製化 AI 自動化",

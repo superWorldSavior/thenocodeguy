@@ -220,7 +220,19 @@
     "securityItem1Title": "Conformité RGPD",
     "securityItem1Desc": "Traitement des données conforme au RGPD. Droit d'accès, de rectification et de suppression garantis.",
     "securityItem2Title": "Isolation des données",
-    "securityItem2Desc": "Chaque client dispose d'un environnement isolé. Aucun partage de données entre comptes."
+    "securityItem2Desc": "Chaque client dispose d'un environnement isolé. Aucun partage de données entre comptes.",
+    "faq4Q": "Comment fonctionne la communication via WhatsApp ?",
+    "faq4A": "Votre agent IA est connecté à un numéro WhatsApp Business dédié. Vous lui envoyez des instructions par message et il exécute les tâches automatiquement : relances, rapports, mise à jour CRM, etc.",
+    "faq5Q": "Quelles langues sont supportées ?",
+    "faq5A": "Nos agents IA comprennent et répondent en français, anglais, chinois traditionnel et simplifié. D'autres langues peuvent être ajoutées sur demande.",
+    "faq6Q": "Puis-je résilier à tout moment ?",
+    "faq6A": "Oui, sans engagement. Vous pouvez résilier à la fin de chaque mois. Aucun frais caché, aucune pénalité.",
+    "faq7Q": "Quels outils et intégrations sont disponibles ?",
+    "faq7A": "Nos agents se connectent à plus de 100 outils : CRM (HubSpot, Pipedrive), Google Workspace, Slack, Notion, Airtable, et bien d'autres via API ou Make/n8n.",
+    "faq8Q": "Quel support est inclus ?",
+    "faq8A": "Support par email et WhatsApp inclus dans tous les plans. Temps de réponse sous 24h en jours ouvrés. Un onboarding personnalisé est fourni à la mise en place.",
+    "faq9Q": "Combien de temps pour voir les premiers résultats ?",
+    "faq9A": "Les premiers workflows sont opérationnels en 48-72h après le kick-off. Les résultats concrets (gain de temps, leads qualifiés) sont visibles dès la première semaine."
   },
   "services": {
     "metaTitle": "Services — Automatisation IA sur mesure",
