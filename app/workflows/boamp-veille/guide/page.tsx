@@ -27,7 +27,7 @@ export default function BoampGuidePage() {
               <Search className="h-6 w-6 text-blue-400" />
             </div>
             <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300">
-              Windmill · Python · Email
+              Windmill · TypeScript · API BOAMP
             </span>
           </div>
           <h1 className="mb-3 text-3xl font-bold text-white print:text-black sm:text-4xl">
@@ -105,55 +105,83 @@ export default function BoampGuidePage() {
 
         {/* Code */}
         <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-white print:text-black">Script principal (Python/Bun)</h2>
+          <h2 className="mb-6 text-xl font-bold text-white print:text-black">Script principal (TypeScript / Bun)</h2>
           <div className="rounded-xl border border-white/10 bg-gray-900 p-5 print:border-gray-300">
             <div className="mb-3 flex items-center gap-2 text-xs text-gray-500">
               <Terminal className="h-4 w-4" />
-              <span>windmill · f/veille/boamp_daily</span>
+              <span>windmill · f/openclaw/veille_opportunites</span>
             </div>
             <pre className="overflow-x-auto text-sm text-gray-300 print:text-gray-800">
-{`import httpx
-from datetime import date, timedelta
+{`const HIGH_VALUE = [
+  "intelligence artificielle", "agent ia", "agentic", "mcp",
+  "knowledge management", "knowledge graph", "rag",
+  "workflow ia", "automatisation ia"
+];
+const MEDIUM_VALUE = [
+  "automatisation", "transformation digitale",
+  "systeme information", "data", "erp"
+];
+const SECTORS = [
+  "aeronautique", "aerospace", "defense", "industrie",
+  "manufacturing", "energie", "dgac", "dga"
+];
 
-KEYWORDS = ["intelligence artificielle", "automatisation", 
-            "transformation numérique", "no-code"]
+function score(titre: string, acheteur: string): number {
+  const text = (titre + " " + acheteur).toLowerCase();
+  let s = 0;
+  for (const kw of HIGH_VALUE)  if (text.includes(kw)) s += 3;
+  for (const kw of MEDIUM_VALUE) if (text.includes(kw)) s += 1;
+  for (const kw of SECTORS)     if (text.includes(kw)) s += 2;
+  return s;
+}
 
-async def main(email_to: str = "erwan@thenocodeguy.com"):
-    yesterday = (date.today() - timedelta(days=1)).isoformat()
-    
-    async with httpx.AsyncClient() as client:
-        r = await client.get(
-            "https://api.boamp.fr/api/explore/v2.1/catalog/"
-            "datasets/boamp/records",
-            params={
-                "where": f"dateparution >= date'{yesterday}'",
-                "limit": 100,
-                "select": "idweb,objet,dateparution,datelimitereponse,url"
-            }
-        )
-        records = r.json().get("results", [])
-    
-    # Filtrage par mots-clés
-    matches = [
-        rec for rec in records
-        if any(kw.lower() in (rec.get("objet") or "").lower()
-               for kw in KEYWORDS)
-    ]
-    
-    if not matches:
-        return {"sent": False, "count": 0}
-    
-    # Formater et envoyer l'email digest
-    html = format_digest(matches)
-    send_email(to=email_to, subject=f"BOAMP Veille — {len(matches)} opportunité(s)", html=html)
-    
-    return {"sent": True, "count": len(matches)}`}
+export async function main() {
+  const BASE =
+    "https://boamp-datadila.opendatasoft.com/api/explore/v2.1/" +
+    "catalog/datasets/boamp/records";
+  const keywords = [
+    "intelligence artificielle", "automatisation",
+    "knowledge management", "transformation digitale",
+  ];
+  const seen = new Set<string>();
+  const items: any[] = [];
+
+  for (const kw of keywords) {
+    try {
+      const url =
+        \`\${BASE}?where=objet%20like%20%22\${encodeURIComponent(kw)}%22\` +
+        \`&limit=10&order_by=dateparution%20DESC\` +
+        \`&select=objet%2Cdateparution%2Cnomacheteur%2Cidweb%2Curl_avis\`;
+      const resp = await fetch(url, { headers: { Accept: "application/json" } });
+      if (!resp.ok) continue;
+      const data = await resp.json();
+      for (const r of data.results ?? []) {
+        if (!r.idweb || seen.has(r.idweb)) continue;
+        seen.add(r.idweb);
+        // Garder uniquement les 3 derniers jours
+        const ageMs = Date.now() - new Date(r.dateparution).getTime();
+        if (ageMs > 3 * 24 * 60 * 60 * 1000) continue;
+        const titre = (r.objet ?? "").replace(/\\n/g, " ").substring(0, 150);
+        items.push({
+          titre,
+          date:     r.dateparution,
+          acheteur: r.nomacheteur ?? "N/A",
+          url:      r.url_avis ?? \`https://www.boamp.fr/avis/detail/\${r.idweb}\`,
+          score:    score(titre, r.nomacheteur ?? ""),
+        });
+      }
+    } catch (_e) { /* skip keyword on error */ }
+  }
+
+  // Top 5 par score de pertinence
+  const top = items.sort((a, b) => b.score - a.score).slice(0, 5);
+  return { scanned: items.length, top, timestamp: new Date().toISOString() };
+}`}
             </pre>
           </div>
           <p className="mt-3 text-sm text-gray-500">
-            Le code complet avec <code className="text-blue-400">format_digest()</code> et{" "}
-            <code className="text-blue-400">send_email()</code> est disponible sur demande —{" "}
-            <Link href="/contact" className="text-emerald-400 hover:underline">contactez-moi</Link>.
+            Ce script tourne sur Windmill (runtime Bun). Il interroge l&apos;API publique BOAMP,
+            filtre les annonces de moins de 3 jours et les classe par score de pertinence métier.
           </p>
         </section>
 
