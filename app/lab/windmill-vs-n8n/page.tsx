@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, FlaskConical } from "lucide-react";
-import dynamic from "next/dynamic";
-
-const Diagram = dynamic(() => import("@/components/Diagram"), { ssr: false });
+import { stackArchitectureElements } from "@/lib/diagrams/stack-architecture";
+import ExcalidrawDiagram from "@/components/ExcalidrawDiagram";
 
 export const metadata: Metadata = {
   title: "Pourquoi j'utilise Windmill et pas n8n (vu de l'intérieur) — Lab TheNoCodeGuy",
@@ -146,24 +145,10 @@ export default function WindmillVsN8nPage() {
           </section>
 
           {/* ---- Diagramme architecture ---- */}
-          <Diagram
-            chart={`flowchart LR
-    OC["🤖 OpenClaw\\n(Agent IA)"]
-    WM["⚙️ Windmill\\n(Orchestrateur)"]
-    DB[("🗄️ Base de\\ndonnées")]
-    APIs["🌐 APIs externes\\n(Graph, Umami...)"]
-    WA["📱 WhatsApp\\n(Erwan)"]
-
-    OC -->|"déclenche script"| WM
-    WM -->|"exécute"| APIs
-    WM -->|"lit/écrit"| DB
-    WM -->|"résultat"| OC
-    OC -->|"alerte si besoin"| WA
-
-    style OC fill:#064e3b,stroke:#10b981,color:#fff
-    style WM fill:#1e3a5f,stroke:#3b82f6,color:#fff
-    style WA fill:#064e3b,stroke:#10b981,color:#fff`}
+          <ExcalidrawDiagram
+            elements={stackArchitectureElements}
             caption="Architecture de ma stack — OpenClaw orchestre, Windmill exécute"
+            height={380}
           />
 
           {/* ---- 3. Pourquoi Windmill ---- */}
