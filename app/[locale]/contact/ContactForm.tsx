@@ -103,6 +103,7 @@ export default function ContactForm() {
                 <option value="workflow">{t("needWorkflow")}</option>
                 <option value="leadgen">{t("needLeadgen")}</option>
                 <option value="maintenance">{t("needMaintenance")}</option>
+                <option value="agent">{t("needAgent")}</option>
                 <option value="other">{t("needOther")}</option>
               </select>
             </div>

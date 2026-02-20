@@ -20,7 +20,6 @@ export default function Navigation() {
   const params = useParams();
   const currentLocale = (params?.locale as string) ?? "fr";
 
-  // Compute the clean path (without locale prefix) to build locale-switch URLs
   const getCleanPath = () => {
     if (currentLocale === "fr") return pathname || "/";
     const prefix = `/${currentLocale}`;
@@ -36,23 +35,19 @@ export default function Navigation() {
     return `/${locale}${clean === "/" ? "" : clean}`;
   };
 
+  const prefixHref = (href: string) =>
+    currentLocale === "fr" ? href : `/${currentLocale}${href === "/" ? "" : href}`;
+
   const links = [
     { href: "/", label: t("home") },
-    { href: "/services", label: t("services") },
-    { href: "/workflows", label: t("workflows") },
-    { href: "/lab", label: t("lab") },
-    { href: "/a-propos", label: t("about") },
+    { href: "/agents", label: t("agents") },
+    { href: "/pricing", label: t("pricing") },
     { href: "/contact", label: t("contact") },
   ];
 
-  // For non-FR locales, prefix hrefs
-  const prefixedLinks = links.map((l) => ({
-    ...l,
-    href: currentLocale === "fr" ? l.href : `/${currentLocale}${l.href === "/" ? "" : l.href}`,
-  }));
+  const prefixedLinks = links.map((l) => ({ ...l, href: prefixHref(l.href) }));
 
-  const auditHref = currentLocale === "fr" ? "/audit" : `/${currentLocale}/audit`;
-  const contactHref = currentLocale === "fr" ? "/contact" : `/${currentLocale}/contact`;
+  const contactHref = prefixHref("/contact");
 
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-gray-950/80 backdrop-blur-md">
@@ -78,12 +73,6 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href={auditHref}
-            className="rounded-lg border border-emerald-500/50 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/20 hover:text-emerald-300"
-          >
-            {t("audit")}
-          </Link>
           <Link
             href={contactHref}
             className="rounded-lg bg-emerald-500 px-4 py-2 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
@@ -136,13 +125,6 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href={auditHref}
-            onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-center text-sm font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/20"
-          >
-            {t("audit")}
-          </Link>
           <Link
             href={contactHref}
             onClick={() => setOpen(false)}
