@@ -209,7 +209,15 @@
     "faq3A": "Oui. Vos données transitent via des connexions chiffrées. Nous n'accédons qu'aux données nécessaires au fonctionnement de vos workflows. Infrastructure hébergée en Europe.",
     "ctaTitle": "Prêt à déléguer ?",
     "ctaSubtitle": "Choisissez votre agent et il commence à travailler sous 48h.",
-    "ctaButton": "Contacter l'équipe"
+    "ctaButton": "Contacter l'équipe",
+    "securityTitle": "Sécurité & conformité RGPD",
+    "securityDesc": "Vos données sont protégées par des standards de sécurité stricts. Conformité totale avec la réglementation européenne.",
+    "securityItem0Title": "Chiffrement de bout en bout",
+    "securityItem0Desc": "Toutes les communications et données stockées sont chiffrées avec les protocoles les plus récents (AES-256, TLS 1.3).",
+    "securityItem1Title": "Conformité RGPD",
+    "securityItem1Desc": "Traitement des données conforme au RGPD. Droit d'accès, de rectification et de suppression garantis.",
+    "securityItem2Title": "Isolation des données",
+    "securityItem2Desc": "Chaque client dispose d'un environnement isolé. Aucun partage de données entre comptes."
   },
   "services": {
     "metaTitle": "Services — Automatisation IA sur mesure",

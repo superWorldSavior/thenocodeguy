@@ -8,6 +8,9 @@ import {
   ChevronDown,
   Infinity,
   ShieldCheck,
+  Lock,
+  Server,
+  ShieldAlert,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
@@ -121,6 +124,43 @@ export default async function PricingPage() {
               >
                 <ShieldCheck className="h-5 w-5 shrink-0 text-emerald-400" />
                 <span className="text-sm text-gray-300">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security / RGPD */}
+      <section className="px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-10 text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10">
+              <ShieldAlert className="h-6 w-6 text-emerald-400" />
+            </div>
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
+              {t("securityTitle" as Key)}
+            </h2>
+            <p className="mx-auto max-w-2xl text-gray-400">
+              {t("securityDesc" as Key)}
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {[
+              { icon: Lock, titleKey: "securityItem0Title", descKey: "securityItem0Desc" },
+              { icon: ShieldCheck, titleKey: "securityItem1Title", descKey: "securityItem1Desc" },
+              { icon: Server, titleKey: "securityItem2Title", descKey: "securityItem2Desc" },
+            ].map(({ icon: ItemIcon, titleKey, descKey }) => (
+              <div
+                key={titleKey}
+                className="rounded-xl border border-white/10 bg-white/5 p-6 text-center"
+              >
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10">
+                  <ItemIcon className="h-6 w-6 text-emerald-400" />
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-white">
+                  {t(titleKey as Key)}
+                </h3>
+                <p className="text-sm text-gray-400">{t(descKey as Key)}</p>
               </div>
             ))}
           </div>
