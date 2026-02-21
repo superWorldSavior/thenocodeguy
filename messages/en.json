@@ -133,7 +133,8 @@
       "whatsappExample0User": "How many leads this week?",
       "whatsappExample0Bot": "23 new qualified leads this week. 8 opened your emails, 3 replied. Would you like me to follow up with the remaining 5?",
       "whatsappExample1User": "Follow up with the 5",
-      "whatsappExample1Bot": "Done. 5 personalized follow-up emails sent. I'll notify you as soon as there's a reply."
+      "whatsappExample1Bot": "Done. 5 personalized follow-up emails sent. I'll notify you as soon as there's a reply.",
+      "avatar": "/agents/commercial-agent.png"
     },
     "admin": {
       "name": "The No Code Admin",
@@ -154,7 +155,8 @@
       "whatsappExample0User": "Any overdue invoices this month?",
       "whatsappExample0Bot": "3 overdue invoices: Company A (€1,200, +15d), Company B (€890, +7d), Company C (€340, +3d). Would you like me to send reminders?",
       "whatsappExample1User": "Send for A and B",
-      "whatsappExample1Bot": "Reminders sent to Company A and Company B. I'll notify you when the payments are received."
+      "whatsappExample1Bot": "Reminders sent to Company A and Company B. I'll notify you when the payments are received.",
+      "avatar": "/agents/admin-agent.png"
     },
     "webmaster": {
       "name": "The No Code Webmaster",
@@ -175,7 +177,8 @@
       "whatsappExample0User": "How is the site doing today?",
       "whatsappExample0Bot": "100% uptime over the last 24h. 342 unique visitors (+12% vs yesterday). Average load time: 1.2s. No errors detected.",
       "whatsappExample1User": "Send me the weekly report",
-      "whatsappExample1Bot": "Report sent to your email. Summary: 2,140 visitors (+8%), top 3 pages, bounce rate down 5%."
+      "whatsappExample1Bot": "Report sent to your email. Summary: 2,140 visitors (+8%), top 3 pages, bounce rate down 5%.",
+      "avatar": "/agents/webmaster-agent.png"
     }
   },
   "pricing": {
