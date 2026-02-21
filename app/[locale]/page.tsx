@@ -6,12 +6,12 @@ import {
   Briefcase,
   FileText,
   Globe,
-  Quote,
   BadgeCheck,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/organisms/HeroSection";
 import HowItWorksSection from "@/components/organisms/HowItWorksSection";
+import TestimonialsSection from "@/components/organisms/TestimonialsSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home");
@@ -45,12 +45,6 @@ export default async function HomePage() {
     { value: t("statsValue0"), label: t("statsLabel0") },
     { value: t("statsValue1"), label: t("statsLabel1") },
     { value: t("statsValue2"), label: t("statsLabel2") },
-  ];
-
-  const testimonials = [
-    { quote: t("testimonial0Quote"), author: t("testimonial0Author"), role: t("testimonial0Role"), company: t("testimonial0Company"), initials: "AL", color: "bg-primary/10 text-primary" },
-    { quote: t("testimonial1Quote"), author: t("testimonial1Author"), role: t("testimonial1Role"), company: t("testimonial1Company"), initials: "KM", color: "bg-sky-500/20 text-sky-400" },
-    { quote: t("testimonial2Quote"), author: t("testimonial2Author"), role: t("testimonial2Role"), company: t("testimonial2Company"), initials: "JC", color: "bg-violet-500/20 text-violet-400" },
   ];
 
   return (
@@ -113,32 +107,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="px-4 py-20 sm:px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("testimonialsTitle")}</h2>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.author} className="rounded-xl border border-border bg-card p-6">
-                <Quote className="mb-4 h-6 w-6 text-primary/50" />
-                <p className="mb-6 text-sm text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${testimonial.color}`}>
-                    {testimonial.initials}
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-foreground">{testimonial.author}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-xs text-muted-foreground/80">{testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       {/* Pricing teaser */}
       <section className="px-4 py-12 sm:px-6">

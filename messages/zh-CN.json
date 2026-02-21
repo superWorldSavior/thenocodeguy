@@ -799,5 +799,20 @@
     "step3Desc": "您的代理开始工作。无需信用卡，无需承诺。先看效果。",
     "step4Title": "任务启动",
     "step4Desc": "满意？任务通过WhatsApp继续。随时可以取消。"
+  },
+  "testimonials": {
+    "title": "他们雇佣了一个智能代理",
+    "t1Name": "Alice Lambert",
+    "t1Role": "增长负责人",
+    "t1Company": "NovaTech Solutions",
+    "t1Quote": "三周前我雇佣了销售代理。现在我的销售管道中有40多个合格线索——我自己没有发过一封cold邮件。",
+    "t2Name": "Karim Mensah",
+    "t2Role": "运营总监",
+    "t2Company": "KellyAssist",
+    "t2Quote": "自从接入行政代理以来，发票催收和会议安排完全自动化运行。我每周省出了10个小时。",
+    "t3Name": "Jean-Charles Petit",
+    "t3Role": "首席技术官",
+    "t3Company": "CloudNine Digital",
+    "t3Quote": "我们发布了一个网站管理员的需求。48小时后，网站监控、SEO报告和部署全部实现了自动化。"
   }
 }

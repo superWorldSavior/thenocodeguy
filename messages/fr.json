@@ -799,5 +799,20 @@
     "step3Desc": "Votre agent commence à travailler. Sans CB, sans engagement. Voyez les résultats d'abord.",
     "step4Title": "Mission lancée",
     "step4Desc": "Satisfait ? La mission continue via WhatsApp. Résiliation à tout moment."
+  },
+  "testimonials": {
+    "title": "Ils ont recruté un agent",
+    "t1Name": "Alice Lambert",
+    "t1Role": "Responsable Growth",
+    "t1Company": "NovaTech Solutions",
+    "t1Quote": "J'ai recruté l'Agent Commercial il y a trois semaines. Mon pipeline compte maintenant 40+ leads qualifiés — je n'ai pas envoyé un seul email à froid.",
+    "t2Name": "Karim Mensah",
+    "t2Role": "Directeur des opérations",
+    "t2Company": "KellyAssist",
+    "t2Quote": "Depuis l'intégration de mon Agent Admin, les relances factures et la planification de réunions tournent en autopilote. J'ai libéré 10h par semaine.",
+    "t3Name": "Jean-Charles Petit",
+    "t3Role": "CTO",
+    "t3Company": "CloudNine Digital",
+    "t3Quote": "On a posté un brief pour un webmaster. 48h plus tard, le monitoring du site, les rapports SEO et les déploiements étaient entièrement automatisés."
   }
 }

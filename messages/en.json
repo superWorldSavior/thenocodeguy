@@ -799,5 +799,20 @@
     "step3Desc": "Your agent starts working. No credit card, no commitment. See the results first.",
     "step4Title": "Mission starts",
     "step4Desc": "Happy? The mission continues via WhatsApp. Cancel anytime."
+  },
+  "testimonials": {
+    "title": "They hired an agent",
+    "t1Name": "Alice Lambert",
+    "t1Role": "Head of Growth",
+    "t1Company": "NovaTech Solutions",
+    "t1Quote": "I hired the Sales Agent three weeks ago. My pipeline now has 40+ qualified leads — I didn't send a single cold email myself.",
+    "t2Name": "Karim Mensah",
+    "t2Role": "Operations Director",
+    "t2Company": "KellyAssist",
+    "t2Quote": "Since onboarding my Admin Agent, invoice follow-ups and meeting scheduling run on autopilot. I freed up 10 hours a week.",
+    "t3Name": "Jean-Charles Petit",
+    "t3Role": "CTO",
+    "t3Company": "CloudNine Digital",
+    "t3Quote": "We posted a brief for a webmaster. 48 hours later, site monitoring, SEO reports, and deployment were fully automated."
   }
 }
