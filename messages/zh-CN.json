@@ -787,5 +787,17 @@
     "subline": "您发布需求简报。我们匹配自主 AI 代理 — 48 小时内就绪。无需设置、无需培训、无长期合同。",
     "ctaPrimary": "发布招聘简报",
     "ctaSecondary": "了解运作方式"
+  },
+  "testimonials": {
+    "title": "They hired an agent",
+    "t1Name": "Marie Dupont",
+    "t1Role": "CEO, StartupFlow",
+    "t1Quote": "I hired the Sales Agent. Within a week, my pipeline had 40 new qualified leads. I didn't lift a finger.",
+    "t2Name": "Thomas Chen",
+    "t2Role": "Founder, DataBridge",
+    "t2Quote": "The Admin Agent handles my inbox, schedules meetings, and sends weekly reports. It's like having a real assistant.",
+    "t3Name": "Sarah Williams",
+    "t3Role": "CTO, CloudNine",
+    "t3Quote": "We posted a brief for a webmaster. 48 hours later, our site monitoring and SEO was fully automated."
   }
 }
