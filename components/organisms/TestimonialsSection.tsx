@@ -12,8 +12,8 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   { nameKey: "t1Name", roleKey: "t1Role", companyKey: "t1Company", quoteKey: "t1Quote", initials: "AL", avatarClass: "bg-primary/10 text-primary" },
-  { nameKey: "t2Name", roleKey: "t2Role", companyKey: "t2Company", quoteKey: "t2Quote", initials: "KM", avatarClass: "bg-sky-100 text-sky-600" },
-  { nameKey: "t3Name", roleKey: "t3Role", companyKey: "t3Company", quoteKey: "t3Quote", initials: "JC", avatarClass: "bg-violet-100 text-violet-600" },
+  { nameKey: "t2Name", roleKey: "t2Role", companyKey: "t2Company", quoteKey: "t2Quote", initials: "KM", avatarClass: "bg-primary/20 text-primary" },
+  { nameKey: "t3Name", roleKey: "t3Role", companyKey: "t3Company", quoteKey: "t3Quote", initials: "JC", avatarClass: "bg-primary/30 text-primary" },
 ];
 
 export default async function TestimonialsSection() {
