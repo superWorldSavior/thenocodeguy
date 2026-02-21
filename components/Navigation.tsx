@@ -68,14 +68,14 @@ export default function Navigation() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-slate-600 transition-colors hover:text-primary"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href={contactHref}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-indigo-500"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("startProject")}
           </Link>
@@ -128,7 +128,7 @@ export default function Navigation() {
           <Link
             href={contactHref}
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-indigo-500"
+            className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("startProject")}
           </Link>

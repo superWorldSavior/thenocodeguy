@@ -155,7 +155,7 @@ export default async function HomePage() {
             {testimonials.map((testimonial) => (
               <div key={testimonial.author} className="rounded-xl border border-border bg-card p-6">
                 <Quote className="mb-4 h-6 w-6 text-primary/50" />
-                <p className="mb-6 text-sm text-slate-600 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="mb-6 text-sm text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
                   <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${testimonial.color}`}>
                     {testimonial.initials}
@@ -163,7 +163,7 @@ export default async function HomePage() {
                   <div>
                     <div className="text-sm font-semibold text-foreground">{testimonial.author}</div>
                     <div className="text-xs text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-xs text-slate-500">{testimonial.company}</div>
+                    <div className="text-xs text-muted-foreground/80">{testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -198,7 +198,7 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className="px-4 py-24 sm:px-6">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-gradient-to-br from-indigo-50 to-transparent p-10 text-center">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 to-transparent p-10 text-center">
           <MessageSquare className="mx-auto mb-6 h-10 w-10 text-primary" />
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
             {t("ctaSectionTitle")}
@@ -208,7 +208,7 @@ export default async function HomePage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-indigo-500"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("ctaSectionButton")}
             <ArrowRight className="h-4 w-4" />
