@@ -19,3 +19,14 @@ Section visuelle qui explique le processus de recrutement d'un agent en 4 étape
 - Accent color uses indigo CSS variable (--color-primary)
 - Component at components/organisms/HowItWorksSection.tsx
 - Renders correctly light + dark, desktop + mobile
+
+## Block log — 2026-02-21 07:20 UTC
+**Verdict:** CHANGES_REQUESTED — PR #68 from parallel process is broken
+
+1. HowItWorksSection never imported on homepage — feature doesn't render
+2. `howItWorks` i18n keys missing from all locale files — component will crash
+3. Scope creep: PR includes TestimonialsSection (#65), story #63 backlog edits
+4. Untranslated testimonials in fr/zh-CN/zh-TW (English text in non-EN locales)
+5. `as any` TypeScript casts
+
+**Fix:** Start fresh — clean branch with only story #64 scope
