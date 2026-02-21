@@ -19,9 +19,15 @@ export const metadata: Metadata = {
   },
   description:
     "Agence spécialisée en workflows IA agentiques et automatisation no-code. On automatise ce que vous répétez.",
+  metadataBase: new URL("https://thenocodeguy.com"),
   openGraph: {
     siteName: "TheNoCodeGuy",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
   },
 };
 

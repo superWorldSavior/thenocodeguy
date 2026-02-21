@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thenocodeguy.com/sitemap.xml
