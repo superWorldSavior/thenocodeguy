@@ -6,7 +6,6 @@ import {
   Briefcase,
   FileText,
   Globe,
-  Quote,
   CircleDot,
   Link2,
   Rocket,
@@ -146,31 +145,7 @@ export default async function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="px-4 py-20 sm:px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("testimonialsTitle")}</h2>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.author} className="rounded-xl border border-border bg-card p-6">
-                <Quote className="mb-4 h-6 w-6 text-primary/50" />
-                <p className="mb-6 text-sm text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${testimonial.color}`}>
-                    {testimonial.initials}
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-foreground">{testimonial.author}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-xs text-muted-foreground/80">{testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       {/* Pricing teaser */}
       <section className="px-4 py-12 sm:px-6">
