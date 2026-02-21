@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Bot, ArrowRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import ChannelBadges from '@/components/molecules/ChannelBadges'
 
 export default async function HeroSection() {
   const t = await getTranslations('hero')
@@ -41,7 +40,6 @@ export default async function HeroSection() {
                 <Link href="/contact">{t('ctaSecondary')}</Link>
               </Button>
             </div>
-            <ChannelBadges size="md" showLabel={true} className="items-start" />
           </div>
 
           {/* Right column — visual placeholder (decorative, replaced with real asset later) */}
