@@ -805,8 +805,30 @@
     "t3Quote": "On a posté un brief pour un webmaster. 48h plus tard, notre No Code Guy avait automatisé le monitoring, les rapports SEO et les déploiements."
   },
   "profiles": {
-    "title": "Votre prochain No Code Guy",
-    "subtitle": "Chacun construit et exécute des workflows adaptés à votre entreprise. Vous nous briefez, on vous matche."
+    "title": "Profils disponibles",
+    "subtitle": "3 agents IA prêts à l'emploi. Choisissez celui qui correspond à votre besoin.",
+    "agent0Name": "The No Code Commercial",
+    "agent0Role": "Prospection & ventes",
+    "agent0Desc": "Prospecte sur LinkedIn, relance par email, met à jour votre CRM. Votre pipeline commercial tourne même pendant votre sommeil.",
+    "agent0Connector0": "LinkedIn",
+    "agent0Connector1": "Email",
+    "agent0Connector2": "HubSpot",
+    "agent0Connector3": "Zapier",
+    "agent1Name": "The No Code Admin",
+    "agent1Role": "Administration & opérations",
+    "agent1Desc": "Gère vos factures, planifie vos réunions, suit vos dépenses. L'admin en pilote automatique.",
+    "agent1Connector0": "Google Sheets",
+    "agent1Connector1": "Notion",
+    "agent1Connector2": "Stripe",
+    "agent1Connector3": "Agenda",
+    "agent2Name": "The No Code Webmaster",
+    "agent2Role": "Site web & monitoring",
+    "agent2Desc": "Surveille votre site 24h/24, automatise les déploiements, suit les performances et le SEO.",
+    "agent2Connector0": "Vercel",
+    "agent2Connector1": "Windmill",
+    "agent2Connector2": "Umami",
+    "agent2Connector3": "Cloudflare",
+    "viewProfile": "Voir le profil complet"
   },
   "ctaSection": {
     "title": "Prêt à recruter votre premier agent ?",

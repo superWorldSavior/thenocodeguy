@@ -808,5 +808,31 @@
     "title": "准备好招聘您的第一位智能助手了吗？",
     "subtitle": "发布一份简报，描述您需要的角色。我们将在48小时内为您匹配一位AI助手——无需承诺。",
     "button": "发布招聘简报"
+  },
+  "profiles": {
+    "title": "可用档案",
+    "subtitle": "3位AI代理随时待命。选择最适合您需求的那一位。",
+    "agent0Name": "The No Code Commercial",
+    "agent0Role": "获客与销售",
+    "agent0Desc": "在LinkedIn上开发客户，通过邮件跟进，更新您的CRM。即使在您睡觉时，销售管道也在运转。",
+    "agent0Connector0": "LinkedIn",
+    "agent0Connector1": "邮件",
+    "agent0Connector2": "HubSpot",
+    "agent0Connector3": "Zapier",
+    "agent1Name": "The No Code Admin",
+    "agent1Role": "行政与运营",
+    "agent1Desc": "管理发票，安排会议，追踪支出。行政事务全自动。",
+    "agent1Connector0": "Google Sheets",
+    "agent1Connector1": "Notion",
+    "agent1Connector2": "Stripe",
+    "agent1Connector3": "日历",
+    "agent2Name": "The No Code Webmaster",
+    "agent2Role": "网站与监控",
+    "agent2Desc": "全天候监控您的网站，自动化部署，追踪性能和SEO。",
+    "agent2Connector0": "Vercel",
+    "agent2Connector1": "Windmill",
+    "agent2Connector2": "Umami",
+    "agent2Connector3": "Cloudflare",
+    "viewProfile": "查看完整档案"
   }
 }
