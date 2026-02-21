@@ -50,15 +50,15 @@ export default function Navigation() {
   const contactHref = prefixHref("/contact");
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-gray-950/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link
           href={currentLocale === "fr" ? "/" : `/${currentLocale}`}
           className="flex items-center gap-2 text-xl font-bold"
         >
-          <Zap className="h-6 w-6 text-emerald-400" />
-          <span className="text-white">
-            TheNoCode<span className="text-emerald-400">Guy</span>
+          <Zap className="h-6 w-6 text-primary" />
+          <span className="text-foreground">
+            TheNoCode<span className="text-primary">Guy</span>
           </span>
         </Link>
 
@@ -68,34 +68,34 @@ export default function Navigation() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-300 transition-colors hover:text-emerald-400"
+              className="text-sm text-slate-600 transition-colors hover:text-primary"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href={contactHref}
-            className="rounded-lg bg-emerald-500 px-4 py-2 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-indigo-500"
           >
             {t("startProject")}
           </Link>
 
           {/* Locale switcher */}
-          <div className="flex items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-1.5 py-1">
+          <div className="flex items-center gap-1 rounded-lg border border-border bg-muted px-1.5 py-1">
             {LOCALES.map((loc, idx) => (
               <span key={loc.code} className="flex items-center">
                 <Link
                   href={buildLocaleUrl(loc.code)}
                   className={`px-1.5 py-0.5 text-xs font-medium rounded transition-colors ${
                     currentLocale === loc.code
-                      ? "text-emerald-400 bg-emerald-500/10"
-                      : "text-gray-500 hover:text-gray-300"
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {loc.label}
                 </Link>
                 {idx < LOCALES.length - 1 && (
-                  <span className="text-gray-700 text-xs">|</span>
+                  <span className="text-muted-foreground/40 text-xs">|</span>
                 )}
               </span>
             ))}
@@ -104,7 +104,7 @@ export default function Navigation() {
 
         {/* Mobile toggle */}
         <button
-          className="text-gray-300 md:hidden"
+          className="text-foreground md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -114,13 +114,13 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-white/10 bg-gray-950 px-4 pb-4 md:hidden">
+        <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
           {prefixedLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-3 text-gray-300 transition-colors hover:text-emerald-400"
+              className="block py-3 text-foreground transition-colors hover:text-primary"
             >
               {l.label}
             </Link>
@@ -128,13 +128,13 @@ export default function Navigation() {
           <Link
             href={contactHref}
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-emerald-500 px-4 py-2 text-center text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+            className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-indigo-500"
           >
             {t("startProject")}
           </Link>
 
           {/* Mobile locale switcher */}
-          <div className="mt-4 flex items-center gap-2 pt-2 border-t border-white/10">
+          <div className="mt-4 flex items-center gap-2 pt-2 border-t border-border">
             {LOCALES.map((loc) => (
               <Link
                 key={loc.code}
@@ -142,8 +142,8 @@ export default function Navigation() {
                 onClick={() => setOpen(false)}
                 className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
                   currentLocale === loc.code
-                    ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-400"
-                    : "border-white/10 text-gray-500 hover:text-gray-300"
+                    ? "border-primary/50 bg-primary/10 text-primary"
+                    : "border-border text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {loc.label}

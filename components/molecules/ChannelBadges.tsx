@@ -72,8 +72,7 @@ export default async function ChannelBadges({
             aria-label={label}
             className={cn(
               'flex items-center justify-center rounded-full border',
-              'bg-white border-slate-200',
-              'dark:bg-slate-800 dark:border-slate-700',
+              'bg-card border-border',
               wrapper
             )}
             style={{ color }}
