@@ -773,21 +773,21 @@
   "hero": {
     "badge": "AI Staffing Agency",
     "headline": "We place a No Code Guy in your team",
-    "subline": "Custom AI agents, built for your workflows, that evolve with your business. Post a brief, we handle the onboarding.",
+    "subline": "We staff custom AI agents into your team. Post a brief, we handle onboarding. They evolve with your business.",
     "ctaPrimary": "Post a brief",
     "ctaSecondary": "How it works"
   },
   "howItWorks": {
     "title": "How hiring works",
-    "subtitle": "Brief → Onboarding → Trial → Mission. Your agent grows with you.",
+    "subtitle": "Brief → Matching → Trial → Placement. Your No Code Guy grows with you.",
     "step1Title": "Post a brief",
-    "step1Desc": "Describe the role you need: commercial, admin, or webmaster. We review it within 24 hours.",
-    "step2Title": "Onboarding & build",
-    "step2Desc": "We build a custom agent tailored to your workflows. Not off-the-shelf — designed for how you actually work.",
+    "step1Desc": "Describe the role you need filled. We review your brief within 24 hours.",
+    "step2Title": "Matching & onboarding",
+    "step2Desc": "We match you with the right agent profile and onboard them into your workflows. Not off-the-shelf — tailored to your team.",
     "step3Title": "7-day trial",
-    "step3Desc": "Your agent starts working. No credit card, no commitment. See the results first.",
-    "step4Title": "Evolving mission",
-    "step4Desc": "Your agent learns and adapts. New skills, new workflows — it grows with your business. Cancel anytime."
+    "step3Desc": "Your No Code Guy starts working embedded in your team. No commitment — see the results first.",
+    "step4Title": "Long-term placement",
+    "step4Desc": "Happy? The placement continues. Your agent gains new skills and adapts as your business grows. Cancel anytime."
   },
   "testimonials": {
     "title": "They hired a No Code Guy",

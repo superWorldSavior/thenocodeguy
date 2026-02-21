@@ -773,21 +773,21 @@
   "hero": {
     "badge": "Agence de staffing IA",
     "headline": "Nous plaçons un No Code Guy dans votre équipe",
-    "subline": "Des agents IA sur mesure, construits pour vos workflows, qui évoluent avec votre entreprise. Déposez un brief, on gère l'onboarding.",
+    "subline": "On place des agents IA sur mesure dans votre équipe. Déposez un brief, on gère l'onboarding. Ils évoluent avec votre business.",
     "ctaPrimary": "Poster un brief",
     "ctaSecondary": "Comment ça marche"
   },
   "howItWorks": {
     "title": "Comment ça marche",
-    "subtitle": "Brief → Onboarding → Essai → Mission. Votre agent grandit avec vous.",
+    "subtitle": "Brief → Matching → Essai → Placement. Votre No Code Guy grandit avec vous.",
     "step1Title": "Postez un brief",
-    "step1Desc": "Décrivez le poste à pourvoir : commercial, admin ou webmaster. Nous le traitons sous 24h.",
-    "step2Title": "Onboarding & construction",
-    "step2Desc": "On construit un agent sur mesure, adapté à vos workflows. Pas du prêt-à-porter — conçu pour votre façon de travailler.",
+    "step1Desc": "Décrivez le poste à pourvoir. On traite votre brief sous 24h.",
+    "step2Title": "Matching & onboarding",
+    "step2Desc": "On matche le bon profil d'agent et on l'intègre dans vos workflows. Pas du prêt-à-porter — adapté à votre équipe.",
     "step3Title": "7 jours d'essai",
-    "step3Desc": "Votre agent commence à travailler. Sans CB, sans engagement. Voyez les résultats d'abord.",
-    "step4Title": "Mission évolutive",
-    "step4Desc": "Votre agent apprend et s'adapte. Nouveaux skills, nouveaux workflows — il grandit avec votre business. Résiliation libre."
+    "step3Desc": "Votre No Code Guy travaille intégré dans votre équipe. Sans engagement — voyez les résultats d'abord.",
+    "step4Title": "Placement long terme",
+    "step4Desc": "Satisfait ? Le placement continue. Votre agent acquiert de nouvelles compétences et s'adapte à mesure que votre business grandit. Résiliation libre."
   },
   "testimonials": {
     "title": "Ils ont embauché un No Code Guy",
