@@ -7,52 +7,38 @@ labels: [sprint]
 ---
 
 ## Description
-La page /contact remplace le simple formulaire email par un vrai brief de poste structuré, style fiche de poste intérim. Le client décrit son besoin, ses outils, son volume — on a assez d'info pour matcher en 24h.
+Un formulaire de brief simple, style agence d'intérim. Le client décrit le poste et les missions qu'il veut déléguer. On s'occupe du reste.
 
 ## Formulaire — Champs
 
-1. **Informations contact**
-   - Nom / Prénom (text, requis)
+1. **Vous**
+   - Nom (text, requis)
    - Email pro (email, requis)
    - Entreprise (text, requis)
-   - Site web (url, optionnel)
 
-2. **Le poste à pourvoir**
-   - Quel rôle ? (select : Commercial / Admin / Webmaster / Autre)
-   - Si "Autre" → champ texte libre
+2. **Le poste**
+   - Quel type de poste ? (select : Commercial / Administratif / Webmaster / Autre)
 
-3. **Workflows à automatiser** (checkboxes, multi-select)
-   - Prospection & lead gen
-   - Relances email / follow-ups
-   - Gestion inbox & calendrier
-   - Facturation & relances paiement
-   - Monitoring site & uptime
-   - SEO & reporting analytics
-   - Déploiements & maintenance technique
-   - Autre (champ texte)
+3. **Les missions**
+   - Décrivez les missions à confier (textarea, requis)
+   - Placeholder : "Ex: Relancer mes prospects, gérer mes factures, maintenir mon site..."
 
-4. **Environnement**
-   - Outils déjà utilisés (text : "HubSpot, Notion, WordPress...")
-   - Taille de l'équipe (select : Solo / 2-10 / 11-50 / 50+)
-
-5. **Budget & timing**
-   - Budget mensuel envisagé (select : < 200€ / 200-500€ / 500-1000€ / > 1000€ / À discuter)
+4. **Contexte** (optionnel)
+   - Outils que vous utilisez déjà (text, optionnel, placeholder : "HubSpot, Notion, WordPress...")
    - Quand ? (select : ASAP / Ce mois / Ce trimestre / Juste en exploration)
 
-6. **Contexte libre** (textarea, optionnel)
-   - "Décrivez votre besoin en quelques lignes"
-
 ## Acceptance Criteria
-- Page /contact accessible depuis nav principale + tous les CTA "Poster un brief" du site
-- Formulaire structuré avec les 6 sections ci-dessus
+- Page /contact accessible depuis nav + tous les CTA "Poster un brief"
+- Formulaire 4 sections, max 6 champs — simple et rapide
+- Le champ missions (textarea) est le cœur du brief — large et invitant
 - Soumission via Formspree (endpoint meolvdkd) → email hello@thenocodeguy.com
-- Confirmation visuelle après envoi (message de succès inline ou page merci)
-- Cron process_formspree_leads détecte la soumission et alerte WhatsApp si email pro
-- Protection anti-spam (honeypot Formspree)
-- Responsive mobile (form lisible et utilisable sur téléphone)
+- Confirmation après envoi (message inline)
+- Cron process_formspree_leads détecte et alerte WhatsApp si email pro
+- Honeypot anti-spam
+- Responsive mobile
 - Traduit 4 locales (en/fr/zh-TW/zh-CN)
-- Design cohérent Slate+Indigo, shadcn/ui components (Input, Select, Checkbox, Textarea, Button)
+- Design Slate+Indigo, shadcn/ui (Input, Select, Textarea, Button)
 - Validation côté client (champs requis, format email)
 
 ---
-_Updated 2026-02-21 — brief structuré style fiche de poste intérim_
+_Updated 2026-02-21 — simplifié style brief intérim, focus missions_
