@@ -787,5 +787,35 @@
     "subline": "您发布需求简报。我们匹配自主 AI 代理 — 48 小时内就绪。无需设置、无需培训、无长期合同。",
     "ctaPrimary": "发布招聘简报",
     "ctaSecondary": "了解运作方式"
+  },
+  "testimonials": {
+    "title": "They hired an agent",
+    "t1Name": "Marie Dupont",
+    "t1Role": "CEO, StartupFlow",
+    "t1Quote": "I hired the Sales Agent. Within a week, my pipeline had 40 new qualified leads. I didn't lift a finger.",
+    "t2Name": "Thomas Chen",
+    "t2Role": "Founder, DataBridge",
+    "t2Quote": "The Admin Agent handles my inbox, schedules meetings, and sends weekly reports. It's like having a real assistant.",
+    "t3Name": "Sarah Williams",
+    "t3Role": "CTO, CloudNine",
+    "t3Quote": "We posted a brief for a webmaster. 48 hours later, our site monitoring and SEO was fully automated."
+  },
+  "cta": {
+    "title": "准备好雇用你的第一位 AI 代理了吗？",
+    "subtitle": "告诉我们你需要什么角色，我们会在 48 小时内为你配对合适的 AI 代理。",
+    "button": "发布需求",
+    "altText": "或预约免费 20 分钟配对通话"
+  },
+  "howItWorks": {
+    "title": "How hiring works",
+    "subtitle": "From brief to mission in 4 simple steps.",
+    "step1Title": "Post a brief",
+    "step1Desc": "Describe the role, skills needed, and your budget range.",
+    "step2Title": "We match",
+    "step2Desc": "We find the right AI agent for your needs within 24 hours.",
+    "step3Title": "7-day trial",
+    "step3Desc": "Test your agent risk-free. No credit card required.",
+    "step4Title": "Mission starts",
+    "step4Desc": "Your agent is operational. Cancel or adjust anytime."
   }
 }
