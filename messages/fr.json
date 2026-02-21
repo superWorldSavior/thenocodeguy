@@ -350,7 +350,7 @@
     "heroHighlight": "architectes d'automatisation",
     "heroSubtitle": "Pas une agence de templates. On conçoit des systèmes d'automatisation sur mesure qui s'adaptent à votre réalité business — et qui durent.",
     "storyTitle": "Pourquoi TheNoCodeGuy ?",
-    "storyP1": "Le no-code a révolutionné la façon dont les entreprises construisent leurs outils. Mais avec l'IA, il y a eu un saut qualitatif : aujourd'hui, on peut construire des workflows qui prennent des décisions, pas seulement qui exécutent des tâches.",
+    "storyP1": "Le no-code a révolutionné la façon dont les entreprises construisent leurs outils. Mais avec l'IA, il y a eu un saut qualitatif : aujourd'hui, on peut construire des workflows qui ",
     "storyP1Bold": "prennent des décisions",
     "storyP2": "Depuis 2014, on accompagne des entrepreneurs, PME et grandes entreprises dans leur transformation digitale. 200+ sessions livrées. Des dizaines de workflows en production qui tournent 24h/24 sans intervention humaine.",
     "storyP3": "Notre philosophie :",
@@ -381,7 +381,8 @@
     "ctaSubtitle": "Envoyez-nous votre challenge. On vous répond avec une approche concrète.",
     "ctaButton": "Démarrer la conversation",
     "imageAlt": "Erwan Poiraud, fondateur de TheNoCodeGuy",
-    "founderRole": "Fondateur & Consultant IA"
+    "founderRole": "Fondateur & Consultant IA",
+    "storyP1End": ", pas seulement qui exécutent des tâches."
   },
   "contact": {
     "metaTitle": "Contact — Parlons de votre projet",
