@@ -133,7 +133,8 @@
       "whatsappExample0User": "Combien de leads cette semaine ?",
       "whatsappExample0Bot": "23 nouveaux leads qualifiés cette semaine. 8 ont ouvert vos emails, 3 ont répondu. Voulez-vous que je relance les 5 restants ?",
       "whatsappExample1User": "Relance les 5",
-      "whatsappExample1Bot": "C'est fait. 5 emails de relance personnalisés envoyés. Je vous notifie dès qu'il y a une réponse."
+      "whatsappExample1Bot": "C'est fait. 5 emails de relance personnalisés envoyés. Je vous notifie dès qu'il y a une réponse.",
+      "avatar": "/agents/commercial-agent.png"
     },
     "admin": {
       "name": "The No Code Admin",
@@ -154,7 +155,8 @@
       "whatsappExample0User": "Factures en retard ce mois ?",
       "whatsappExample0Bot": "3 factures en retard : Société A (1 200 €, +15j), Société B (890 €, +7j), Société C (340 €, +3j). Voulez-vous que j'envoie les relances ?",
       "whatsappExample1User": "Envoie pour A et B",
-      "whatsappExample1Bot": "Relances envoyées à Société A et Société B. Je vous notifie quand les paiements sont reçus."
+      "whatsappExample1Bot": "Relances envoyées à Société A et Société B. Je vous notifie quand les paiements sont reçus.",
+      "avatar": "/agents/admin-agent.png"
     },
     "webmaster": {
       "name": "The No Code Webmaster",
@@ -175,7 +177,8 @@
       "whatsappExample0User": "Comment va le site aujourd'hui ?",
       "whatsappExample0Bot": "Uptime 100% sur les dernières 24h. 342 visiteurs uniques (+12% vs hier). Temps de chargement moyen : 1.2s. Aucune erreur détectée.",
       "whatsappExample1User": "Envoie-moi le rapport de la semaine",
-      "whatsappExample1Bot": "Rapport envoyé sur votre email. Résumé : 2 140 visiteurs (+8%), 3 pages les plus vues, taux de rebond en baisse de 5%."
+      "whatsappExample1Bot": "Rapport envoyé sur votre email. Résumé : 2 140 visiteurs (+8%), 3 pages les plus vues, taux de rebond en baisse de 5%.",
+      "avatar": "/agents/webmaster-agent.png"
     }
   },
   "pricing": {

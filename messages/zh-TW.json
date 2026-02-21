@@ -133,7 +133,8 @@
       "whatsappExample0User": "這週有多少潛在客戶？",
       "whatsappExample0Bot": "本週有 23 位新的合格潛在客戶。8 位打開了您的電子郵件，3 位已回覆。要我跟進剩下的 5 位嗎？",
       "whatsappExample1User": "跟進那 5 位",
-      "whatsappExample1Bot": "完成了。已發送 5 封個人化追蹤郵件。收到回覆後我會立即通知您。"
+      "whatsappExample1Bot": "完成了。已發送 5 封個人化追蹤郵件。收到回覆後我會立即通知您。",
+      "avatar": "/agents/commercial-agent.png"
     },
     "admin": {
       "name": "The No Code Admin",
@@ -154,7 +155,8 @@
       "whatsappExample0User": "這個月有逾期發票嗎？",
       "whatsappExample0Bot": "3 張逾期發票：A 公司（€1,200，逾期 15 天）、B 公司（€890，逾期 7 天）、C 公司（€340，逾期 3 天）。要我發送催款通知嗎？",
       "whatsappExample1User": "發送 A 和 B 的",
-      "whatsappExample1Bot": "已向 A 公司和 B 公司發送催款通知。收到付款後我會通知您。"
+      "whatsappExample1Bot": "已向 A 公司和 B 公司發送催款通知。收到付款後我會通知您。",
+      "avatar": "/agents/admin-agent.png"
     },
     "webmaster": {
       "name": "The No Code Webmaster",
@@ -175,7 +177,8 @@
       "whatsappExample0User": "今天網站運作如何？",
       "whatsappExample0Bot": "過去 24 小時運行時間 100%。342 位獨立訪客（較昨日 +12%）。平均載入時間：1.2 秒。未偵測到錯誤。",
       "whatsappExample1User": "發送本週報告給我",
-      "whatsappExample1Bot": "報告已寄至您的電子郵件。摘要：2,140 位訪客（+8%），前 3 熱門頁面，跳出率下降 5%。"
+      "whatsappExample1Bot": "報告已寄至您的電子郵件。摘要：2,140 位訪客（+8%），前 3 熱門頁面，跳出率下降 5%。",
+      "avatar": "/agents/webmaster-agent.png"
     }
   },
   "pricing": {
