@@ -23,7 +23,8 @@
     "agents": "Agents",
     "pricing": "Tarifs",
     "contact": "Contact",
-    "startProject": "Engager un agent"
+    "startProject": "Engager un agent",
+    "howItWorks": "Comment ça marche"
   },
   "footer": {
     "home": "Accueil",
