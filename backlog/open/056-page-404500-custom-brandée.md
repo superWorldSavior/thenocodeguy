@@ -3,7 +3,7 @@ id: 56
 title: "Page 404/500 custom brandée"
 priority: low
 size: M
-labels: [sprint]
+labels: []
 ---
 
 ## Description

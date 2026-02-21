@@ -3,7 +3,7 @@ id: 53
 title: "Lighthouse score > 90 sur toutes les pages"
 priority: medium
 size: M
-labels: [sprint]
+labels: []
 ---
 
 ## Description
