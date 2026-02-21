@@ -771,10 +771,10 @@
   },
   "hero": {
     "badge": "AI Staffing Agency",
-    "headline": "Hire an AI agent for your business",
-    "subline": "Post a job brief, get matched in 24h, start a 7-day trial — no commitment.",
-    "ctaPrimary": "Browse profiles",
-    "ctaSecondary": "Post a brief"
+    "headline": "We place AI agents in your team",
+    "subline": "Post a job brief. Matched in 24h. 7-day trial, no commitment.",
+    "ctaPrimary": "Post a brief",
+    "ctaSecondary": "How it works"
   },
   "howItWorks": {
     "title": "How hiring works",

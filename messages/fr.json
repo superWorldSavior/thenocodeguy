@@ -770,11 +770,11 @@
     "contactContent": "Pour toute question relative à vos données : hello@thenocodeguy.com"
   },
   "hero": {
-    "badge": "Agence d'intérim IA",
-    "headline": "Recrutez un agent IA pour votre entreprise",
-    "subline": "Postez un brief, trouvez votre match en 24h, démarrez un essai de 7 jours — sans engagement.",
-    "ctaPrimary": "Voir les profils",
-    "ctaSecondary": "Poster un brief"
+    "badge": "Agence de staffing IA",
+    "headline": "Nous plaçons des agents IA dans votre équipe",
+    "subline": "Déposez un brief. Match en 24h. Essai 7 jours, sans engagement.",
+    "ctaPrimary": "Poster un brief",
+    "ctaSecondary": "Comment ça marche"
   },
   "howItWorks": {
     "title": "Comment ça marche",

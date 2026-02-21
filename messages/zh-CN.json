@@ -770,11 +770,11 @@
     "contactContent": "如有任何数据相关问题：hello@thenocodeguy.com"
   },
   "hero": {
-    "badge": "AI 人才派遣机构",
-    "headline": "为您的企业招聘 AI 代理",
-    "subline": "发布需求简报，24 小时内匹配，开始 7 天试用 — 无需承诺。",
-    "ctaPrimary": "浏览档案",
-    "ctaSecondary": "发布简报"
+    "badge": "AI 人力派遣",
+    "headline": "我们为您的团队配置 AI 代理",
+    "subline": "提交职位简报，24 小时内配对，7 天试用，无需承诺。",
+    "ctaPrimary": "提交简报",
+    "ctaSecondary": "了解流程"
   },
   "howItWorks": {
     "title": "招聘流程",
