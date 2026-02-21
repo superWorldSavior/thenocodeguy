@@ -770,10 +770,10 @@
   },
   "hero": {
     "badge": "Agence d'intérim IA",
-    "headline": "Embauchez un agent, pas un outil.",
-    "subline": "Vous postez un brief. Nous trouvons un agent IA autonome — opérationnel en 48h. Pas de setup, pas de formation, pas de contrat longue durée.",
-    "ctaPrimary": "Poster un brief",
-    "ctaSecondary": "Voir comment ça marche"
+    "headline": "Recrutez un agent IA pour votre entreprise",
+    "subline": "Postez un brief, trouvez votre match en 24h, démarrez un essai de 7 jours — sans engagement.",
+    "ctaPrimary": "Voir les profils",
+    "ctaSecondary": "Poster un brief"
   },
   "howItWorks": {
     "title": "Comment ça marche",
