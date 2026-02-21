@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Zap, Globe, Brain, GitBranch } from "lucide-react";
+import { ArrowRight, Zap, Globe, Brain, GitBranch, Linkedin } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -64,12 +64,29 @@ export default async function AProposPage() {
           <div className="space-y-4">
             <div className="relative overflow-hidden rounded-2xl border border-white/10">
               <Image
-                src="/images/about.png"
+                src="/images/founder-erwan.jpg"
                 alt={t("imageAlt")}
                 width={600}
                 height={400}
-                className="w-full object-cover opacity-90"
+                className="w-full object-cover"
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-950/90 to-transparent p-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-sm font-semibold text-white">Erwan Poiraud</div>
+                    <div className="text-xs text-gray-400">{t("founderRole" as Key)}</div>
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/erwanpoiraud/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors hover:bg-emerald-500/20 hover:text-emerald-400"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s) => (
