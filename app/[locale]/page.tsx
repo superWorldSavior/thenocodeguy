@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/organisms/HeroSection";
-import ProfilesSection from "@/components/organisms/ProfilesSection";
 import HowItWorksSection from "@/components/organisms/HowItWorksSection";
 import TestimonialsSection from "@/components/organisms/TestimonialsSection";
 import CTASection from "@/components/organisms/CTASection";
@@ -23,7 +22,6 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection />
-      <ProfilesSection />
       <HowItWorksSection />
       <TestimonialsSection />
       <CTASection />
