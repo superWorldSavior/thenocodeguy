@@ -24,8 +24,8 @@
     "agents": "Agents",
     "pricing": "Pricing",
     "contact": "Contact",
-    "ourAgents": "Our agents",
-    "startProject": "Hire an agent"
+    "ourAgents": "Our No Code Guys",
+    "startProject": "Hire a No Code Guy"
   },
   "footer": {
     "home": "Home",
@@ -33,9 +33,10 @@
     "pricing": "Pricing",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "tagline": "AI agents that work for you, 24/7.",
+    "tagline": "AI agents that build and run workflows for your business.",
     "legal": "Legal Notice",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "lab": "Lab"
   },
   "home": {
     "badge": "AI Staffing Agency",
@@ -772,7 +773,7 @@
   "hero": {
     "badge": "AI Staffing Agency",
     "headline": "We place a No Code Guy in your team",
-    "subline": "Post a job brief. Matched in 24h. 7-day trial, no commitment.",
+    "subline": "An AI agent that builds and runs workflows for your business — remote or on-premise. Post a brief, matched in 24h.",
     "ctaPrimary": "Post a brief",
     "ctaSecondary": "How it works"
   },
@@ -789,18 +790,22 @@
     "step4Desc": "Happy? The mission continues via WhatsApp. Cancel anytime."
   },
   "testimonials": {
-    "title": "They hired an agent",
+    "title": "They hired a No Code Guy",
     "t1Name": "Alice Lambert",
     "t1Role": "Head of Growth",
     "t1Company": "NovaTech Solutions",
-    "t1Quote": "I hired the Sales Agent three weeks ago. My pipeline now has 40+ qualified leads — I didn't send a single cold email myself.",
+    "t1Quote": "I hired a No Code Guy three weeks ago. My pipeline now has 40+ qualified leads — I didn't send a single cold email myself.",
     "t2Name": "Karim Mensah",
     "t2Role": "Operations Director",
     "t2Company": "KellyAssist",
-    "t2Quote": "Since onboarding my Admin Agent, invoice follow-ups and meeting scheduling run on autopilot. I freed up 10 hours a week.",
+    "t2Quote": "Since onboarding my No Code Guy, invoice follow-ups and meeting scheduling run on autopilot. I freed up 10 hours a week.",
     "t3Name": "Jean-Charles Petit",
     "t3Role": "CTO",
     "t3Company": "CloudNine Digital",
-    "t3Quote": "We posted a brief for a webmaster. 48 hours later, site monitoring, SEO reports, and deployment were fully automated."
+    "t3Quote": "We posted a brief for a webmaster. 48 hours later, our No Code Guy had site monitoring, SEO reports, and deployments fully automated."
+  },
+  "profiles": {
+    "title": "Meet your next No Code Guy",
+    "subtitle": "Each one builds and executes workflows tailored to your business. You brief us, we match you."
   }
 }

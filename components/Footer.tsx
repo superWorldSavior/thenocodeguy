@@ -6,42 +6,42 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="border-t border-white/10 bg-gray-950">
+    <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div>
             <div className="flex items-center gap-2 text-lg font-bold">
-              <Zap className="h-5 w-5 text-emerald-400" />
-              <span className="text-white">
-                TheNoCode<span className="text-emerald-400">Guy</span>
+              <Zap className="h-5 w-5 text-primary" />
+              <span className="text-foreground">
+                TheNoCode<span className="text-primary">Guy</span>
               </span>
             </div>
-            <p className="mt-2 text-sm text-gray-500">{t("tagline")}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{t("tagline")}</p>
           </div>
 
-          <div className="flex gap-6 text-sm text-gray-400">
-            <Link href="/" className="transition-colors hover:text-emerald-400">
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <Link href="/" className="transition-colors hover:text-primary">
               {t("home")}
             </Link>
-            <Link href="/agents" className="transition-colors hover:text-emerald-400">
+            <Link href="/agents" className="transition-colors hover:text-primary">
               {t("agents")}
             </Link>
-            <Link href="/pricing" className="transition-colors hover:text-emerald-400">
-              {t("pricing")}
+            <Link href="/lab" className="transition-colors hover:text-primary">
+              {t("lab")}
             </Link>
-            <Link href="/contact" className="transition-colors hover:text-emerald-400">
+            <Link href="/contact" className="transition-colors hover:text-primary">
               {t("contact")}
             </Link>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center gap-4 border-t border-white/10 pt-8 text-sm text-gray-500">
+        <div className="mt-8 flex flex-col items-center gap-4 border-t border-border pt-8 text-sm text-muted-foreground">
           <div className="flex gap-4">
-            <Link href="/legal" className="transition-colors hover:text-emerald-400">
+            <Link href="/legal" className="transition-colors hover:text-primary">
               {t("legal")}
             </Link>
-            <span className="text-gray-700">·</span>
-            <Link href="/privacy" className="transition-colors hover:text-emerald-400">
+            <span className="text-muted-foreground/40">·</span>
+            <Link href="/privacy" className="transition-colors hover:text-primary">
               {t("privacy")}
             </Link>
           </div>

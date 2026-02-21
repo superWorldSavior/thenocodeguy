@@ -24,8 +24,8 @@
     "agents": "智能代理",
     "pricing": "價格",
     "contact": "聯絡",
-    "ourAgents": "我們的代理",
-    "startProject": "聘請代理"
+    "ourAgents": "我們的 No Code Guys",
+    "startProject": "僱用 No Code Guy"
   },
   "footer": {
     "home": "首頁",
@@ -33,9 +33,10 @@
     "pricing": "價格",
     "contact": "聯絡",
     "rights": "保留所有權利。",
-    "tagline": "為您工作的 AI 代理，全年無休。",
+    "tagline": "為您的企業建構並執行工作流程的 AI 代理。",
     "legal": "法律聲明",
-    "privacy": "隱私政策"
+    "privacy": "隱私政策",
+    "lab": "實驗室"
   },
   "home": {
     "badge": "AI 人才派遣機構",
@@ -772,7 +773,7 @@
   "hero": {
     "badge": "AI 人力派遣",
     "headline": "我們為您的團隊配置一位 No Code Guy",
-    "subline": "提交職位簡報，24 小時內配對，7 天試用，無需承諾。",
+    "subline": "一位為您的企業建構並執行工作流程的 AI 代理 — 遠端或本地部署。提交簡報，24 小時內配對。",
     "ctaPrimary": "提交簡報",
     "ctaSecondary": "了解流程"
   },
@@ -789,7 +790,7 @@
     "step4Desc": "滿意？任務透過WhatsApp繼續。隨時可以取消。"
   },
   "testimonials": {
-    "title": "他們僱用了一個智能代理",
+    "title": "他們僱用了一位 No Code Guy",
     "t1Name": "Alice Lambert",
     "t1Role": "成長負責人",
     "t1Company": "NovaTech Solutions",

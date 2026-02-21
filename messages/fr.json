@@ -24,8 +24,8 @@
     "agents": "Agents",
     "pricing": "Tarifs",
     "contact": "Contact",
-    "ourAgents": "Nos agents",
-    "startProject": "Engager un agent"
+    "ourAgents": "Nos No Code Guys",
+    "startProject": "Embaucher un No Code Guy"
   },
   "footer": {
     "home": "Accueil",
@@ -33,9 +33,10 @@
     "pricing": "Tarifs",
     "contact": "Contact",
     "rights": "Tous droits réservés.",
-    "tagline": "Des agents IA qui travaillent pour vous, 24/7.",
+    "tagline": "Des agents IA qui construisent et exécutent des workflows pour votre entreprise.",
     "legal": "Mentions légales",
-    "privacy": "Politique de confidentialité"
+    "privacy": "Politique de confidentialité",
+    "lab": "Lab"
   },
   "home": {
     "badge": "Agence d'intérim IA",
@@ -772,7 +773,7 @@
   "hero": {
     "badge": "Agence de staffing IA",
     "headline": "Nous plaçons un No Code Guy dans votre équipe",
-    "subline": "Déposez un brief. Match en 24h. Essai 7 jours, sans engagement.",
+    "subline": "Un agent IA qui construit et exécute des workflows pour votre entreprise — à distance ou on-premise. Déposez un brief, match en 24h.",
     "ctaPrimary": "Poster un brief",
     "ctaSecondary": "Comment ça marche"
   },
@@ -789,18 +790,22 @@
     "step4Desc": "Satisfait ? La mission continue via WhatsApp. Résiliation à tout moment."
   },
   "testimonials": {
-    "title": "Ils ont recruté un agent",
+    "title": "Ils ont embauché un No Code Guy",
     "t1Name": "Alice Lambert",
     "t1Role": "Responsable Growth",
     "t1Company": "NovaTech Solutions",
-    "t1Quote": "J'ai recruté l'Agent Commercial il y a trois semaines. Mon pipeline compte maintenant 40+ leads qualifiés — je n'ai pas envoyé un seul email à froid.",
+    "t1Quote": "J'ai embauché un No Code Guy il y a trois semaines. Mon pipeline compte 40+ leads qualifiés — je n'ai pas envoyé un seul email à froid.",
     "t2Name": "Karim Mensah",
     "t2Role": "Directeur des opérations",
     "t2Company": "KellyAssist",
-    "t2Quote": "Depuis l'intégration de mon Agent Admin, les relances factures et la planification de réunions tournent en autopilote. J'ai libéré 10h par semaine.",
+    "t2Quote": "Depuis l'arrivée de mon No Code Guy, les relances factures et la planification tournent en autopilote. 10h libérées par semaine.",
     "t3Name": "Jean-Charles Petit",
     "t3Role": "CTO",
     "t3Company": "CloudNine Digital",
-    "t3Quote": "On a posté un brief pour un webmaster. 48h plus tard, le monitoring du site, les rapports SEO et les déploiements étaient entièrement automatisés."
+    "t3Quote": "On a posté un brief pour un webmaster. 48h plus tard, notre No Code Guy avait automatisé le monitoring, les rapports SEO et les déploiements."
+  },
+  "profiles": {
+    "title": "Votre prochain No Code Guy",
+    "subtitle": "Chacun construit et exécute des workflows adaptés à votre entreprise. Vous nous briefez, on vous matche."
   }
 }
