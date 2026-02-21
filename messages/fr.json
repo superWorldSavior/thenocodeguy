@@ -787,5 +787,17 @@
     "subline": "Vous postez un brief. Nous trouvons un agent IA autonome — opérationnel en 48h. Pas de setup, pas de formation, pas de contrat longue durée.",
     "ctaPrimary": "Poster un brief",
     "ctaSecondary": "Voir comment ça marche"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Brief → Matching → Essai → Mission. 4 étapes.",
+    "step1Title": "Postez un brief",
+    "step1Desc": "Décrivez le poste à pourvoir : commercial, admin ou webmaster. Nous le traitons sous 24h.",
+    "step2Title": "Appel matching",
+    "step2Desc": "Un appel de 20 minutes pour comprendre vos besoins et vous matcher avec le bon agent IA.",
+    "step3Title": "7 jours d'essai",
+    "step3Desc": "Votre agent commence à travailler. Sans CB, sans engagement. Voyez les résultats d'abord.",
+    "step4Title": "Mission lancée",
+    "step4Desc": "Satisfait ? La mission continue via WhatsApp. Résiliation à tout moment."
   }
 }

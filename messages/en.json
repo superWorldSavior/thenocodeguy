@@ -787,5 +787,17 @@
     "subline": "You post a brief. We match an autonomous AI agent — operational in 48h. No setup, no training, no long-term contract.",
     "ctaPrimary": "Post a job brief",
     "ctaSecondary": "See how it works"
+  },
+  "howItWorks": {
+    "title": "How hiring works",
+    "subtitle": "Brief → Match → Trial → Mission. 4 steps.",
+    "step1Title": "Post a brief",
+    "step1Desc": "Describe the role you need: commercial, admin, or webmaster. We review it within 24 hours.",
+    "step2Title": "Matching call",
+    "step2Desc": "A 20-minute call to understand your needs and match you with the right AI agent.",
+    "step3Title": "7-day trial",
+    "step3Desc": "Your agent starts working. No credit card, no commitment. See the results first.",
+    "step4Title": "Mission starts",
+    "step4Desc": "Happy? The mission continues via WhatsApp. Cancel anytime."
   }
 }

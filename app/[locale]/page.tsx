@@ -7,13 +7,11 @@ import {
   FileText,
   Globe,
   Quote,
-  CircleDot,
-  Link2,
-  Rocket,
   BadgeCheck,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/organisms/HeroSection";
+import HowItWorksSection from "@/components/organisms/HowItWorksSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home");
@@ -29,8 +27,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const agentIcons = [Briefcase, FileText, Globe];
-const howIcons = [CircleDot, Link2, Rocket];
-
 export default async function HomePage() {
   const t = await getTranslations("home");
   type Key = Parameters<typeof t>[0];
@@ -44,12 +40,6 @@ export default async function HomePage() {
   }));
 
   const agentSlugs = ["commercial", "admin", "webmaster"];
-
-  const howSteps = [0, 1, 2].map((i) => ({
-    icon: howIcons[i],
-    title: t(`how${i}Title` as Key),
-    desc: t(`how${i}Desc` as Key),
-  }));
 
   const stats = [
     { value: t("statsValue0"), label: t("statsLabel0") },
@@ -107,29 +97,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section id="how" className="px-4 py-20 sm:px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("howTitle")}</h2>
-            <p className="text-muted-foreground">{t("howSubtitle")}</p>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-3">
-            {howSteps.map((step, i) => (
-              <div key={step.title} className="text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <step.icon className="h-6 w-6 text-primary" />
-                </div>
-                <div className="mb-2 text-sm font-bold text-primary">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <h3 className="mb-2 text-xl font-bold">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorksSection />
 
       {/* Stats */}
       <section className="px-4 py-16 sm:px-6">
