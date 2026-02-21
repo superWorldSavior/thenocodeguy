@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
-import { Bot } from 'lucide-react'
+import { Bot, ArrowRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import ChannelBadges from '@/components/molecules/ChannelBadges'
@@ -9,8 +9,8 @@ export default async function HeroSection() {
   const t = await getTranslations('hero')
 
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-slate-950">
-      {/* Radial gradient background */}
+    <section className="relative overflow-hidden bg-background">
+      {/* Radial gradient background — decorative */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,theme(colors.emerald.950/40),transparent_60%)]"
@@ -24,7 +24,7 @@ export default async function HeroSection() {
             <div>
               <Badge variant="secondary">{t('badge')}</Badge>
             </div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white lg:text-5xl">
+            <h1 className="text-3xl font-extrabold tracking-tight text-foreground lg:text-5xl">
               {t('headline')}
             </h1>
             <p className="text-lg text-muted-foreground">
@@ -32,7 +32,10 @@ export default async function HeroSection() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild variant="default" size="lg">
-                <Link href="/agents">{t('ctaPrimary')}</Link>
+                <Link href="/agents">
+                  {t('ctaPrimary')}
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="#how">{t('ctaSecondary')}</Link>
@@ -41,9 +44,12 @@ export default async function HeroSection() {
             <ChannelBadges size="md" showLabel={true} className="items-start" />
           </div>
 
-          {/* Right column — visual placeholder */}
-          <div className="flex aspect-video w-full items-center justify-center rounded-2xl border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
-            <Bot className="h-20 w-20 text-slate-400 dark:text-slate-500" />
+          {/* Right column — visual placeholder (decorative, replaced with real asset later) */}
+          <div
+            aria-hidden="true"
+            className="flex aspect-video w-full items-center justify-center rounded-2xl border border-border bg-muted"
+          >
+            <Bot className="h-20 w-20 text-muted-foreground" />
           </div>
 
         </div>
