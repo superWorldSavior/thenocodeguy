@@ -36,12 +36,15 @@ export default function Navigation() {
   };
 
   const prefixHref = (href: string) =>
-    currentLocale === "fr" ? href : `/${currentLocale}${href === "/" ? "" : href}`;
+    href.startsWith("#")
+      ? href
+      : currentLocale === "fr"
+        ? href
+        : `/${currentLocale}${href === "/" ? "" : href}`;
 
   const links = [
     { href: "/", label: t("home") },
-    { href: "/agents", label: t("agents") },
-    { href: "/pricing", label: t("pricing") },
+    { href: "#profiles", label: t("ourAgents") },
     { href: "/contact", label: t("contact") },
   ];
 
