@@ -3,7 +3,7 @@ id: 72
 title: "Supprimer la page /pricing — pricing intégré dans landing"
 priority: medium
 size: S
-labels: [backlog]
+labels: [backlog, sprint]
 dependsOn: [68, 69]
 ---
 

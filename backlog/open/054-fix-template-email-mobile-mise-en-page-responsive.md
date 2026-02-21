@@ -3,7 +3,7 @@ id: 54
 title: "Fix template email mobile — mise en page responsive"
 priority: medium
 size: M
-labels: []
+labels: [sprint]
 ---
 
 ## Description

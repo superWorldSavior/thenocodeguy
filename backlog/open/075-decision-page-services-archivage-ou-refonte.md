@@ -3,7 +3,7 @@ id: 75
 title: "Page /services — archiver ou transformer en 'Nos missions'"
 priority: low
 size: S
-labels: [backlog]
+labels: [backlog, sprint]
 dependsOn: []
 ---
 

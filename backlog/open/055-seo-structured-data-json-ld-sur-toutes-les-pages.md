@@ -3,7 +3,7 @@ id: 55
 title: "SEO structured data JSON-LD sur toutes les pages"
 priority: low
 size: M
-labels: []
+labels: [sprint]
 ---
 
 ## Description

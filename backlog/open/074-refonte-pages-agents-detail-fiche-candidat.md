@@ -3,7 +3,7 @@ id: 74
 title: "Refonte pages /agents/[slug] — fiches candidat détaillées"
 priority: medium
 size: L
-labels: [backlog]
+labels: [backlog, sprint]
 dependsOn: [60, 63]
 ---
 

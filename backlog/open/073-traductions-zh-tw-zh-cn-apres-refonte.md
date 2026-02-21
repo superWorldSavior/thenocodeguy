@@ -3,7 +3,7 @@ id: 73
 title: "Traductions zh-TW et zh-CN — aligner après refonte FR/EN"
 priority: medium
 size: M
-labels: [backlog]
+labels: [backlog, sprint]
 dependsOn: [60]
 ---
 

@@ -3,7 +3,7 @@ id: 52
 title: "Page contact fonctionnelle avec pipeline CRM"
 priority: medium
 size: M
-labels: []
+labels: [sprint]
 ---
 
 ## Description
