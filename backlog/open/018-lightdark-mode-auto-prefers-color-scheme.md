@@ -41,7 +41,7 @@ Le site détecte prefers-color-scheme et applique le thème correspondant au pre
 
 Un toggle manuel permet de basculer light/dark et persiste en localStorage 
 
-Toutes les pages (homepage, agents, pricing, contact, legal) sont lisibles dans les deux modes 
+Toutes les pages (homepage, agents, contact, legal) sont lisibles dans les deux modes 
 
 Pas de flash blanc (FOUC) au chargement en mode dark 
 

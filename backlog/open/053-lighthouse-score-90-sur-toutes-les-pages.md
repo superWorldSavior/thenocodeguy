@@ -7,18 +7,18 @@ labels: []
 ---
 
 ## Description
-Audit Lighthouse (Performance, Accessibility, Best Practices, SEO) sur homepage, /agents, /pricing. Corriger tout ce qui est sous 90. 
+Audit Lighthouse (Performance, Accessibility, Best Practices, SEO) sur homepage, /agents. Corriger tout ce qui est sous 90. 
 
 AC 
 
-Score > 90 sur les 4 catégories pour /, /agents, /pricing 
+Score > 90 sur les 4 catégories pour /, /agents 
 
 Screenshots des scores 
 
 Issues corrigées documentées
 
 ## Acceptance Criteria
-Score Lighthouse >= 90 sur Performance, Accessibility, Best Practices, SEO pour : homepage, /agents, /pricing, /contact 
+Score Lighthouse >= 90 sur Performance, Accessibility, Best Practices, SEO pour : homepage, /agents, /contact 
 
 Rapport Lighthouse généré et archivé (screenshot ou JSON) 
 

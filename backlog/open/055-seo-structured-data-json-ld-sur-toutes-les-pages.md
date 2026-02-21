@@ -11,7 +11,7 @@ Ajouter Schema.org JSON-LD : Organization (homepage), Service (agents), FAQPage 
 
 AC 
 
-JSON-LD valide sur homepage, /agents, /agents/[slug], /pricing 
+JSON-LD valide sur homepage, /agents, /agents/[slug] 
 
 Validé avec Google Rich Results Test 
 
@@ -22,7 +22,7 @@ JSON-LD Organization sur homepage
 
 JSON-LD Product sur chaque page agent 
 
-JSON-LD FAQPage sur pricing (si FAQ présente) 
+ 
 
 Validation via Google Rich Results Test : 0 erreurs 
 

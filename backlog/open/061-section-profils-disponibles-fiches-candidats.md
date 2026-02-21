@@ -8,11 +8,11 @@ dependsOn: [59, 60]
 ---
 
 ## Description
-Remplace la section "Agents" générique par une section "Profils disponibles" qui ressemble à une agence de recrutement. Chaque agent = une fiche candidat avec : avatar stylisé, titre de poste, compétences clés, missions types, disponibilité, fourchette de rémunération. Le visiteur doit avoir l'impression de parcourir des CV, pas des "pricing tiers".
+Remplace la section "Agents" générique par une section "Profils disponibles" qui ressemble à une agence de recrutement. Chaque agent = une fiche candidat avec : avatar stylisé, titre de poste, compétences clés, missions types, disponibilité. Le visiteur doit avoir l'impression de parcourir des CV d'une agence de recrutement.
 
 ## Acceptance Criteria
 - Section renders 3 agent profile cards: Commercial, Admin, Webmaster
-- Each card displays: avatar (SVG illustration, not photo), job title, 3-4 key skills as badges, 2-3 sample missions, availability status ("Disponible" / "Available"), and starting price ("from 149€/month")
+- Each card displays: avatar (SVG illustration, not photo), job title, 3-4 key skills as badges, 2-3 sample missions, availability status ("Disponible" / "Available")
 - Cards use indigo accent color and slate palette (new theme)
 - Layout is responsive: 3 columns desktop, 1 column mobile (stacked)
 - All text sourced from messages/en.json (no hardcoded strings)
