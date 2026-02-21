@@ -32,24 +32,26 @@ export default async function HeroSection() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild variant="default" size="lg">
-                <Link href="/agents">
+                <Link href="#profiles">
                   {t('ctaPrimary')}
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="#how">{t('ctaSecondary')}</Link>
+                <Link href="/contact">{t('ctaSecondary')}</Link>
               </Button>
             </div>
             <ChannelBadges size="md" showLabel={true} className="items-start" />
           </div>
 
           {/* Right column — visual placeholder (decorative, replaced with real asset later) */}
-          <div
-            aria-hidden="true"
-            className="flex aspect-video w-full items-center justify-center rounded-2xl border border-border bg-muted"
-          >
-            <Bot className="h-20 w-20 text-muted-foreground" />
+          <div className="flex aspect-square w-full items-center justify-center rounded-2xl border border-border bg-gradient-to-br from-primary/20 via-primary/5 to-transparent">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 ring-2 ring-primary/20">
+                <Bot className="h-12 w-12 text-primary" />
+              </div>
+              <span className="text-sm font-medium text-muted-foreground">{t('badge')}</span>
+            </div>
           </div>
 
         </div>

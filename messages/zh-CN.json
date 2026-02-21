@@ -770,10 +770,10 @@
   },
   "hero": {
     "badge": "AI 人才派遣机构",
-    "headline": "招聘代理，而非工具。",
-    "subline": "您发布需求简报。我们匹配自主 AI 代理 — 48 小时内就绪。无需设置、无需培训、无长期合同。",
-    "ctaPrimary": "发布招聘简报",
-    "ctaSecondary": "了解运作方式"
+    "headline": "为您的企业招聘 AI 代理",
+    "subline": "发布需求简报，24 小时内匹配，开始 7 天试用 — 无需承诺。",
+    "ctaPrimary": "浏览档案",
+    "ctaSecondary": "发布简报"
   },
   "howItWorks": {
     "title": "招聘流程",
