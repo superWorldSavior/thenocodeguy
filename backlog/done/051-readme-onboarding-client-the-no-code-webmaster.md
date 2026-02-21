@@ -21,3 +21,6 @@ Le README liste les limites du plan (nombre de sites, fréquence des updates, ty
 
 ---
 _Migrated from Azure DevOps #68_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

@@ -29,3 +29,6 @@ Chaque workflow est testé et retourne un résultat JSON structuré (succès/err
 
 ---
 _Migrated from Azure DevOps #49_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

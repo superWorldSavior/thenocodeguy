@@ -21,3 +21,6 @@ Le document précise les limites légales et responsabilités (l'agent ne valide
 
 ---
 _Migrated from Azure DevOps #48_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

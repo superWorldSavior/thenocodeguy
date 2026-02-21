@@ -34,3 +34,6 @@ Générer 3 illustrations d'agents IA avec gpt-image-1.5. Style : portrait carr�
 - Commercial agent has monochromatic blue skin, other two have naturalistic skin tones
 - gpt-image-1 is inherently non-deterministic — same prompt doesn't guarantee same style
 - 3 attempts failed for the same reason. Needs manual intervention or different approach (e.g., consistent seed, post-processing, or Erwan picks from multiple generations)
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

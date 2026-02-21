@@ -29,3 +29,6 @@ Chaque workflow est documenté avec ses paramètres d'entrée/sortie dans Windmi
 
 ---
 _Migrated from Azure DevOps #43_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

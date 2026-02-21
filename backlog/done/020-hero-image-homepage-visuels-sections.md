@@ -33,3 +33,6 @@ LCP (Largest Contentful Paint) < 2.5s avec les nouvelles images
 
 ---
 _Migrated from Azure DevOps #90_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

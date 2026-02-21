@@ -1,37 +1,22 @@
 ---
 id: 52
-title: "Page contact fonctionnelle avec pipeline CRM"
-priority: medium
+title: "Page contact — formulaire de brief client (Formspree)"
+priority: high
 size: M
 labels: [sprint]
 ---
 
 ## Description
-Vérifier que /contact envoie bien via Formspree (meolvdkd), que le cron process_formspree_leads capte les soumissions, et que le pipeline fonctionne bout en bout. 
-
-AC 
-
-Formulaire /contact fonctionne (test réel) 
-
-Email reçu sur hello@thenocodeguy.com 
-
-Cron leads détecte la soumission 
-
-Lead ajouté dans pipeline Excel OneDrive
+La page /contact doit permettre aux prospects de soumettre un brief : quel type de tâches ils veulent déléguer à un agent IA. Le formulaire alimente le pipeline de leads.
 
 ## Acceptance Criteria
-Page /contact accessible depuis le menu principal 
-
-Formulaire : nom, email, entreprise, message, type de besoin (select) 
-
-Soumission envoie un email à hello@thenocodeguy.com via API 
-
-Confirmation visuelle après envoi (toast ou page merci) 
-
-Données sauvegardées dans un pipeline CRM (Windmill ou spreadsheet) 
-
-Protection anti-spam (honeypot ou rate limit)
-
+- Page /contact accessible depuis le menu principal et les CTA du site
+- Formulaire : nom, email, entreprise, taille équipe (select), description du besoin (textarea), budget indicatif (select optionnel)
+- Soumission via Formspree (endpoint meolvdkd) → email reçu sur hello@thenocodeguy.com
+- Confirmation visuelle après envoi (toast ou page merci)
+- Cron process_formspree_leads détecte la soumission
+- Protection anti-spam (honeypot)
+- Traduit 4 locales
 
 ---
-_Migrated from Azure DevOps #83_
+_Updated 2026-02-21 — brief form for staffing model_

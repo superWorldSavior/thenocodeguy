@@ -39,3 +39,6 @@ Tous les workflows passent exclusivement par des appels API HTTP (zéro accès s
 
 ---
 _Migrated from Azure DevOps #65_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

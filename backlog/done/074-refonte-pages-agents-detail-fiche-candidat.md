@@ -16,3 +16,6 @@ Transformer les pages agents individuelles (/agents/commercial, /agents/admin, /
 - CTA on each page: "Recruit this agent" / "Recruter cet agent" → /contact
 - All text from messages/[locale].json
 - Renders correctly all 4 locales, light + dark, desktop + mobile
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

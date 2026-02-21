@@ -18,3 +18,6 @@ Remplace la section "Agents" générique par une section "Profils disponibles" q
 - All text sourced from messages/en.json (no hardcoded strings)
 - Section heading uses hiring/recruitment vocabulary from messages (e.g., "Available profiles" / "Profils disponibles")
 - Component placed in components/organisms/ProfilesSection.tsx
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.

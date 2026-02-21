@@ -21,3 +21,6 @@ Les secrets (PAT, tokens API) sont gérés via variables d'environnement et jama
 
 ---
 _Migrated from Azure DevOps #45_
+
+## Archive Note — 2026-02-21
+**Status:** OBSOLETE — positioning change to AI staffing agency model (Randstad de l'IA). No agent catalog, no profiles, no avatars, no pricing displayed, custom agents only.
