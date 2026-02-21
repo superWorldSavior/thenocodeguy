@@ -28,3 +28,9 @@ Générer 3 illustrations d'agents IA avec gpt-image-1.5. Style : portrait carr�
 - Technical implementation is clean — only visual quality blocked
 
 **Fix:** Regenerate all 3 with unified style prompt, targeting semi-painterly digital art as baseline
+
+## Block log — 2026-02-21 07:08 UTC (attempt 3)
+**Verdict:** CHANGES_REQUESTED — visual inconsistency persists
+- Commercial agent has monochromatic blue skin, other two have naturalistic skin tones
+- gpt-image-1 is inherently non-deterministic — same prompt doesn't guarantee same style
+- 3 attempts failed for the same reason. Needs manual intervention or different approach (e.g., consistent seed, post-processing, or Erwan picks from multiple generations)
