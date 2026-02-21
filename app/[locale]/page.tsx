@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/organisms/HeroSection";
+import TestimonialsSection from "@/components/organisms/TestimonialsSection";
+import HowItWorksSection from "@/components/organisms/HowItWorksSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home");
@@ -57,15 +59,13 @@ export default async function HomePage() {
     { value: t("statsValue2"), label: t("statsLabel2") },
   ];
 
-  const testimonials = [
-    { quote: t("testimonial0Quote"), author: t("testimonial0Author"), role: t("testimonial0Role"), company: t("testimonial0Company"), initials: "AL", color: "bg-primary/10 text-primary" },
-    { quote: t("testimonial1Quote"), author: t("testimonial1Author"), role: t("testimonial1Role"), company: t("testimonial1Company"), initials: "KM", color: "bg-sky-500/20 text-sky-400" },
-    { quote: t("testimonial2Quote"), author: t("testimonial2Author"), role: t("testimonial2Role"), company: t("testimonial2Company"), initials: "JC", color: "bg-violet-500/20 text-violet-400" },
-  ];
+  // Testimonials now handled by TestimonialsSection component
 
   return (
     <>
       <HeroSection />
+
+      <HowItWorksSection />
 
       {/* Agents */}
       <section className="px-4 py-20 sm:px-6">

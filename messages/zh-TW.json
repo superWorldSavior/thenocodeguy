@@ -787,5 +787,29 @@
     "subline": "您發布需求簡報。我們匹配自主 AI 代理 — 48 小時內就緒。無需設置、無需培訓、無長期合同。",
     "ctaPrimary": "發布招聘簡報",
     "ctaSecondary": "了解運作方式"
+  },
+  "howItWorks": {
+    "title": "How hiring works",
+    "subtitle": "From brief to mission in 4 simple steps.",
+    "step1Title": "Post a brief",
+    "step1Desc": "Describe the role, skills needed, and your budget range.",
+    "step2Title": "We match",
+    "step2Desc": "We find the right AI agent for your needs within 24 hours.",
+    "step3Title": "7-day trial",
+    "step3Desc": "Test your agent risk-free. No credit card required.",
+    "step4Title": "Mission starts",
+    "step4Desc": "Your agent is operational. Cancel or adjust anytime."
+  },
+  "testimonials": {
+    "title": "They hired an agent",
+    "t1Name": "Marie Dupont",
+    "t1Role": "CEO, StartupFlow",
+    "t1Quote": "I hired the Sales Agent. Within a week, my pipeline had 40 new qualified leads. I didn't lift a finger.",
+    "t2Name": "Thomas Chen",
+    "t2Role": "Founder, DataBridge",
+    "t2Quote": "The Admin Agent handles my inbox, schedules meetings, and sends weekly reports. It's like having a real assistant.",
+    "t3Name": "Sarah Williams",
+    "t3Role": "CTO, CloudNine",
+    "t3Quote": "We posted a brief for a webmaster. 48 hours later, our site monitoring and SEO was fully automated."
   }
 }
