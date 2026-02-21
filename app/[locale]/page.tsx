@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  Zap,
   MessageSquare,
   Briefcase,
   FileText,
@@ -14,6 +13,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import HeroSection from "@/components/organisms/HeroSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home");
@@ -65,42 +65,7 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden px-4 py-24 sm:px-6 sm:py-32">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-950/40 via-gray-950 to-gray-950" />
-        <div className="relative mx-auto max-w-4xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
-            <Zap className="h-3.5 w-3.5" />
-            {t("badge")}
-          </div>
-          <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            {t("heroTitle")}
-          </h1>
-          <p className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              {t("heroHighlight")}
-            </span>
-          </p>
-          <p className="mx-auto mb-10 mt-6 max-w-2xl text-lg text-gray-400 sm:text-xl">
-            {t("heroSubtitle")}
-          </p>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/agents"
-              className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-base font-semibold text-gray-950 transition-colors hover:bg-emerald-400"
-            >
-              {t("ctaPrimary")}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-base text-gray-300 transition-colors hover:border-emerald-500/50 hover:text-white"
-            >
-              {t("ctaSecondary")}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Agents */}
       <section className="px-4 py-20 sm:px-6">
@@ -143,7 +108,7 @@ export default async function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="px-4 py-20 sm:px-6">
+      <section id="how" className="px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("howTitle")}</h2>

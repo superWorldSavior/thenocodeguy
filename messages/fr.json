@@ -780,5 +780,12 @@
     "retentionContent": "Les données sont conservées pendant la durée de votre abonnement et supprimées dans les 30 jours suivant la résiliation.",
     "contactTitle": "Contact",
     "contactContent": "Pour toute question relative à vos données : hello@thenocodeguy.com"
+  },
+  "hero": {
+    "badge": "AI Staffing Agency",
+    "headline": "Hire an agent, not a tool.",
+    "subline": "Pick a role. We staff it with an autonomous AI agent — operational in 48h. No setup, no training, no contract.",
+    "ctaPrimary": "Browse open roles →",
+    "ctaSecondary": "See how it works"
   }
 }

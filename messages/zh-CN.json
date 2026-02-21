@@ -780,5 +780,12 @@
     "retentionContent": "数据在订阅期间保留，取消后 30 天内删除。",
     "contactTitle": "联系方式",
     "contactContent": "如有任何数据相关问题：hello@thenocodeguy.com"
+  },
+  "hero": {
+    "badge": "AI Staffing Agency",
+    "headline": "Hire an agent, not a tool.",
+    "subline": "Pick a role. We staff it with an autonomous AI agent — operational in 48h. No setup, no training, no contract.",
+    "ctaPrimary": "Browse open roles →",
+    "ctaSecondary": "See how it works"
   }
 }
