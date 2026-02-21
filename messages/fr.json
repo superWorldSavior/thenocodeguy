@@ -807,5 +807,10 @@
   "profiles": {
     "title": "Votre prochain No Code Guy",
     "subtitle": "Chacun construit et exécute des workflows adaptés à votre entreprise. Vous nous briefez, on vous matche."
+  },
+  "ctaSection": {
+    "title": "Prêt à recruter votre premier agent ?",
+    "subtitle": "Postez un brief décrivant le poste. Nous vous trouvons un agent IA sous 48h — sans engagement.",
+    "button": "Poster un brief"
   }
 }

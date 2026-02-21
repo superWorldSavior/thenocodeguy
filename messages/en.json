@@ -807,5 +807,10 @@
   "profiles": {
     "title": "Meet your next No Code Guy",
     "subtitle": "Each one builds and executes workflows tailored to your business. You brief us, we match you."
+  },
+  "ctaSection": {
+    "title": "Ready to hire your first agent?",
+    "subtitle": "Post a brief describing the role you need. We match you with an AI agent within 48 hours — no commitment.",
+    "button": "Post a job brief"
   }
 }
