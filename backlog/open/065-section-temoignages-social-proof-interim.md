@@ -17,3 +17,10 @@ dependsOn: [60]
 - Cards use slate palette + indigo accent stars
 - Layout: 3 columns desktop, 1 column mobile
 - Component at components/organisms/TestimonialsSection.tsx
+
+## Block log — 2026-02-21 07:53 UTC
+**Verdict:** CHANGES_REQUESTED
+
+1. Palette violation: bg-sky-* and bg-violet-* break slate+indigo-only rule → use bg-primary/10 variants
+2. Dead i18n keys: old home.testimonial0* keys not cleaned up
+3. Mixed language in zh: "cold邮件" should be fully translated
