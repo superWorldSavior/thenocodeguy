@@ -773,21 +773,21 @@
   "hero": {
     "badge": "AI 人力派遣",
     "headline": "我們為您的團隊配置一位 No Code Guy",
-    "subline": "一位為您的企業建構並執行工作流程的 AI 代理 — 遠端或本地部署。提交簡報，24 小時內配對。",
+    "subline": "客製化 AI 代理，為您的工作流程量身打造，隨企業成長而進化。提交簡報，我們負責培訓上線。",
     "ctaPrimary": "提交簡報",
     "ctaSecondary": "了解流程"
   },
   "howItWorks": {
     "title": "招聘流程",
-    "subtitle": "需求 → 配對 → 試用 → 啟動任務。4個步驟。",
+    "subtitle": "簡報 → 培訓 → 試用 → 任務。您的代理與您一同成長。",
     "step1Title": "發布需求",
     "step1Desc": "描述您需要的職位：商務、行政或網站管理員。我們將在24小時內審核。",
-    "step2Title": "配對電話",
-    "step2Desc": "透過20分鐘的電話了解您的需求，為您配對合適的AI代理。",
+    "step2Title": "培訓與建構",
+    "step2Desc": "我們為您的工作流程量身打造客製化代理。非現成方案 — 專為您的工作方式設計。",
     "step3Title": "7天試用",
     "step3Desc": "您的代理開始工作。無需信用卡，無需承諾。先看成效。",
-    "step4Title": "任務啟動",
-    "step4Desc": "滿意？任務透過WhatsApp繼續。隨時可以取消。"
+    "step4Title": "持續進化",
+    "step4Desc": "您的代理持續學習與適應。新技能、新流程 — 隨業務成長。隨時可終止。"
   },
   "testimonials": {
     "title": "他們僱用了一位 No Code Guy",

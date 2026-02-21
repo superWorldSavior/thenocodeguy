@@ -773,21 +773,21 @@
   "hero": {
     "badge": "AI 人力派遣",
     "headline": "我们为您的团队配置一位 No Code Guy",
-    "subline": "一位为您的企业构建并执行工作流程的 AI 代理 — 远程或本地部署。提交简报，24 小时内配对。",
+    "subline": "定制化 AI 代理，为您的工作流程量身打造，随企业成长而进化。提交简报，我们负责培训上线。",
     "ctaPrimary": "提交简报",
     "ctaSecondary": "了解流程"
   },
   "howItWorks": {
     "title": "招聘流程",
-    "subtitle": "需求 → 匹配 → 试用 → 启动任务。4个步骤。",
+    "subtitle": "简报 → 培训 → 试用 → 任务。您的代理与您一同成长。",
     "step1Title": "发布需求",
     "step1Desc": "描述您需要的职位：商务、行政或网站管理员。我们将在24小时内审核。",
-    "step2Title": "匹配电话",
-    "step2Desc": "通过20分钟的电话了解您的需求，为您匹配合适的AI代理。",
+    "step2Title": "培训与构建",
+    "step2Desc": "我们为您的工作流程量身打造定制化代理。非现成方案 — 专为您的工作方式设计。",
     "step3Title": "7天试用",
     "step3Desc": "您的代理开始工作。无需信用卡，无需承诺。先看效果。",
-    "step4Title": "任务启动",
-    "step4Desc": "满意？任务通过WhatsApp继续。随时可以取消。"
+    "step4Title": "持续进化",
+    "step4Desc": "您的代理持续学习与适应。新技能、新流程 — 随业务成长。随时可终止。"
   },
   "testimonials": {
     "title": "他们雇用了一位 No Code Guy",

@@ -773,21 +773,21 @@
   "hero": {
     "badge": "AI Staffing Agency",
     "headline": "We place a No Code Guy in your team",
-    "subline": "An AI agent that builds and runs workflows for your business — remote or on-premise. Post a brief, matched in 24h.",
+    "subline": "Custom AI agents, built for your workflows, that evolve with your business. Post a brief, we handle the onboarding.",
     "ctaPrimary": "Post a brief",
     "ctaSecondary": "How it works"
   },
   "howItWorks": {
     "title": "How hiring works",
-    "subtitle": "Brief → Match → Trial → Mission. 4 steps.",
+    "subtitle": "Brief → Onboarding → Trial → Mission. Your agent grows with you.",
     "step1Title": "Post a brief",
     "step1Desc": "Describe the role you need: commercial, admin, or webmaster. We review it within 24 hours.",
-    "step2Title": "Matching call",
-    "step2Desc": "A 20-minute call to understand your needs and match you with the right AI agent.",
+    "step2Title": "Onboarding & build",
+    "step2Desc": "We build a custom agent tailored to your workflows. Not off-the-shelf — designed for how you actually work.",
     "step3Title": "7-day trial",
     "step3Desc": "Your agent starts working. No credit card, no commitment. See the results first.",
-    "step4Title": "Mission starts",
-    "step4Desc": "Happy? The mission continues via WhatsApp. Cancel anytime."
+    "step4Title": "Evolving mission",
+    "step4Desc": "Your agent learns and adapts. New skills, new workflows — it grows with your business. Cancel anytime."
   },
   "testimonials": {
     "title": "They hired a No Code Guy",

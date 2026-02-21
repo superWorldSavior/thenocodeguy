@@ -773,21 +773,21 @@
   "hero": {
     "badge": "Agence de staffing IA",
     "headline": "Nous plaçons un No Code Guy dans votre équipe",
-    "subline": "Un agent IA qui construit et exécute des workflows pour votre entreprise — à distance ou on-premise. Déposez un brief, match en 24h.",
+    "subline": "Des agents IA sur mesure, construits pour vos workflows, qui évoluent avec votre entreprise. Déposez un brief, on gère l'onboarding.",
     "ctaPrimary": "Poster un brief",
     "ctaSecondary": "Comment ça marche"
   },
   "howItWorks": {
     "title": "Comment ça marche",
-    "subtitle": "Brief → Matching → Essai → Mission. 4 étapes.",
+    "subtitle": "Brief → Onboarding → Essai → Mission. Votre agent grandit avec vous.",
     "step1Title": "Postez un brief",
     "step1Desc": "Décrivez le poste à pourvoir : commercial, admin ou webmaster. Nous le traitons sous 24h.",
-    "step2Title": "Appel matching",
-    "step2Desc": "Un appel de 20 minutes pour comprendre vos besoins et vous matcher avec le bon agent IA.",
+    "step2Title": "Onboarding & construction",
+    "step2Desc": "On construit un agent sur mesure, adapté à vos workflows. Pas du prêt-à-porter — conçu pour votre façon de travailler.",
     "step3Title": "7 jours d'essai",
     "step3Desc": "Votre agent commence à travailler. Sans CB, sans engagement. Voyez les résultats d'abord.",
-    "step4Title": "Mission lancée",
-    "step4Desc": "Satisfait ? La mission continue via WhatsApp. Résiliation à tout moment."
+    "step4Title": "Mission évolutive",
+    "step4Desc": "Votre agent apprend et s'adapte. Nouveaux skills, nouveaux workflows — il grandit avec votre business. Résiliation libre."
   },
   "testimonials": {
     "title": "Ils ont embauché un No Code Guy",
