@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,12 +56,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={localeToHtmlLang[locale] ?? locale}>
-      <body className={`${inter.className} bg-gray-950 text-white antialiased`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+      <body className={`${inter.className} bg-background text-foreground antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navigation />
+            <main>{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
         <Script
