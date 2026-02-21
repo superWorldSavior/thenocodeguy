@@ -81,25 +81,12 @@
     "statsValue1": "24/7",
     "statsLabel2": "Temps de mise en place",
     "statsValue2": "< 48h",
-    "testimonialsTitle": "Ils nous font confiance",
-    "testimonial0Quote": "Erwan a automatisé notre pipeline de relance commerciale en 2 semaines. On a gagné 10h par semaine et le taux de réponse a doublé.",
-    "testimonial0Author": "Audrey Lefèvre",
-    "testimonial0Role": "Fondatrice & CEO",
-    "testimonial1Quote": "The No Code Guy gère notre automatisation depuis 2 ans. Fiable, réactif, et toujours force de proposition. Un vrai partenaire.",
-    "testimonial1Author": "Kelly Martin",
-    "testimonial1Role": "Directrice des opérations",
-    "testimonial2Quote": "Si vous cherchez un consultant technico-fonctionnel qui comprend vraiment les enjeux business, Erwan est la personne qu'il vous faut.",
-    "testimonial2Author": "Jean-Charles Petit",
-    "testimonial2Role": "Directeur commercial",
     "ctaSectionTitle": "Prêt à engager votre premier agent ?",
     "ctaSectionSubtitle": "Décrivez-nous votre besoin. On configure votre agent et il commence à travailler sous 48h.",
     "ctaSectionButton": "Engager un agent",
     "pricingTeaser": "Adapté à vos besoins",
     "pricingTeaserPrice": "Sur devis",
-    "pricingTeaserCta": "Voir les tarifs",
-    "testimonial0Company": "NovaTech Solutions",
-    "testimonial1Company": "KellyAssist",
-    "testimonial2Company": "GroupeABC Consulting"
+    "pricingTeaserCta": "Voir les tarifs"
   },
   "agents": {
     "metaTitle": "Agents IA — The No Code Guys",
@@ -799,5 +786,20 @@
     "step3Desc": "Votre agent commence à travailler. Sans CB, sans engagement. Voyez les résultats d'abord.",
     "step4Title": "Mission lancée",
     "step4Desc": "Satisfait ? La mission continue via WhatsApp. Résiliation à tout moment."
+  },
+  "testimonials": {
+    "title": "Ils ont recruté un agent",
+    "t1Name": "Alice Lambert",
+    "t1Role": "Responsable Growth",
+    "t1Company": "NovaTech Solutions",
+    "t1Quote": "J'ai recruté l'Agent Commercial il y a trois semaines. Mon pipeline compte maintenant 40+ leads qualifiés — je n'ai pas envoyé un seul email à froid.",
+    "t2Name": "Karim Mensah",
+    "t2Role": "Directeur des opérations",
+    "t2Company": "KellyAssist",
+    "t2Quote": "Depuis l'intégration de mon Agent Admin, les relances factures et la planification de réunions tournent en autopilote. J'ai libéré 10h par semaine.",
+    "t3Name": "Jean-Charles Petit",
+    "t3Role": "CTO",
+    "t3Company": "CloudNine Digital",
+    "t3Quote": "On a posté un brief pour un webmaster. 48h plus tard, le monitoring du site, les rapports SEO et les déploiements étaient entièrement automatisés."
   }
 }
