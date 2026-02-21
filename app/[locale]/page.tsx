@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/organisms/HeroSection";
+import CTASection from "@/components/organisms/CTASection";
+import TestimonialsSection from "@/components/organisms/TestimonialsSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home");
