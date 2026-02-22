@@ -3,7 +3,7 @@ id: 19
 title: "Review visuelle systématique du site (toutes pages, desktop + mobile)"
 priority: high
 size: M
-labels: []
+labels: [sprint]
 ---
 
 ## Description

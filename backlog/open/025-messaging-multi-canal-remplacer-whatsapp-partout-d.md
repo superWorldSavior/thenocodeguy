@@ -3,7 +3,7 @@ id: 25
 title: "Messaging multi-canal — remplacer WhatsApp partout dans le site"
 priority: high
 size: M
-labels: []
+labels: [sprint]
 ---
 
 ## Description

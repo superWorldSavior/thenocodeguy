@@ -3,7 +3,7 @@ id: 78
 title: "QA responsive — vérification tous breakpoints"
 priority: medium
 size: S
-labels: [qa]
+labels: [qa, sprint]
 ---
 
 ## Description
