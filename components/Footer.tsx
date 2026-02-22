@@ -33,7 +33,19 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col items-center gap-4 border-t border-border pt-8 text-sm text-muted-foreground">
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/mentions-legales" className="transition-colors hover:text-primary">
+              {t("mentionsLegales")}
+            </Link>
+            <span className="text-muted-foreground/40">·</span>
+            <Link href="/cgv" className="transition-colors hover:text-primary">
+              {t("cgv")}
+            </Link>
+            <span className="text-muted-foreground/40">·</span>
+            <Link href="/confidentialite" className="transition-colors hover:text-primary">
+              {t("confidentialite")}
+            </Link>
+            <span className="text-muted-foreground/40">·</span>
             <Link href="/legal" className="transition-colors hover:text-primary">
               {t("legal")}
             </Link>
