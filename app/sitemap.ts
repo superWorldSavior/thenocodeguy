@@ -5,11 +5,6 @@ const LOCALES = ["fr", "en", "zh-TW", "zh-CN"];
 
 const PAGES = [
   "/",
-  "/agents",
-  "/agents/commercial",
-  "/agents/admin",
-  "/agents/webmaster",
-  "/pricing",
   "/contact",
   "/services",
   "/audit",
@@ -34,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE}${page === "/" ? "" : page}`,
       lastModified: new Date(),
       changeFrequency: page === "/" ? "weekly" : "monthly",
-      priority: page === "/" ? 1.0 : page === "/pricing" ? 0.9 : 0.7,
+      priority: page === "/" ? 1.0 : 0.7,
       alternates: { languages },
     });
   }

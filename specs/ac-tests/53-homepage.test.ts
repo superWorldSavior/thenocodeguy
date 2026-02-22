@@ -48,7 +48,7 @@ describe('PBI #53 — Homepage rewrite', () => {
 
   it('AC4: CTA vers pricing ou contact présent', () => {
     const page = loadPage('page.tsx')
-    expect(page).toMatch(/\/pricing|\/contact|\/tarifs/)
+    expect(page).toMatch(/\/contact|\/tarifs/)
   })
 
   it('AC5: metadata contient le nouveau positionnement', () => {

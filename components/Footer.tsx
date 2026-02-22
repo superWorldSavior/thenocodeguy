@@ -23,9 +23,6 @@ export default function Footer() {
             <Link href="/" className="transition-colors hover:text-primary">
               {t("home")}
             </Link>
-            <Link href="/agents" className="transition-colors hover:text-primary">
-              {t("agents")}
-            </Link>
             <Link href="/lab" className="transition-colors hover:text-primary">
               {t("lab")}
             </Link>
