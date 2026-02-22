@@ -135,7 +135,7 @@ export default async function AgentsPage() {
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t("ctaTitle")}</h2>
           <p className="mb-8 text-gray-400">{t("ctaSubtitle")}</p>
           <Link
-            href="/pricing"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-8 py-3 text-base font-semibold text-gray-950 transition-colors hover:bg-emerald-400"
           >
             {t("ctaButton")}

@@ -5,6 +5,15 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/pricing",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
