@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Send, Mail, Clock, CheckCircle } from "lucide-react";
+import { Send, CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 
 export default function ContactForm() {
   const t = useTranslations("contact");
@@ -25,111 +29,111 @@ export default function ContactForm() {
         form.reset();
       }
     } catch {
-      // handle error
+      // silent
     } finally {
       setLoading(false);
     }
   }
 
+  if (sent) {
+    return (
+      <div className="flex flex-col items-center justify-center rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 p-12 text-center">
+        <CheckCircle className="mb-4 h-12 w-12" style={{ color: "var(--primary)" }} />
+        <h3 className="mb-2 text-xl font-bold">{t("successTitle")}</h3>
+        <p style={{ color: "var(--muted-foreground)" }}>{t("successSubtitle")}</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="grid gap-12 lg:grid-cols-5 lg:items-start">
-      {/* Info */}
-      <div className="space-y-6 lg:col-span-2">
-        <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-          <div className="mb-3 flex items-center gap-3">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10">
-              <Mail className="h-4 w-4 text-emerald-400" />
-            </div>
-            <h3 className="font-semibold">{t("emailCardTitle")}</h3>
+    <form onSubmit={handleSubmit} className="mx-auto max-w-2xl space-y-8">
+      {/* Honeypot anti-spam */}
+      <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+
+      {/* Section 1: Vous */}
+      <fieldset className="space-y-4">
+        <legend className="mb-2 text-lg font-semibold">{t("sectionYou")}</legend>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="space-y-1.5">
+            <Label htmlFor="name">{t("labelName")}</Label>
+            <Input id="name" type="text" name="name" required placeholder={t("placeholderName")} />
           </div>
-          <p className="text-sm text-gray-400">{t("emailCardEmail")}</p>
-        </div>
-        <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-          <div className="mb-3 flex items-center gap-3">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10">
-              <Clock className="h-4 w-4 text-emerald-400" />
-            </div>
-            <h3 className="font-semibold">{t("responseCardTitle")}</h3>
+          <div className="space-y-1.5">
+            <Label htmlFor="email">{t("labelEmail")}</Label>
+            <Input id="email" type="email" name="email" required placeholder={t("placeholderEmail")} />
           </div>
-          <p className="text-sm text-gray-400">{t("responseCardDesc")}</p>
         </div>
-        <div className="rounded-xl border border-emerald-500/20 bg-emerald-900/10 p-6">
-          <p className="text-sm text-emerald-300">{t("tipText")}</p>
+        <div className="space-y-1.5">
+          <Label htmlFor="company">{t("labelCompany")}</Label>
+          <Input id="company" type="text" name="company" required placeholder={t("placeholderCompany")} />
         </div>
-      </div>
+      </fieldset>
 
-      {/* Form */}
-      <div className="lg:col-span-3">
-        {sent ? (
-          <div className="flex flex-col items-center justify-center rounded-xl border border-emerald-500/30 bg-emerald-900/20 p-12 text-center">
-            <CheckCircle className="mb-4 h-12 w-12 text-emerald-400" />
-            <h3 className="mb-2 text-xl font-bold">{t("successTitle")}</h3>
-            <p className="text-gray-400">{t("successSubtitle")}</p>
+      {/* Section 2: Le poste */}
+      <fieldset className="space-y-4">
+        <legend className="mb-2 text-lg font-semibold">{t("sectionRole")}</legend>
+        <div className="space-y-1.5">
+          <Label htmlFor="role">{t("labelRole")}</Label>
+          <select
+            id="role"
+            name="role"
+            required
+            className="flex h-9 w-full rounded-md border border-[var(--input)] bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[var(--muted-foreground)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--ring)] disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            <option value="">{t("selectDefault")}</option>
+            <option value="commercial">{t("roleCommercial")}</option>
+            <option value="administratif">{t("roleAdmin")}</option>
+            <option value="webmaster">{t("roleWebmaster")}</option>
+            <option value="autre">{t("roleOther")}</option>
+          </select>
+        </div>
+      </fieldset>
+
+      {/* Section 3: Les missions */}
+      <fieldset className="space-y-4">
+        <legend className="mb-2 text-lg font-semibold">{t("sectionMissions")}</legend>
+        <div className="space-y-1.5">
+          <Label htmlFor="missions">{t("labelMissions")}</Label>
+          <Textarea
+            id="missions"
+            name="missions"
+            required
+            rows={6}
+            placeholder={t("placeholderMissions")}
+            className="min-h-[150px]"
+          />
+        </div>
+      </fieldset>
+
+      {/* Section 4: Contexte (optionnel) */}
+      <fieldset className="space-y-4">
+        <legend className="mb-2 text-lg font-semibold">{t("sectionContext")}</legend>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="space-y-1.5">
+            <Label htmlFor="tools">{t("labelTools")}</Label>
+            <Input id="tools" type="text" name="tools" placeholder={t("placeholderTools")} />
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-white/10 bg-white/5 p-8">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-gray-300">{t("labelName")}</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder={t("placeholderName")}
-                  className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20"
-                />
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-gray-300">{t("labelEmail")}</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder={t("placeholderEmail")}
-                  className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-gray-300">{t("labelNeed")}</label>
-              <select
-                name="need"
-                required
-                className="w-full rounded-lg border border-white/10 bg-gray-900 px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-emerald-500/50"
-              >
-                <option value="">{t("selectDefault")}</option>
-                <option value="audit">{t("needAudit")}</option>
-                <option value="workflow">{t("needWorkflow")}</option>
-                <option value="leadgen">{t("needLeadgen")}</option>
-                <option value="maintenance">{t("needMaintenance")}</option>
-                <option value="agent">{t("needAgent")}</option>
-                <option value="other">{t("needOther")}</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-gray-300">{t("labelMessage")}</label>
-              <textarea
-                name="message"
-                required
-                rows={5}
-                placeholder={t("placeholderMessage")}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 font-semibold text-gray-950 transition-colors hover:bg-emerald-400 disabled:opacity-50"
+          <div className="space-y-1.5">
+            <Label htmlFor="timeline">{t("labelTimeline")}</Label>
+            <select
+              id="timeline"
+              name="timeline"
+              className="flex h-9 w-full rounded-md border border-[var(--input)] bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-[var(--muted-foreground)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--ring)] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {loading ? t("submitting") : t("submitButton")}
-              <Send className="h-4 w-4" />
-            </button>
-          </form>
-        )}
-      </div>
-    </div>
+              <option value="">{t("selectDefault")}</option>
+              <option value="asap">{t("timelineAsap")}</option>
+              <option value="month">{t("timelineMonth")}</option>
+              <option value="quarter">{t("timelineQuarter")}</option>
+              <option value="exploring">{t("timelineExploring")}</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <Button type="submit" disabled={loading} className="w-full" size="lg">
+        {loading ? t("submitting") : t("submitButton")}
+        <Send className="ml-2 h-4 w-4" />
+      </Button>
+    </form>
   );
 }
