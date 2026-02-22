@@ -6,7 +6,6 @@ const LOCALES = ["fr", "en", "zh-TW", "zh-CN"];
 const PAGES = [
   "/",
   "/contact",
-  "/services",
   "/audit",
   "/a-propos",
   "/legal",
