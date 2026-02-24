@@ -16,7 +16,7 @@ export default async function CTASection() {
         </p>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 text-base font-semibold text-primary shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
+          className="inline-flex items-center gap-2 rounded-xl bg-brand-yellow px-8 py-3.5 text-base font-semibold text-primary shadow-lg transition-all hover:bg-white hover:shadow-xl"
         >
           {t("button")}
           <ArrowRight className="h-4 w-4" />

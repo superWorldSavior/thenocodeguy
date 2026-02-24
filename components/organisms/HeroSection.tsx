@@ -17,8 +17,8 @@ export default async function HeroSection() {
           {/* Left column — copy */}
           <div className="flex flex-col gap-6 animate-fade-in-up">
             <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
-                <Zap className="h-3 w-3" />
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-3 py-1 text-xs font-semibold text-primary">
+                <Zap className="h-3 w-3 text-brand-yellow" />
                 {t('badge')}
               </span>
             </div>
@@ -31,7 +31,7 @@ export default async function HeroSection() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
               >
                 {t('ctaPrimary')}
                 <ArrowRight className="h-4 w-4" />

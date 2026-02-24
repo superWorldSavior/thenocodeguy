@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
-import { Menu, X, Zap } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const LOCALES = [
@@ -59,9 +60,9 @@ export default function Navigation() {
           href={currentLocale === "fr" ? "/" : `/${currentLocale}`}
           className="flex items-center gap-2 text-xl font-bold"
         >
-          <Zap className="h-6 w-6 text-primary" />
+          <Image src="/favicon_io/favicon-32x32.png" alt="TNCG" width={28} height={28} className="rounded-sm" />
           <span className="text-foreground">
-            TheNoCode<span className="text-primary">Guy</span>
+            TheNoCode<span className="text-brand-yellow">Guy</span>
           </span>
         </Link>
 
@@ -78,7 +79,7 @@ export default function Navigation() {
           ))}
           <Link
             href={contactHref}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-primary"
           >
             {t("startProject")}
           </Link>

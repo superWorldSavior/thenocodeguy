@@ -71,7 +71,7 @@ export default async function DomainesSection() {
               >
                 {/* Featured badge */}
                 {domaine.featured && (
-                  <div className="absolute right-3 top-3 z-10 rounded-full bg-primary px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
+                  <div className="absolute right-3 top-3 z-10 rounded-full bg-brand-yellow px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">
                     {t('featured')}
                   </div>
                 )}
