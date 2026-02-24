@@ -24,7 +24,7 @@
     "agents": "智能代理",
     "pricing": "价格",
     "contact": "联系",
-    "ourAgents": "我们的 No Code Guys",
+    "ourAgents": "专业领域",
     "startProject": "雇用 No Code Guy"
   },
   "footer": {
@@ -775,7 +775,10 @@
     "headline": "我们为您的团队配置一位 No Code Guy",
     "subline": "我们将定制化 AI 代理派驻到您的团队。提交简报，我们负责入职培训。他们随您的企业一同成长。",
     "ctaPrimary": "提交简报",
-    "ctaSecondary": "了解流程"
+    "ctaSecondary": "了解流程",
+    "trustBadge1": "< 48小时配置",
+    "trustBadge2": "全天候服务",
+    "trustBadge3": "无需承诺"
   },
   "howItWorks": {
     "title": "招聘流程",
@@ -834,5 +837,60 @@
     "agent2Connector2": "Umami",
     "agent2Connector3": "Cloudflare",
     "viewProfile": "查看完整档案"
+  },
+  "stats": {
+    "stat1Value": "< 48小时",
+    "stat1Label": "配置时间",
+    "stat2Value": "24/7",
+    "stat2Label": "代理可用性",
+    "stat3Value": "0元",
+    "stat3Label": "无需承诺",
+    "stat4Value": "x10",
+    "stat4Label": "相比传统顾问"
+  },
+  "domaines": {
+    "title": "我们的专业领域",
+    "subtitle": "按行业专业化的AI代理，随时准备加入您的团队。",
+    "ctaButton": "在此领域招聘",
+    "featured": "重点行业",
+    "btpTitle": "建筑与工程",
+    "btpTasks": "发票分类,安全文件,供应商跟进,工地报告,能源合规",
+    "commerceTitle": "销售与商务",
+    "commerceTasks": "LinkedIn开发,邮件跟进,CRM管理,线索筛选,管道追踪",
+    "adminTitle": "行政与运营",
+    "adminTasks": "信件分类,排程,预记账,人资追踪,日历管理",
+    "webTitle": "网络与数字",
+    "webTasks": "全天候监控,SEO报告,部署,分析仪表板,维护"
+  },
+  "missions": {
+    "title": "进行中的任务",
+    "subtitle": "了解我们的AI代理如何改变真实行业。",
+    "kellyassistBadge": "建筑 — 行政",
+    "kellyassistTitle": "KellyAssist — AI增强建筑行政助理",
+    "kellyassistDesc": "专精建筑领域的行政助理，由人工智能增强。发票分类、安全文件管理、供应商跟进——全部自动化运行。",
+    "kellyassistStat1Value": "10小时",
+    "kellyassistStat1Label": "每周节省",
+    "kellyassistStat2Value": "< 48小时",
+    "kellyassistStat2Label": "部署时间",
+    "kellyassistCta": "启动类似任务"
+  },
+  "domainesBtp": {
+    "metaTitle": "建筑与工程 — 专业AI代理 | TheNoCodeGuy",
+    "metaDesc": "专精建筑的AI代理：发票分类、安全文件、合规、供应商跟进。48小时内部署。",
+    "badge": "建筑行业",
+    "title": "建筑与工程AI代理",
+    "subtitle": "处理建筑行政事务的AI助理。发票分类、合规、跟进——全自动化。",
+    "tasksTitle": "可自动化的任务",
+    "task1": "供应商发票分类归档",
+    "task2": "安全文件生成与追踪",
+    "task3": "竣工文件编制",
+    "task4": "能源效能合规监控",
+    "task5": "供应商和分包商自动跟进",
+    "task6": "每周工地进度报告",
+    "task7": "采购订单管理与归档",
+    "task8": "认证与保险追踪",
+    "referenceTitle": "他们信任我们",
+    "referenceDesc": "KellyAssist 使用我们的AI代理来增强其建筑行政助理。结果：每位助理每周节省10小时。",
+    "cta": "发布建筑需求"
   }
 }

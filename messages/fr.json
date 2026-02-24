@@ -24,7 +24,7 @@
     "agents": "Agents",
     "pricing": "Missions",
     "contact": "Contact",
-    "ourAgents": "Nos No Code Guys",
+    "ourAgents": "Nos domaines",
     "startProject": "Embaucher un No Code Guy"
   },
   "footer": {
@@ -798,7 +798,10 @@
     "headline": "Nous plaçons un No Code Guy dans votre équipe",
     "subline": "On place des agents IA sur mesure dans votre équipe. Déposez un brief, on gère l'onboarding. Ils évoluent avec votre business.",
     "ctaPrimary": "Poster un brief",
-    "ctaSecondary": "Comment ça marche"
+    "ctaSecondary": "Comment ça marche",
+    "trustBadge1": "< 48h de placement",
+    "trustBadge2": "Disponible 24/7",
+    "trustBadge3": "Sans engagement"
   },
   "howItWorks": {
     "title": "Comment ça marche",
@@ -918,5 +921,60 @@
     "securityContent": "TheNoCodeGuy met en œuvre les mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données : chiffrement, contrôle d'accès, sauvegardes régulières, sensibilisation du personnel.",
     "cnilTitle": "Réclamation auprès de la CNIL",
     "cnilContent": "Si vous estimez que le traitement de vos données ne respecte pas la réglementation, vous pouvez introduire une réclamation auprès de la CNIL : www.cnil.fr"
+  },
+  "stats": {
+    "stat1Value": "< 48h",
+    "stat1Label": "Délai de placement",
+    "stat2Value": "24/7",
+    "stat2Label": "Disponibilité agents",
+    "stat3Value": "0 €",
+    "stat3Label": "Sans engagement",
+    "stat4Value": "x10",
+    "stat4Label": "vs consultant traditionnel"
+  },
+  "domaines": {
+    "title": "Nos domaines d'expertise",
+    "subtitle": "Des agents IA spécialisés par secteur, prêts à intégrer votre équipe.",
+    "ctaButton": "Recruter dans ce domaine",
+    "featured": "Secteur phare",
+    "btpTitle": "BTP & Construction",
+    "btpTasks": "Tri factures,PPSPS & DOE,Relances fournisseurs,Reporting chantier,Conformité DPE",
+    "commerceTitle": "Commerce & Ventes",
+    "commerceTasks": "Prospection LinkedIn,Relances email,Gestion CRM,Qualification leads,Suivi pipeline",
+    "adminTitle": "Administration & Ops",
+    "adminTasks": "Tri courrier,Planification,Pré-comptabilité,Suivi RH,Gestion agendas",
+    "webTitle": "Web & Digital",
+    "webTasks": "Monitoring 24/7,Rapports SEO,Déploiements,Dashboards analytics,Maintenance"
+  },
+  "missions": {
+    "title": "Mission en cours",
+    "subtitle": "Découvrez comment nos agents IA transforment des secteurs concrets.",
+    "kellyassistBadge": "BTP — Administration",
+    "kellyassistTitle": "KellyAssist — Assistantes admin BTP augmentées par l'IA",
+    "kellyassistDesc": "Des assistantes administratives spécialisées BTP, augmentées par l'intelligence artificielle. Tri de factures, gestion PPSPS, relances fournisseurs — le tout en pilote automatique.",
+    "kellyassistStat1Value": "10h",
+    "kellyassistStat1Label": "économisées / semaine",
+    "kellyassistStat2Value": "< 48h",
+    "kellyassistStat2Label": "mise en place",
+    "kellyassistCta": "Lancer une mission similaire"
+  },
+  "domainesBtp": {
+    "metaTitle": "BTP & Construction — Agents IA spécialisés | TheNoCodeGuy",
+    "metaDesc": "Agents IA spécialisés BTP : tri factures, PPSPS, DOE, DPE, relances fournisseurs. Déployés en 48h.",
+    "badge": "Secteur BTP",
+    "title": "Agents IA pour le BTP & la Construction",
+    "subtitle": "Des assistants IA qui gèrent l'administratif de vos chantiers. Tri factures, conformité, relances — en pilote automatique.",
+    "tasksTitle": "Tâches automatisables",
+    "task1": "Tri et classement des factures fournisseurs",
+    "task2": "Génération et suivi des PPSPS",
+    "task3": "Compilation des DOE (Dossiers des Ouvrages Exécutés)",
+    "task4": "Suivi conformité DPE et réglementation thermique",
+    "task5": "Relances automatiques fournisseurs et sous-traitants",
+    "task6": "Reporting chantier hebdomadaire",
+    "task7": "Gestion et archivage des bons de commande",
+    "task8": "Suivi des certifications et assurances",
+    "referenceTitle": "Ils nous font confiance",
+    "referenceDesc": "KellyAssist utilise nos agents IA pour augmenter ses assistantes administratives BTP. Résultat : 10h économisées par semaine par assistante.",
+    "cta": "Poster un brief BTP"
   }
 }

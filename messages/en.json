@@ -24,7 +24,7 @@
     "agents": "Agents",
     "pricing": "Missions",
     "contact": "Contact",
-    "ourAgents": "Our No Code Guys",
+    "ourAgents": "Our expertise",
     "startProject": "Hire a No Code Guy"
   },
   "footer": {
@@ -798,7 +798,10 @@
     "headline": "We place a No Code Guy in your team",
     "subline": "We staff custom AI agents into your team. Post a brief, we handle onboarding. They evolve with your business.",
     "ctaPrimary": "Post a brief",
-    "ctaSecondary": "How it works"
+    "ctaSecondary": "How it works",
+    "trustBadge1": "< 48h placement",
+    "trustBadge2": "Available 24/7",
+    "trustBadge3": "No commitment"
   },
   "howItWorks": {
     "title": "How hiring works",
@@ -918,5 +921,60 @@
     "securityContent": "TheNoCodeGuy implements appropriate technical and organizational measures to ensure the security of your data: encryption, access control, regular backups, staff awareness.",
     "cnilTitle": "Complaint to the CNIL",
     "cnilContent": "If you believe that the processing of your data does not comply with regulations, you may file a complaint with the CNIL: www.cnil.fr"
+  },
+  "stats": {
+    "stat1Value": "< 48h",
+    "stat1Label": "Time to placement",
+    "stat2Value": "24/7",
+    "stat2Label": "Agent availability",
+    "stat3Value": "$0",
+    "stat3Label": "No commitment",
+    "stat4Value": "x10",
+    "stat4Label": "vs traditional consultant"
+  },
+  "domaines": {
+    "title": "Our areas of expertise",
+    "subtitle": "AI agents specialized by industry, ready to join your team.",
+    "ctaButton": "Hire in this field",
+    "featured": "Featured sector",
+    "btpTitle": "Construction & Building",
+    "btpTasks": "Invoice sorting,Safety docs (PPSPS),Supplier follow-ups,Site reporting,Energy compliance",
+    "commerceTitle": "Sales & Commerce",
+    "commerceTasks": "LinkedIn prospecting,Email follow-ups,CRM management,Lead qualification,Pipeline tracking",
+    "adminTitle": "Administration & Ops",
+    "adminTasks": "Mail sorting,Scheduling,Pre-accounting,HR tracking,Calendar management",
+    "webTitle": "Web & Digital",
+    "webTasks": "24/7 monitoring,SEO reports,Deployments,Analytics dashboards,Maintenance"
+  },
+  "missions": {
+    "title": "Active mission",
+    "subtitle": "See how our AI agents are transforming real industries.",
+    "kellyassistBadge": "Construction — Administration",
+    "kellyassistTitle": "KellyAssist — AI-augmented construction admin assistants",
+    "kellyassistDesc": "Administrative assistants specialized in construction, augmented by artificial intelligence. Invoice sorting, safety document management, supplier follow-ups — all on autopilot.",
+    "kellyassistStat1Value": "10h",
+    "kellyassistStat1Label": "saved / week",
+    "kellyassistStat2Value": "< 48h",
+    "kellyassistStat2Label": "setup time",
+    "kellyassistCta": "Launch a similar mission"
+  },
+  "domainesBtp": {
+    "metaTitle": "Construction & Building — Specialized AI Agents | TheNoCodeGuy",
+    "metaDesc": "AI agents specialized in construction: invoice sorting, safety docs, compliance, supplier follow-ups. Deployed in 48h.",
+    "badge": "Construction Sector",
+    "title": "AI Agents for Construction & Building",
+    "subtitle": "AI assistants that handle construction administration. Invoice sorting, compliance, follow-ups — on autopilot.",
+    "tasksTitle": "Automatable tasks",
+    "task1": "Supplier invoice sorting and filing",
+    "task2": "Safety documentation (PPSPS) generation and tracking",
+    "task3": "As-built documentation (DOE) compilation",
+    "task4": "Energy performance (DPE) compliance monitoring",
+    "task5": "Automated supplier and subcontractor follow-ups",
+    "task6": "Weekly site progress reporting",
+    "task7": "Purchase order management and archiving",
+    "task8": "Certification and insurance tracking",
+    "referenceTitle": "They trust us",
+    "referenceDesc": "KellyAssist uses our AI agents to augment their construction admin assistants. Result: 10 hours saved per week per assistant.",
+    "cta": "Post a construction brief"
   }
 }

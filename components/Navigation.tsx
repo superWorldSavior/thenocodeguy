@@ -44,7 +44,7 @@ export default function Navigation() {
 
   const links = [
     { href: "/", label: t("home") },
-    { href: "#profiles", label: t("ourAgents") },
+    { href: "#domaines", label: t("ourAgents") },
     { href: "/contact", label: t("contact") },
   ];
 

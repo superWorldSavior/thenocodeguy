@@ -24,7 +24,7 @@
     "agents": "智能代理",
     "pricing": "價格",
     "contact": "聯絡",
-    "ourAgents": "我們的 No Code Guys",
+    "ourAgents": "專業領域",
     "startProject": "僱用 No Code Guy"
   },
   "footer": {
@@ -775,7 +775,10 @@
     "headline": "我們為您的團隊配置一位 No Code Guy",
     "subline": "我們將客製化 AI 代理派駐到您的團隊。提交簡報，我們負責入職培訓。他們隨您的企業一同成長。",
     "ctaPrimary": "提交簡報",
-    "ctaSecondary": "了解流程"
+    "ctaSecondary": "了解流程",
+    "trustBadge1": "< 48小時配置",
+    "trustBadge2": "全天候服務",
+    "trustBadge3": "無需承諾"
   },
   "howItWorks": {
     "title": "招聘流程",
@@ -834,5 +837,60 @@
     "agent2Connector2": "Umami",
     "agent2Connector3": "Cloudflare",
     "viewProfile": "查看完整檔案"
+  },
+  "stats": {
+    "stat1Value": "< 48小時",
+    "stat1Label": "配置時間",
+    "stat2Value": "24/7",
+    "stat2Label": "代理可用性",
+    "stat3Value": "0元",
+    "stat3Label": "無需承諾",
+    "stat4Value": "x10",
+    "stat4Label": "相比傳統顧問"
+  },
+  "domaines": {
+    "title": "我們的專業領域",
+    "subtitle": "按行業專業化的AI代理，隨時準備加入您的團隊。",
+    "ctaButton": "在此領域招聘",
+    "featured": "重點行業",
+    "btpTitle": "建築與工程",
+    "btpTasks": "發票分類,安全文件,供應商跟進,工地報告,能源合規",
+    "commerceTitle": "銷售與商務",
+    "commerceTasks": "LinkedIn開發,郵件跟進,CRM管理,線索篩選,管道追蹤",
+    "adminTitle": "行政與營運",
+    "adminTasks": "信件分類,排程,預記帳,人資追蹤,行事曆管理",
+    "webTitle": "網路與數位",
+    "webTasks": "全天候監控,SEO報告,部署,分析儀表板,維護"
+  },
+  "missions": {
+    "title": "進行中的任務",
+    "subtitle": "了解我們的AI代理如何改變真實行業。",
+    "kellyassistBadge": "建築 — 行政",
+    "kellyassistTitle": "KellyAssist — AI增強建築行政助理",
+    "kellyassistDesc": "專精建築領域的行政助理，由人工智慧增強。發票分類、安全文件管理、供應商跟進——全部自動化運行。",
+    "kellyassistStat1Value": "10小時",
+    "kellyassistStat1Label": "每週節省",
+    "kellyassistStat2Value": "< 48小時",
+    "kellyassistStat2Label": "部署時間",
+    "kellyassistCta": "啟動類似任務"
+  },
+  "domainesBtp": {
+    "metaTitle": "建築與工程 — 專業AI代理 | TheNoCodeGuy",
+    "metaDesc": "專精建築的AI代理：發票分類、安全文件、合規、供應商跟進。48小時內部署。",
+    "badge": "建築行業",
+    "title": "建築與工程AI代理",
+    "subtitle": "處理建築行政事務的AI助理。發票分類、合規、跟進——全自動化。",
+    "tasksTitle": "可自動化的任務",
+    "task1": "供應商發票分類歸檔",
+    "task2": "安全文件生成與追蹤",
+    "task3": "竣工文件編制",
+    "task4": "能源效能合規監控",
+    "task5": "供應商和分包商自動跟進",
+    "task6": "每週工地進度報告",
+    "task7": "採購訂單管理與歸檔",
+    "task8": "認證與保險追蹤",
+    "referenceTitle": "他們信任我們",
+    "referenceDesc": "KellyAssist 使用我們的AI代理來增強其建築行政助理。結果：每位助理每週節省10小時。",
+    "cta": "發布建築需求"
   }
 }
