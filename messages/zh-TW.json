@@ -772,13 +772,13 @@
   },
   "hero": {
     "badge": "AI 人力派遣",
-    "headline": "我們為您的團隊配置一位 No Code Guy",
-    "subline": "我們將客製化 AI 代理派駐到您的團隊。提交簡報，我們負責入職培訓。他們隨您的企業一同成長。",
-    "ctaPrimary": "提交簡報",
+    "headline": "您的建築行政助理忙不過來？我們為她配備AI助手。",
+    "subline": "發票催收、資質到期提醒、記帳準備、郵件摘要——AI代理在48小時內接手您的重複性任務。您保持掌控，它負責繁瑣工作。",
+    "ctaPrimary": "查看我們能自動化什麼",
     "ctaSecondary": "了解流程",
-    "trustBadge1": "< 48小時配置",
-    "trustBadge2": "全天候服務",
-    "trustBadge3": "無需承諾"
+    "trustBadge1": "48小時內部署",
+    "trustBadge2": "透過WhatsApp運作",
+    "trustBadge3": "建築行業專精"
   },
   "howItWorks": {
     "title": "招聘流程",
@@ -808,9 +808,9 @@
     "t3Quote": "我們發布了一個網站管理員的需求。48小時後，網站監控、SEO報告和部署全部實現了自動化。"
   },
   "ctaSection": {
-    "title": "準備好招聘您的第一位智能助手了嗎？",
-    "subtitle": "發布一份簡報，描述您需要的角色。我們將在48小時內為您匹配一位AI助手——無需承諾。",
-    "button": "發布招聘簡報"
+    "title": "準備好自動化您的行政工作了嗎？",
+    "subtitle": "描述您的重複性任務。我們向您展示AI代理在48小時內能處理什麼——無需承諾。",
+    "button": "預約演示 — 15分鐘"
   },
   "profiles": {
     "title": "可用檔案",
@@ -854,7 +854,7 @@
     "ctaButton": "在此領域招聘",
     "featured": "重點行業",
     "btpTitle": "建築與工程",
-    "btpTasks": "發票分類,安全文件,供應商跟進,工地報告,能源合規",
+    "btpTasks": "自動發票催收,資質到期提醒,每日郵件摘要,記帳準備,薪資變量,標案追蹤,WhatsApp截止提醒",
     "commerceTitle": "銷售與商務",
     "commerceTasks": "LinkedIn開發,郵件跟進,CRM管理,線索篩選,管道追蹤",
     "adminTitle": "行政與營運",
@@ -875,22 +875,72 @@
     "studyCta": "啟動類似任務"
   },
   "domainesBtp": {
-    "metaTitle": "建築與工程 — 專業AI代理 | TheNoCodeGuy",
-    "metaDesc": "專精建築的AI代理：發票分類、安全文件、合規、供應商跟進。48小時內部署。",
+    "metaTitle": "建築行政助理AI增強 — TheNoCodeGuy",
+    "metaDesc": "自動化建築行政：發票催收、資質提醒、記帳準備、標案追蹤。AI代理48小時內部署。",
     "badge": "建築行業",
-    "title": "建築與工程AI代理",
-    "subtitle": "處理建築行政事務的AI助理。發票分類、合規、跟進——全自動化。",
-    "tasksTitle": "可自動化的任務",
-    "task1": "供應商發票分類歸檔",
-    "task2": "安全文件生成與追蹤",
-    "task3": "竣工文件編制",
-    "task4": "能源效能合規監控",
-    "task5": "供應商和分包商自動跟進",
-    "task6": "每週工地進度報告",
-    "task7": "採購訂單管理與歸檔",
-    "task8": "認證與保險追蹤",
-    "referenceTitle": "他們信任我們",
+    "title": "您的建築行政全自動運行",
+    "subtitle": "催收、合規、記帳、標案——AI代理接手那些佔滿您整天的任務。48小時內部署。",
+    "ctaTop": "預約演示 — 15分鐘",
+
+    "section1Title": "行政與合規",
+    "section1Before1": "您手動催收供應商發票",
+    "section1After1": "代理在第30、45、60天自動催收——透過郵件和WhatsApp",
+    "section1Before2": "您在10個不同資料夾中找安全計劃",
+    "section1After2": "代理生成預填安全計劃並追蹤簽名",
+    "section1Before3": "您在工程結束時匆忙編制竣工文件",
+    "section1After3": "代理在施工過程中收集資料並提醒缺少的文件",
+    "section1Before4": "您忘記了能源合規或熱規定的截止日期",
+    "section1After4": "代理監控所有日期並在到期前30天提醒您",
+
+    "section2Title": "人力資源與薪資管理",
+    "section2Before1": "您每月手動輸入薪資變量",
+    "section2After1": "代理收集工時、獎金、缺勤並準備薪資檔案",
+    "section2Before2": "您花時間排工地團隊班表",
+    "section2After2": "代理根據可用性和資質生成每週排班",
+    "section2Before3": "您追查過期的認證和安全卡",
+    "section2After3": "代理在到期前60天提醒並建議培訓時段",
+
+    "section3Title": "財務追蹤",
+    "section3Before1": "您手動為會計分類發票",
+    "section3After1": "代理自動配對採購訂單、發票和交貨單",
+    "section3Before2": "您逐一催收未付款項",
+    "section3After2": "代理按您的日程發送漸進式催收（友好提醒→正式通知）",
+    "section3Before3": "您用試算表建立現金流預測",
+    "section3After3": "代理生成每週更新的現金流儀表板",
+
+    "section4Title": "工地管理",
+    "section4Before1": "您手動撰寫每週工地報告",
+    "section4After1": "代理將進度、照片和警報編制成自動PDF報告",
+    "section4Before2": "您把採購訂單存在檔案櫃裡",
+    "section4After2": "代理數位化、分類並將每個訂單連結到對應工程",
+    "section4Before3": "您分別透過郵件發送會議記錄",
+    "section4After3": "代理根據您的筆記起草會議記錄並在10分鐘內發送給與會者",
+
+    "section5Title": "商務與標案",
+    "section5Before1": "您在多個平台上手動監控標案",
+    "section5After1": "代理監控相關標案並每天發送精準摘要",
+    "section5Before2": "您在最後一刻組裝投標文件",
+    "section5After2": "代理預填經常性行政文件（表格、證書、聲明）",
+    "section5Before3": "您忘記在首次接觸後跟進潛在客戶",
+    "section5After3": "代理按您的序列自動跟進：第3天、第7天、第14天",
+
+    "section6Title": "認證與保險",
+    "section6Before1": "您逐一檢查資質和責任保險證書",
+    "section6After1": "代理監控所有有效期並自動提醒您",
+    "section6Before2": "您在郵件中搜尋認證和安全卡",
+    "section6After2": "代理在最新儀表板中集中所有文件",
+    "section6Before3": "您因文件缺失而有失去合約的風險",
+    "section6After3": "代理在每次提交前驗證文件完整性",
+
+    "beforeLabel": "之前",
+    "afterLabel": "有了您的AI代理",
+    "referenceTitle": "已投入使用",
     "referenceDesc": "一家領先的建築企業使用我們的AI代理來增強其行政助理。結果：每位助理每週節省10小時。",
-    "cta": "發布建築需求"
+    "referenceStat1Value": "10小時",
+    "referenceStat1Label": "每週節省",
+    "referenceStat2Value": "< 48小時",
+    "referenceStat2Label": "部署時間",
+    "cta": "預約演示 — 15分鐘",
+    "ctaSubtext": "免費，無需承諾。我們向您展示可以為您自動化什麼。"
   }
 }

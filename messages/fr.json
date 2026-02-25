@@ -795,13 +795,13 @@
   },
   "hero": {
     "badge": "Agence de staffing IA",
-    "headline": "Nous plaçons un No Code Guy dans votre équipe",
-    "subline": "On place des agents IA sur mesure dans votre équipe. Déposez un brief, on gère l'onboarding. Ils évoluent avec votre business.",
-    "ctaPrimary": "Poster un brief",
+    "headline": "Votre assistante admin BTP débordée ? On lui met un bras droit IA.",
+    "subline": "Relances factures, alertes Qualibat, prépa compta, digest emails — un agent IA prend en charge vos tâches répétitives en 48h. Vous gardez le contrôle, il fait le travail de fond.",
+    "ctaPrimary": "Voir ce qu'on automatise",
     "ctaSecondary": "Comment ça marche",
-    "trustBadge1": "< 48h de placement",
-    "trustBadge2": "Disponible 24/7",
-    "trustBadge3": "Sans engagement"
+    "trustBadge1": "Déployé en 48h",
+    "trustBadge2": "Fonctionne via WhatsApp",
+    "trustBadge3": "Spécialisé BTP"
   },
   "howItWorks": {
     "title": "Comment ça marche",
@@ -857,9 +857,9 @@
     "viewProfile": "Voir le profil complet"
   },
   "ctaSection": {
-    "title": "Prêt à recruter votre premier agent ?",
-    "subtitle": "Postez un brief décrivant le poste. Nous vous trouvons un agent IA sous 48h — sans engagement.",
-    "button": "Poster un brief"
+    "title": "Prêt à automatiser votre admin ?",
+    "subtitle": "Décrivez vos tâches répétitives. On vous montre ce qu'un agent IA peut gérer en 48h — sans engagement.",
+    "button": "Demander une démo — 15 min"
   },
   "mentionsLegales": {
     "metaTitle": "Mentions légales — TheNoCodeGuy",
@@ -938,7 +938,7 @@
     "ctaButton": "Recruter dans ce domaine",
     "featured": "Secteur phare",
     "btpTitle": "BTP & Construction",
-    "btpTasks": "Tri factures,PPSPS & DOE,Relances fournisseurs,Reporting chantier,Conformité DPE",
+    "btpTasks": "Relance factures auto,Alertes Qualibat & décennale,Digest emails matinal,Prépa comptable,Variables de paie,Suivi appels d'offres,Rappels WhatsApp échéances",
     "commerceTitle": "Commerce & Ventes",
     "commerceTasks": "Prospection LinkedIn,Relances email,Gestion CRM,Qualification leads,Suivi pipeline",
     "adminTitle": "Administration & Ops",
@@ -959,22 +959,72 @@
     "studyCta": "Lancer une mission similaire"
   },
   "domainesBtp": {
-    "metaTitle": "BTP & Construction — Agents IA spécialisés | TheNoCodeGuy",
-    "metaDesc": "Agents IA spécialisés BTP : tri factures, PPSPS, DOE, DPE, relances fournisseurs. Déployés en 48h.",
+    "metaTitle": "Assistante administrative BTP augmentée par l'IA — TheNoCodeGuy",
+    "metaDesc": "Automatisez l'admin BTP : relances factures, alertes Qualibat, prépa compta, suivi AO. Agent IA déployé en 48h, spécialisé construction.",
     "badge": "Secteur BTP",
-    "title": "Agents IA pour le BTP & la Construction",
-    "subtitle": "Des assistants IA qui gèrent l'administratif de vos chantiers. Tri factures, conformité, relances — en pilote automatique.",
-    "tasksTitle": "Tâches automatisables",
-    "task1": "Tri et classement des factures fournisseurs",
-    "task2": "Génération et suivi des PPSPS",
-    "task3": "Compilation des DOE (Dossiers des Ouvrages Exécutés)",
-    "task4": "Suivi conformité DPE et réglementation thermique",
-    "task5": "Relances automatiques fournisseurs et sous-traitants",
-    "task6": "Reporting chantier hebdomadaire",
-    "task7": "Gestion et archivage des bons de commande",
-    "task8": "Suivi des certifications et assurances",
-    "referenceTitle": "Ils nous font confiance",
+    "title": "Votre admin BTP tourne en pilote automatique",
+    "subtitle": "Relances, conformité, compta, AO — un agent IA prend le relais sur les tâches qui mangent vos journées. Déployé en 48h.",
+    "ctaTop": "Demander une démo — 15 min",
+
+    "section1Title": "Administration & Conformité",
+    "section1Before1": "Vous relancez les factures fournisseurs à la main",
+    "section1After1": "L'agent relance automatiquement à J+30, J+45, J+60 — par email et WhatsApp",
+    "section1Before2": "Vous cherchez les PPSPS dans 10 dossiers différents",
+    "section1After2": "L'agent génère le PPSPS pré-rempli et suit les signatures",
+    "section1Before3": "Vous compilez les DOE en fin de chantier dans l'urgence",
+    "section1After3": "L'agent collecte les pièces au fil du chantier et alerte les manquantes",
+    "section1Before4": "Vous oubliez une échéance DPE ou conformité thermique",
+    "section1After4": "L'agent surveille les dates et vous alerte 30 jours avant expiration",
+
+    "section2Title": "Gestion RH & Paie",
+    "section2Before1": "Vous saisissez les variables de paie manuellement chaque mois",
+    "section2After1": "L'agent collecte heures, primes, absences et prépare le fichier paie",
+    "section2Before2": "Vous perdez du temps à planifier les équipes chantier",
+    "section2After2": "L'agent génère le planning hebdo selon disponibilités et qualifications",
+    "section2Before3": "Vous courez après les CACES et habilitations expirées",
+    "section2After3": "L'agent alerte 60 jours avant expiration et propose les créneaux formation",
+
+    "section3Title": "Suivi Financier",
+    "section3Before1": "Vous triez les factures à la main pour la compta",
+    "section3After1": "L'agent classe, rapproche bon de commande / facture / livraison automatiquement",
+    "section3Before2": "Vous relancez les impayés un par un",
+    "section3After2": "L'agent envoie les relances graduées (amiable → mise en demeure) selon votre calendrier",
+    "section3Before3": "Vous préparez le prévisionnel de trésorerie sur tableur",
+    "section3After3": "L'agent génère un dashboard trésorerie mis à jour chaque semaine",
+
+    "section4Title": "Pilotage Chantier",
+    "section4Before1": "Vous rédigez le reporting chantier hebdo manuellement",
+    "section4After1": "L'agent compile les avancements, photos et alertes en un rapport PDF automatique",
+    "section4Before2": "Vous archivez les bons de commande dans des classeurs",
+    "section4After2": "L'agent numérise, classe et relie chaque BC au chantier correspondant",
+    "section4Before3": "Vous envoyez les comptes rendus de réunion par email séparément",
+    "section4After3": "L'agent rédige le CR depuis vos notes et l'envoie aux participants en 10 min",
+
+    "section5Title": "Commercial & Appels d'Offres",
+    "section5Before1": "Vous surveillez les AO manuellement sur plusieurs plateformes",
+    "section5After1": "L'agent veille les AO pertinents et vous envoie un digest quotidien ciblé",
+    "section5Before2": "Vous assemblez le dossier de réponse AO en dernière minute",
+    "section5After2": "L'agent pré-remplit les pièces administratives récurrentes (DC1, DC2, attestations)",
+    "section5Before3": "Vous oubliez de relancer un prospect après un premier contact",
+    "section5After3": "L'agent relance automatiquement selon votre séquence : J+3, J+7, J+14",
+
+    "section6Title": "Certifications & Assurances",
+    "section6Before1": "Vous vérifiez les attestations Qualibat et décennale une par une",
+    "section6After1": "L'agent surveille toutes les dates de validité et vous alerte automatiquement",
+    "section6Before2": "Vous cherchez les attestations RGE et CACES dans les emails",
+    "section6After2": "L'agent centralise tous les documents dans un tableau de bord à jour",
+    "section6Before3": "Vous risquez de perdre un marché pour un document manquant",
+    "section6After3": "L'agent vérifie la complétude du dossier avant chaque soumission",
+
+    "beforeLabel": "Avant",
+    "afterLabel": "Avec votre agent IA",
+    "referenceTitle": "Déjà en production",
     "referenceDesc": "Une entreprise BTP leader utilise nos agents IA pour augmenter ses assistantes administratives. Résultat : 10h économisées par semaine par assistante.",
-    "cta": "Poster un brief BTP"
+    "referenceStat1Value": "10h",
+    "referenceStat1Label": "économisées / semaine",
+    "referenceStat2Value": "< 48h",
+    "referenceStat2Label": "mise en place",
+    "cta": "Demander une démo — 15 min",
+    "ctaSubtext": "Gratuit, sans engagement. On vous montre ce qu'on peut automatiser chez vous."
   }
 }

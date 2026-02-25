@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, HardHat, CheckCircle2 } from "lucide-react";
+import { ArrowRight, HardHat, X, Check } from "lucide-react";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("domainesBtp");
@@ -12,10 +12,16 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const taskKeys = [
-  "task1", "task2", "task3", "task4",
-  "task5", "task6", "task7", "task8",
+const sections = [
+  { key: "section1", count: 4 },
+  { key: "section2", count: 3 },
+  { key: "section3", count: 3 },
+  { key: "section4", count: 3 },
+  { key: "section5", count: 3 },
+  { key: "section6", count: 3 },
 ] as const;
+
+type SectionKey = (typeof sections)[number]["key"];
 
 export default async function BtpPage() {
   const t = await getTranslations("domainesBtp");
@@ -40,14 +46,14 @@ export default async function BtpPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
               >
-                {t("cta")}
+                {t("ctaTop")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
 
-            <div className="relative animate-fade-in-up animate-delay-200">
+            <div className="relative animate-fade-in-up [animation-delay:200ms]">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border/50 shadow-2xl shadow-primary/10">
                 <Image
                   src="/images/homepage/domaine-btp.webp"
@@ -63,25 +69,57 @@ export default async function BtpPage() {
         </div>
       </section>
 
-      {/* Tasks list */}
-      <section className="px-4 py-20 sm:px-6">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-10 text-center text-3xl font-bold">{t("tasksTitle")}</h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {taskKeys.map((key) => (
-              <div
-                key={key}
-                className="card-hover flex items-start gap-3 rounded-xl border border-border bg-card p-5"
-              >
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span className="text-card-foreground">{t(key)}</span>
-              </div>
-            ))}
+      {/* Avant / Après sections */}
+      {sections.map((section, sectionIndex) => (
+        <section
+          key={section.key}
+          className={`px-4 py-16 sm:px-6 ${sectionIndex % 2 === 0 ? "bg-muted/30" : "bg-background"}`}
+        >
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-10 text-center text-2xl font-bold sm:text-3xl">
+              {t(`${section.key}Title` as `${SectionKey}Title`)}
+            </h2>
+            <div className="grid gap-4">
+              {Array.from({ length: section.count }).map((_, i) => {
+                const idx = i + 1;
+                return (
+                  <div
+                    key={idx}
+                    className="grid grid-cols-1 gap-3 rounded-xl border border-border bg-card p-5 sm:grid-cols-2 sm:gap-6"
+                  >
+                    {/* Avant */}
+                    <div className="flex items-start gap-3">
+                      <X className="mt-0.5 h-5 w-5 shrink-0 text-red-400" />
+                      <div>
+                        <span className="mb-1 block text-xs font-semibold uppercase tracking-wider text-red-400">
+                          {t("beforeLabel")}
+                        </span>
+                        <span className="text-sm text-muted-foreground">
+                          {t(`${section.key}Before${idx}` as `${SectionKey}Before1`)}
+                        </span>
+                      </div>
+                    </div>
+                    {/* Après */}
+                    <div className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-emerald-500" />
+                      <div>
+                        <span className="mb-1 block text-xs font-semibold uppercase tracking-wider text-emerald-500">
+                          {t("afterLabel")}
+                        </span>
+                        <span className="text-sm text-card-foreground">
+                          {t(`${section.key}After${idx}` as `${SectionKey}After1`)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
-      {/* Client reference */}
+      {/* Client reference + stats */}
       <section className="px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-4xl">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-8 sm:p-12">
@@ -89,13 +127,33 @@ export default async function BtpPage() {
             <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
               {t("referenceDesc")}
             </p>
+            <div className="mb-8 flex gap-8">
+              <div>
+                <div className="text-3xl font-extrabold text-primary">
+                  {t("referenceStat1Value")}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {t("referenceStat1Label")}
+                </div>
+              </div>
+              <div className="h-auto w-px bg-border" />
+              <div>
+                <div className="text-3xl font-extrabold text-primary">
+                  {t("referenceStat2Value")}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {t("referenceStat2Label")}
+                </div>
+              </div>
+            </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-all hover:bg-primary/90"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
             >
               {t("cta")}
               <ArrowRight className="h-4 w-4" />
             </Link>
+            <p className="mt-3 text-sm text-muted-foreground">{t("ctaSubtext")}</p>
           </div>
         </div>
       </section>

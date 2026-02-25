@@ -795,13 +795,13 @@
   },
   "hero": {
     "badge": "AI Staffing Agency",
-    "headline": "We place a No Code Guy in your team",
-    "subline": "We staff custom AI agents into your team. Post a brief, we handle onboarding. They evolve with your business.",
-    "ctaPrimary": "Post a brief",
+    "headline": "Your construction admin assistant is overwhelmed? We give her an AI right hand.",
+    "subline": "Invoice follow-ups, Qualibat alerts, bookkeeping prep, email digests — an AI agent takes over your repetitive tasks in 48h. You stay in control, it does the heavy lifting.",
+    "ctaPrimary": "See what we automate",
     "ctaSecondary": "How it works",
-    "trustBadge1": "< 48h placement",
-    "trustBadge2": "Available 24/7",
-    "trustBadge3": "No commitment"
+    "trustBadge1": "Deployed in 48h",
+    "trustBadge2": "Works via WhatsApp",
+    "trustBadge3": "Construction specialist"
   },
   "howItWorks": {
     "title": "How hiring works",
@@ -857,9 +857,9 @@
     "viewProfile": "View full profile"
   },
   "ctaSection": {
-    "title": "Ready to hire your first agent?",
-    "subtitle": "Post a brief describing the role you need. We match you with an AI agent within 48 hours — no commitment.",
-    "button": "Post a job brief"
+    "title": "Ready to automate your admin?",
+    "subtitle": "Describe your repetitive tasks. We show you what an AI agent can handle in 48h — no commitment.",
+    "button": "Request a demo — 15 min"
   },
   "mentionsLegales": {
     "metaTitle": "Legal Notice — TheNoCodeGuy",
@@ -938,7 +938,7 @@
     "ctaButton": "Hire in this field",
     "featured": "Featured sector",
     "btpTitle": "Construction & Building",
-    "btpTasks": "Invoice sorting,Safety docs (PPSPS),Supplier follow-ups,Site reporting,Energy compliance",
+    "btpTasks": "Auto invoice follow-ups,Qualibat & insurance alerts,Morning email digest,Bookkeeping prep,Payroll variables,Tender tracking,WhatsApp deadline reminders",
     "commerceTitle": "Sales & Commerce",
     "commerceTasks": "LinkedIn prospecting,Email follow-ups,CRM management,Lead qualification,Pipeline tracking",
     "adminTitle": "Administration & Ops",
@@ -959,22 +959,72 @@
     "studyCta": "Launch a similar mission"
   },
   "domainesBtp": {
-    "metaTitle": "Construction & Building — Specialized AI Agents | TheNoCodeGuy",
-    "metaDesc": "AI agents specialized in construction: invoice sorting, safety docs, compliance, supplier follow-ups. Deployed in 48h.",
+    "metaTitle": "Construction Admin Assistant Augmented by AI — TheNoCodeGuy",
+    "metaDesc": "Automate construction admin: invoice follow-ups, Qualibat alerts, bookkeeping prep, tender tracking. AI agent deployed in 48h.",
     "badge": "Construction Sector",
-    "title": "AI Agents for Construction & Building",
-    "subtitle": "AI assistants that handle construction administration. Invoice sorting, compliance, follow-ups — on autopilot.",
-    "tasksTitle": "Automatable tasks",
-    "task1": "Supplier invoice sorting and filing",
-    "task2": "Safety documentation (PPSPS) generation and tracking",
-    "task3": "As-built documentation (DOE) compilation",
-    "task4": "Energy performance (DPE) compliance monitoring",
-    "task5": "Automated supplier and subcontractor follow-ups",
-    "task6": "Weekly site progress reporting",
-    "task7": "Purchase order management and archiving",
-    "task8": "Certification and insurance tracking",
-    "referenceTitle": "They trust us",
+    "title": "Your construction admin runs on autopilot",
+    "subtitle": "Follow-ups, compliance, bookkeeping, tenders — an AI agent takes over the tasks eating up your days. Deployed in 48h.",
+    "ctaTop": "Request a demo — 15 min",
+
+    "section1Title": "Administration & Compliance",
+    "section1Before1": "You chase supplier invoices manually",
+    "section1After1": "The agent follows up automatically at D+30, D+45, D+60 — by email and WhatsApp",
+    "section1Before2": "You hunt for safety plans across 10 different folders",
+    "section1After2": "The agent generates pre-filled safety plans and tracks signatures",
+    "section1Before3": "You scramble to compile as-built docs at project end",
+    "section1After3": "The agent collects documents throughout the project and flags missing ones",
+    "section1Before4": "You miss an energy compliance or thermal regulation deadline",
+    "section1After4": "The agent monitors all dates and alerts you 30 days before expiry",
+
+    "section2Title": "HR & Payroll Management",
+    "section2Before1": "You enter payroll variables manually every month",
+    "section2After1": "The agent collects hours, bonuses, absences and prepares the payroll file",
+    "section2Before2": "You spend time scheduling site teams",
+    "section2After2": "The agent generates weekly schedules based on availability and qualifications",
+    "section2Before3": "You chase expired certifications and safety cards",
+    "section2After3": "The agent alerts 60 days before expiry and suggests training slots",
+
+    "section3Title": "Financial Tracking",
+    "section3Before1": "You sort invoices manually for the accountant",
+    "section3After1": "The agent matches purchase orders, invoices and deliveries automatically",
+    "section3Before2": "You chase unpaid invoices one by one",
+    "section3After2": "The agent sends graduated reminders (friendly → formal notice) on your schedule",
+    "section3Before3": "You build cash flow forecasts on spreadsheets",
+    "section3After3": "The agent generates a cash flow dashboard updated weekly",
+
+    "section4Title": "Site Management",
+    "section4Before1": "You write the weekly site report manually",
+    "section4After1": "The agent compiles progress, photos and alerts into an automatic PDF report",
+    "section4Before2": "You archive purchase orders in filing cabinets",
+    "section4After2": "The agent digitizes, classifies and links each PO to the corresponding project",
+    "section4Before3": "You send meeting minutes by email separately",
+    "section4After3": "The agent drafts minutes from your notes and sends them to attendees in 10 min",
+
+    "section5Title": "Sales & Tenders",
+    "section5Before1": "You monitor tenders manually across multiple platforms",
+    "section5After1": "The agent watches relevant tenders and sends you a targeted daily digest",
+    "section5Before2": "You assemble tender response packages last minute",
+    "section5After2": "The agent pre-fills recurring admin documents (forms, certificates, declarations)",
+    "section5Before3": "You forget to follow up with a prospect after first contact",
+    "section5After3": "The agent follows up automatically on your schedule: D+3, D+7, D+14",
+
+    "section6Title": "Certifications & Insurance",
+    "section6Before1": "You check Qualibat and liability insurance certificates one by one",
+    "section6After1": "The agent monitors all validity dates and alerts you automatically",
+    "section6Before2": "You search for certifications and safety cards in emails",
+    "section6After2": "The agent centralizes all documents in an up-to-date dashboard",
+    "section6Before3": "You risk losing a contract over a missing document",
+    "section6After3": "The agent verifies package completeness before each submission",
+
+    "beforeLabel": "Before",
+    "afterLabel": "With your AI agent",
+    "referenceTitle": "Already in production",
     "referenceDesc": "A leading construction company uses our AI agents to augment their admin assistants. Result: 10 hours saved per week per assistant.",
-    "cta": "Post a construction brief"
+    "referenceStat1Value": "10h",
+    "referenceStat1Label": "saved / week",
+    "referenceStat2Value": "< 48h",
+    "referenceStat2Label": "setup time",
+    "cta": "Request a demo — 15 min",
+    "ctaSubtext": "Free, no commitment. We show you what we can automate for you."
   }
 }
