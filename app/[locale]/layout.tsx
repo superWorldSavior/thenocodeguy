@@ -64,7 +64,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={localeToHtmlLang[locale] ?? locale}>
+    <html lang={localeToHtmlLang[locale] ?? locale} suppressHydrationWarning>
       <body className={`${inter.className} bg-background text-foreground antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>

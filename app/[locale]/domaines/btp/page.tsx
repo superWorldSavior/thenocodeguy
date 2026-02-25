@@ -81,7 +81,7 @@ export default async function BtpPage() {
         </div>
       </section>
 
-      {/* KellyAssist reference */}
+      {/* Client reference */}
       <section className="px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-4xl">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-8 sm:p-12">

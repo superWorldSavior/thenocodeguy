@@ -800,7 +800,7 @@
     "t1Quote": "三周前我雇佣了销售代理。现在我的销售管道中有40多个合格线索——我自己没有发过一封陌生开发邮件。",
     "t2Name": "Karim Mensah",
     "t2Role": "运营总监",
-    "t2Company": "KellyAssist",
+    "t2Company": "领先建筑企业",
     "t2Quote": "自从接入行政代理以来，发票催收和会议安排完全自动化运行。我每周省出了10个小时。",
     "t3Name": "Jean-Charles Petit",
     "t3Role": "首席技术官",
@@ -863,16 +863,16 @@
     "webTasks": "全天候监控,SEO报告,部署,分析仪表板,维护"
   },
   "missions": {
-    "title": "进行中的任务",
+    "title": "案例研究",
     "subtitle": "了解我们的AI代理如何改变真实行业。",
-    "kellyassistBadge": "建筑 — 行政",
-    "kellyassistTitle": "KellyAssist — AI增强建筑行政助理",
-    "kellyassistDesc": "专精建筑领域的行政助理，由人工智能增强。发票分类、安全文件管理、供应商跟进——全部自动化运行。",
-    "kellyassistStat1Value": "10小时",
-    "kellyassistStat1Label": "每周节省",
-    "kellyassistStat2Value": "< 48小时",
-    "kellyassistStat2Label": "部署时间",
-    "kellyassistCta": "启动类似任务"
+    "studyBadge": "建筑 — 行政",
+    "studyTitle": "领先建筑企业 — AI增强行政管理",
+    "studyDesc": "专精建筑领域的行政助理，由人工智能增强。发票分类、安全文件管理、供应商跟进——全部自动化运行。",
+    "studyStat1Value": "10小时",
+    "studyStat1Label": "每周节省",
+    "studyStat2Value": "< 48小时",
+    "studyStat2Label": "部署时间",
+    "studyCta": "启动类似任务"
   },
   "domainesBtp": {
     "metaTitle": "建筑与工程 — 专业AI代理 | TheNoCodeGuy",
@@ -890,7 +890,7 @@
     "task7": "采购订单管理与归档",
     "task8": "认证与保险追踪",
     "referenceTitle": "他们信任我们",
-    "referenceDesc": "KellyAssist 使用我们的AI代理来增强其建筑行政助理。结果：每位助理每周节省10小时。",
+    "referenceDesc": "一家领先的建筑企业使用我们的AI代理来增强其行政助理。结果：每位助理每周节省10小时。",
     "cta": "发布建筑需求"
   }
 }

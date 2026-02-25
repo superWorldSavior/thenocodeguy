@@ -823,7 +823,7 @@
     "t1Quote": "I hired a No Code Guy three weeks ago. My pipeline now has 40+ qualified leads — I didn't send a single cold email myself.",
     "t2Name": "Karim Mensah",
     "t2Role": "Operations Director",
-    "t2Company": "KellyAssist",
+    "t2Company": "Leading construction firm",
     "t2Quote": "Since onboarding my No Code Guy, invoice follow-ups and meeting scheduling run on autopilot. I freed up 10 hours a week.",
     "t3Name": "Jean-Charles Petit",
     "t3Role": "CTO",
@@ -947,16 +947,16 @@
     "webTasks": "24/7 monitoring,SEO reports,Deployments,Analytics dashboards,Maintenance"
   },
   "missions": {
-    "title": "Active mission",
+    "title": "Case study",
     "subtitle": "See how our AI agents are transforming real industries.",
-    "kellyassistBadge": "Construction — Administration",
-    "kellyassistTitle": "KellyAssist — AI-augmented construction admin assistants",
-    "kellyassistDesc": "Administrative assistants specialized in construction, augmented by artificial intelligence. Invoice sorting, safety document management, supplier follow-ups — all on autopilot.",
-    "kellyassistStat1Value": "10h",
-    "kellyassistStat1Label": "saved / week",
-    "kellyassistStat2Value": "< 48h",
-    "kellyassistStat2Label": "setup time",
-    "kellyassistCta": "Launch a similar mission"
+    "studyBadge": "Construction — Administration",
+    "studyTitle": "Leading construction company — AI-augmented administration",
+    "studyDesc": "Administrative assistants specialized in construction, augmented by artificial intelligence. Invoice sorting, safety document management, supplier follow-ups — all on autopilot.",
+    "studyStat1Value": "10h",
+    "studyStat1Label": "saved / week",
+    "studyStat2Value": "< 48h",
+    "studyStat2Label": "setup time",
+    "studyCta": "Launch a similar mission"
   },
   "domainesBtp": {
     "metaTitle": "Construction & Building — Specialized AI Agents | TheNoCodeGuy",
@@ -974,7 +974,7 @@
     "task7": "Purchase order management and archiving",
     "task8": "Certification and insurance tracking",
     "referenceTitle": "They trust us",
-    "referenceDesc": "KellyAssist uses our AI agents to augment their construction admin assistants. Result: 10 hours saved per week per assistant.",
+    "referenceDesc": "A leading construction company uses our AI agents to augment their admin assistants. Result: 10 hours saved per week per assistant.",
     "cta": "Post a construction brief"
   }
 }

@@ -14,14 +14,14 @@ export default async function MissionsSection() {
           <p className="text-muted-foreground">{t('subtitle')}</p>
         </div>
 
-        {/* KellyAssist case study card */}
+        {/* Case study card */}
         <div className="card-hover overflow-hidden rounded-2xl border border-border bg-card">
           <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr]">
             {/* Image */}
             <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[360px]">
               <Image
-                src="/images/homepage/mission-kellyassist.webp"
-                alt="KellyAssist — AI-augmented construction admin"
+                src="/images/homepage/mission-casestudy.webp"
+                alt={t('studyTitle')}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -33,34 +33,34 @@ export default async function MissionsSection() {
             {/* Content */}
             <div className="flex flex-col justify-center p-8 lg:p-12">
               <span className="mb-3 inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                {t('kellyassistBadge')}
+                {t('studyBadge')}
               </span>
 
               <h3 className="mb-4 text-2xl font-bold text-card-foreground lg:text-3xl">
-                {t('kellyassistTitle')}
+                {t('studyTitle')}
               </h3>
 
               <p className="mb-6 leading-relaxed text-muted-foreground">
-                {t('kellyassistDesc')}
+                {t('studyDesc')}
               </p>
 
               {/* Stats */}
               <div className="mb-8 flex gap-8">
                 <div>
                   <div className="text-3xl font-extrabold text-primary">
-                    {t('kellyassistStat1Value')}
+                    {t('studyStat1Value')}
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    {t('kellyassistStat1Label')}
+                    {t('studyStat1Label')}
                   </div>
                 </div>
                 <div className="h-auto w-px bg-border" />
                 <div>
                   <div className="text-3xl font-extrabold text-primary">
-                    {t('kellyassistStat2Value')}
+                    {t('studyStat2Value')}
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    {t('kellyassistStat2Label')}
+                    {t('studyStat2Label')}
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default async function MissionsSection() {
                 href="/contact"
                 className="inline-flex w-fit items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90"
               >
-                {t('kellyassistCta')}
+                {t('studyCta')}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
