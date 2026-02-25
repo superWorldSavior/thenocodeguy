@@ -26,7 +26,12 @@
     "contact": "Contact",
     "ourAgents": "Nos domaines",
     "startProject": "Embaucher un No Code Guy",
-    "blog": "Blog"
+    "blog": "Blog",
+    "switchLanguage": "Langue",
+    "langFr": "Français",
+    "langEn": "English",
+    "langZhTw": "繁體中文",
+    "langZhCn": "简体中文"
   },
   "footer": {
     "home": "Accueil",
@@ -625,7 +630,7 @@
     "windmillVsN8n": {
       "metaTitle": "Pourquoi j'utilise Windmill et pas n8n (vu de l'intérieur) — Lab TheNoCodeGuy",
       "breadcrumb": "Retour au Lab",
-      "labBadge": "Lab",
+      "blogBadge": "Blog",
       "title": "Pourquoi j'utilise Windmill et pas n8n",
       "titleSuffix": "(vu de l'intérieur)",
       "date": "20 février 2026",
@@ -689,7 +694,7 @@
     "veilleEmail": {
       "metaTitle": "Comment j'automatise ma veille email avec GPT-4o — Lab TheNoCodeGuy",
       "breadcrumb": "Retour au Lab",
-      "labBadge": "Lab",
+      "blogBadge": "Blog",
       "title": "Comment j'automatise ma veille email",
       "titleSuffix": "avec GPT-4o",
       "date": "20 février 2026",

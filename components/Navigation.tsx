@@ -3,15 +3,21 @@
 import { useState } from "react";
 import NextLink from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe, Check } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const LOCALES = [
-  { code: "fr", label: "FR" },
-  { code: "en", label: "EN" },
-  { code: "zh-TW", label: "繁中" },
-  { code: "zh-CN", label: "简中" },
+  { code: "fr", label: "FR", name: "langFr" },
+  { code: "en", label: "EN", name: "langEn" },
+  { code: "zh-TW", label: "繁中", name: "langZhTw" },
+  { code: "zh-CN", label: "简中", name: "langZhCn" },
 ] as const;
 
 export default function Navigation() {
@@ -64,26 +70,28 @@ export default function Navigation() {
           </Link>
 
           {/* Locale switcher */}
-          <div className="flex items-center gap-1 rounded-lg border border-border bg-muted px-1.5 py-1">
-            {LOCALES.map((loc, idx) => (
-              <span key={loc.code} className="flex items-center">
-                <Link
-                  href={pathname}
-                  locale={loc.code}
-                  className={`px-1.5 py-0.5 text-xs font-medium rounded transition-colors ${
-                    locale === loc.code
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {loc.label}
-                </Link>
-                {idx < LOCALES.length - 1 && (
-                  <span className="text-muted-foreground/40 text-xs">|</span>
-                )}
-              </span>
-            ))}
-          </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1.5 rounded-lg border border-border bg-muted px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground">
+                <Globe className="h-4 w-4" />
+                <span className="text-xs font-medium">{LOCALES.find(l => l.code === locale)?.label}</span>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {LOCALES.map((loc) => (
+                <DropdownMenuItem key={loc.code} asChild>
+                  <Link
+                    href={pathname}
+                    locale={loc.code}
+                    className="flex w-full items-center justify-between gap-6"
+                  >
+                    <span>{t(loc.name)}</span>
+                    {locale === loc.code && <Check className="h-4 w-4 text-primary" />}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile toggle */}
@@ -125,22 +133,31 @@ export default function Navigation() {
           </Link>
 
           {/* Mobile locale switcher */}
-          <div className="mt-4 flex items-center gap-2 pt-2 border-t border-border">
-            {LOCALES.map((loc) => (
-              <Link
-                key={loc.code}
-                href={pathname}
-                locale={loc.code}
-                onClick={() => setOpen(false)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
-                  locale === loc.code
-                    ? "border-primary/50 bg-primary/10 text-primary"
-                    : "border-border text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {loc.label}
-              </Link>
-            ))}
+          <div className="mt-4 border-t border-border pt-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex w-full items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  <Globe className="h-4 w-4" />
+                  <span>{t("switchLanguage")}</span>
+                  <span className="ml-auto text-xs font-medium text-primary">{LOCALES.find(l => l.code === locale)?.label}</span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48">
+                {LOCALES.map((loc) => (
+                  <DropdownMenuItem key={loc.code} asChild>
+                    <Link
+                      href={pathname}
+                      locale={loc.code}
+                      onClick={() => setOpen(false)}
+                      className="flex w-full items-center justify-between gap-6"
+                    >
+                      <span>{t(loc.name)}</span>
+                      {locale === loc.code && <Check className="h-4 w-4 text-primary" />}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       )}

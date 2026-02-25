@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, FlaskConical, ArrowRight } from "lucide-react";
+import { ArrowLeft, BookOpen, ArrowRight } from "lucide-react";
 import { emailAutomationElements } from "@/lib/diagrams/email-automation";
 import ExcalidrawDiagram from "@/components/ExcalidrawDiagram";
 import { getTranslations } from "next-intl/server";
@@ -42,25 +42,25 @@ export default async function VeilleEmailPage() {
   }));
 
   return (
-    <main className="min-h-screen bg-gray-950 py-16 sm:py-24">
+    <main className="min-h-screen bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <Link href="/blog" className="mb-10 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-emerald-400">
+        <Link href="/blog" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary">
           <ArrowLeft className="h-4 w-4" /> {t("breadcrumb")}
         </Link>
 
         <div className="mb-12">
-          <div className="mb-4 flex items-center gap-2 text-emerald-400">
-            <FlaskConical className="h-4 w-4" />
-            <span className="text-xs font-medium uppercase tracking-widest">{t("labBadge")}</span>
+          <div className="mb-4 flex items-center gap-2 text-primary">
+            <BookOpen className="h-4 w-4" />
+            <span className="text-xs font-medium uppercase tracking-widest">{t("blogBadge")}</span>
           </div>
-          <h1 className="mb-6 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="mb-6 text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
             {t("title")}{" "}
-            <span className="text-gray-400">{t("titleSuffix")}</span>
+            <span className="text-muted-foreground">{t("titleSuffix")}</span>
           </h1>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">DA</div>
-              <span><span className="text-gray-300">David Aames</span> — Assistant IA, TheNoCodeGuy</span>
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">DA</div>
+              <span><span className="text-card-foreground">David Aames</span> — Assistant IA, TheNoCodeGuy</span>
             </div>
             <span>·</span>
             <span>{t("date")}</span>
@@ -69,21 +69,21 @@ export default async function VeilleEmailPage() {
           </div>
           <div className="mt-5 flex flex-wrap gap-2">
             {["Email", "GPT-4o", "Windmill", "Graph API", "Automatisation"].map((tag) => (
-              <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">{tag}</span>
+              <span key={tag} className="rounded-full border border-border bg-muted px-3 py-1 text-xs text-muted-foreground">{tag}</span>
             ))}
           </div>
         </div>
 
-        <div className="mb-12 h-px bg-white/10" />
+        <div className="mb-12 h-px bg-border" />
 
-        <article className="prose-custom space-y-10 text-gray-300">
+        <article className="prose-custom space-y-10 text-card-foreground">
 
           {/* Hook */}
           <section>
-            <p className="text-xl font-medium leading-relaxed text-white">{t("hook")}</p>
+            <p className="text-xl font-medium leading-relaxed text-foreground">{t("hook")}</p>
             <p className="mt-4 leading-relaxed">
               {t("hookP2").replace("hello@thenocodeguy.com", "")}
-              <code className="rounded bg-gray-800 px-1.5 py-0.5 text-sm text-emerald-300">hello@thenocodeguy.com</code>
+              <code className="rounded bg-muted px-1.5 py-0.5 text-sm text-primary">hello@thenocodeguy.com</code>
               {", "}
               {t("hookP2").split("hello@thenocodeguy.com")[1] || ""}
             </p>
@@ -93,16 +93,16 @@ export default async function VeilleEmailPage() {
 
           {/* Architecture overview */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("archTitle")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("archTitle")}</h2>
             <p className="leading-relaxed">{t("archIntro")}</p>
             <ol className="mt-4 space-y-3 pl-2">
               {archSteps.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">
+                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
                     {i + 1}
                   </span>
                   <span>
-                    <strong className="text-white">{item.step} : </strong>{item.desc}
+                    <strong className="text-foreground">{item.step} : </strong>{item.desc}
                   </span>
                 </li>
               ))}
@@ -117,10 +117,10 @@ export default async function VeilleEmailPage() {
 
           {/* Step 1 */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("step1Title")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("step1Title")}</h2>
             <p className="leading-relaxed">{t("step1P1")}</p>
             <p className="mt-4 leading-relaxed">{t("step1P2")}</p>
-            <pre className="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 text-sm text-emerald-300">
+            <pre className="mt-4 overflow-x-auto rounded-xl bg-[#1e1e2e] p-5 text-sm text-[#cdd6f4]">
               <code>{`import httpx
 
 def get_token(tenant_id, client_id, client_secret):
@@ -151,9 +151,9 @@ def fetch_recent_emails(token, user_email, hours=24):
 
           {/* Step 2 */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("step2Title")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("step2Title")}</h2>
             <p className="leading-relaxed">{t("step2P1")}</p>
-            <pre className="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 text-sm text-emerald-300">
+            <pre className="mt-4 overflow-x-auto rounded-xl bg-[#1e1e2e] p-5 text-sm text-[#cdd6f4]">
               <code>{`SPAM_PATTERNS = ["unsubscribe", "se désabonner", "no-reply@", "noreply@"]
 PRIORITY_SENDERS = ["@client.com", "erwan@", "hello@thenocodeguy.com"]
 NEWSLETTER_KEYWORDS = ["newsletter", "digest", "weekly", "hebdo", "recap"]
@@ -162,7 +162,7 @@ def classify_email(email: dict) -> str:
     subject = email["subject"].lower()
     sender = email["from"]["emailAddress"]["address"].lower()
     preview = email["bodyPreview"].lower()
-    
+
     if any(p in sender for p in SPAM_PATTERNS):
         return "spam"
     if any(s in sender for s in PRIORITY_SENDERS):
@@ -172,7 +172,7 @@ def classify_email(email: dict) -> str:
     return "other"
 
 def filter_for_llm(emails):
-    return [e for e in emails 
+    return [e for e in emails
             if classify_email(e) in ("priority", "newsletter")]`}</code>
             </pre>
             <p className="mt-4 leading-relaxed">{t("step2P2")}</p>
@@ -180,9 +180,9 @@ def filter_for_llm(emails):
 
           {/* Step 3 */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("step3Title")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("step3Title")}</h2>
             <p className="leading-relaxed">{t("step3P1")}</p>
-            <pre className="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 text-sm text-emerald-300">
+            <pre className="mt-4 overflow-x-auto rounded-xl bg-[#1e1e2e] p-5 text-sm text-[#cdd6f4]">
               <code>{`SYSTEM_PROMPT = """Tu es un assistant de veille email pour un consultant en automatisation IA.
 Pour chaque email, génère un JSON avec:
 - summary: résumé actionnable en 1-2 phrases max (français)
@@ -209,12 +209,12 @@ Preview: {email['bodyPreview'][:500]}
             </pre>
             <p className="mt-4 leading-relaxed">
               {t("step3P2").split("response_format: json_object")[0]}
-              <code className="rounded bg-gray-800 px-1.5 py-0.5 text-sm text-emerald-300">response_format: json_object</code>
+              <code className="rounded bg-muted px-1.5 py-0.5 text-sm text-primary">response_format: json_object</code>
               {t("step3P2").split("response_format: json_object")[1] || ""}
             </p>
-            <div className="mt-5 rounded-xl border border-emerald-500/20 bg-gray-900 p-5">
-              <p className="mb-3 text-xs font-mono text-gray-500">{t("step3ExampleLabel")}</p>
-              <pre className="text-sm text-gray-300">
+            <div className="mt-5 rounded-xl border border-primary/20 bg-muted p-5">
+              <p className="mb-3 text-xs font-mono text-muted-foreground">{t("step3ExampleLabel")}</p>
+              <pre className="text-sm text-card-foreground">
                 <code>{`{
   "summary": "Client Kelly demande un devis pour automatisation CRM. Deadline vendredi.",
   "score": 5,
@@ -226,45 +226,45 @@ Preview: {email['bodyPreview'][:500]}
 
           {/* Step 4 */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("step4Title")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("step4Title")}</h2>
             <p className="leading-relaxed">{t("step4P1")}</p>
-            <pre className="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 text-sm text-emerald-300">
+            <pre className="mt-4 overflow-x-auto rounded-xl bg-[#1e1e2e] p-5 text-sm text-[#cdd6f4]">
               <code>{`def format_digest(summaries: list[dict]) -> str:
     sorted_items = sorted(summaries, key=lambda x: x["score"], reverse=True)
-    
+
     lines = ["📧 *Digest Email — ce matin*\\n"]
-    
+
     for item in sorted_items:
         score_emoji = "🔴" if item["score"] >= 4 else "🟡" if item["score"] >= 2 else "⚪"
         action = f" → _{item['action']}_" if item["action"] else ""
         lines.append(f"{score_emoji} {item['subject']}")
         lines.append(f"   {item['summary']}{action}\\n")
-    
+
     lines.append(f"_{len(sorted_items)} emails analysés_")
     return "\\n".join(lines)`}</code>
             </pre>
             <p className="mt-4 leading-relaxed">{t("step4P2")}</p>
-            <div className="mt-4 rounded-xl border border-white/10 bg-gray-900 p-5 font-mono text-sm">
-              <p className="text-white">📧 <strong>Digest Email — ce matin</strong></p>
+            <div className="mt-4 rounded-xl border border-border bg-muted p-5 font-mono text-sm">
+              <p className="text-foreground">📧 <strong>Digest Email — ce matin</strong></p>
               <p className="mt-3 text-red-400">🔴 Kelly — Devis automatisation CRM</p>
-              <p className="ml-3 text-gray-400">Demande de devis urgente, deadline vendredi. → <em>répondre</em></p>
+              <p className="ml-3 text-muted-foreground">Demande de devis urgente, deadline vendredi. → <em>répondre</em></p>
               <p className="mt-2 text-yellow-400">🟡 Windmill — v1.380 changelog</p>
-              <p className="ml-3 text-gray-400">Nouvelle version avec amélioration du scheduler Python. → <em>lire</em></p>
-              <p className="mt-2 text-gray-500">⚪ Substack — The Batch #234</p>
-              <p className="ml-3 text-gray-400">Récap hebdo IA : GPT-5 rumeurs, agents en prod. → <em>archiver</em></p>
-              <p className="mt-3 text-gray-600 text-xs italic">8 emails analysés</p>
+              <p className="ml-3 text-muted-foreground">Nouvelle version avec amélioration du scheduler Python. → <em>lire</em></p>
+              <p className="mt-2 text-muted-foreground">⚪ Substack — The Batch #234</p>
+              <p className="ml-3 text-muted-foreground">Récap hebdo IA : GPT-5 rumeurs, agents en prod. → <em>archiver</em></p>
+              <p className="mt-3 text-muted-foreground/60 text-xs italic">8 emails analysés</p>
             </div>
           </section>
 
           {/* Windmill */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("windmillTitle")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("windmillTitle")}</h2>
             <p className="leading-relaxed">{t("windmillP1")}</p>
             <div className="mt-5 space-y-4">
               {windmillItems.map((item) => (
-                <div key={item.title} className="rounded-xl border border-white/10 bg-gray-900/60 p-5">
-                  <h3 className="mb-2 font-semibold text-emerald-400">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-gray-300">{item.body}</p>
+                <div key={item.title} className="rounded-xl border border-border bg-card p-5">
+                  <h3 className="mb-2 font-semibold text-primary">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-card-foreground">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -272,15 +272,15 @@ Preview: {email['bodyPreview'][:500]}
 
           {/* Impact */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("impactTitle")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("impactTitle")}</h2>
             <p className="leading-relaxed">{t("impactP1")}</p>
             <p className="mt-4 leading-relaxed">{t("impactP2")}</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {impactStats.map((stat) => (
-                <div key={stat.label} className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="mb-2 text-xs text-gray-500">{stat.label}</p>
+                <div key={stat.label} className="rounded-xl border border-border bg-muted p-4 text-center">
+                  <p className="mb-2 text-xs text-muted-foreground">{stat.label}</p>
                   <p className="text-sm text-red-400 line-through">{stat.before}</p>
-                  <p className="mt-1 text-sm font-semibold text-emerald-400">{stat.after}</p>
+                  <p className="mt-1 text-sm font-semibold text-primary">{stat.after}</p>
                 </div>
               ))}
             </div>
@@ -288,14 +288,14 @@ Preview: {email['bodyPreview'][:500]}
 
           {/* Extend */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("extendTitle")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("extendTitle")}</h2>
             <p className="leading-relaxed">{t("extendIntro")}</p>
             <ul className="mt-4 space-y-3">
               {extendItems.map((item) => (
                 <li key={item.idea} className="flex gap-3">
-                  <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-emerald-400" />
+                  <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
                   <span>
-                    <strong className="text-white">{item.idea} : </strong>{item.desc}
+                    <strong className="text-foreground">{item.idea} : </strong>{item.desc}
                   </span>
                 </li>
               ))}
@@ -305,36 +305,36 @@ Preview: {email['bodyPreview'][:500]}
 
           {/* Conclusion */}
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-white">{t("conclusionTitle")}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("conclusionTitle")}</h2>
             <p className="leading-relaxed">{t("conclusionP1")}</p>
             <p className="mt-4 leading-relaxed">{t("conclusionP2")}</p>
-            <p className="mt-6 text-lg font-medium text-white">{t("conclusionFinal")}</p>
+            <p className="mt-6 text-lg font-medium text-foreground">{t("conclusionFinal")}</p>
           </section>
 
           {/* Workflow available CTA */}
-          <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-6">
-            <p className="font-semibold text-white">
+          <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6">
+            <p className="font-semibold text-foreground">
               {t("workflowCta").split("/workflows")[0]}
-              <Link href="/workflows" className="text-emerald-400 hover:text-emerald-300">/workflows</Link>
+              <Link href="/contact" className="text-primary hover:text-primary">/contact</Link>
             </p>
-            <p className="mt-2 text-sm text-gray-400">{t("workflowCtaDesc")}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{t("workflowCtaDesc")}</p>
           </div>
 
           {/* Signature */}
-          <div className="mt-12 flex items-start gap-4 rounded-2xl border border-white/10 bg-gray-900/50 p-6">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-sm font-bold text-emerald-400">DA</div>
+          <div className="mt-12 flex items-start gap-4 rounded-2xl border border-border bg-card p-6">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">DA</div>
             <div>
-              <p className="font-semibold text-white">{t("signatureName")}</p>
-              <p className="text-sm text-gray-400">{t("signatureRole")}</p>
+              <p className="font-semibold text-foreground">{t("signatureName")}</p>
+              <p className="text-sm text-muted-foreground">{t("signatureRole")}</p>
             </div>
           </div>
         </article>
 
-        <div className="mt-16 flex flex-col items-center gap-6 border-t border-white/10 pt-12 sm:flex-row sm:justify-between">
-          <Link href="/blog" className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-emerald-400">
+        <div className="mt-16 flex flex-col items-center gap-6 border-t border-border pt-12 sm:flex-row sm:justify-between">
+          <Link href="/blog" className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary">
             <ArrowLeft className="h-4 w-4" /> {t("bottomNavBack")}
           </Link>
-          <Link href="/contact" className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400">
+          <Link href="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-primary">
             {t("bottomNavNext")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FlaskConical, ArrowRight } from "lucide-react";
+import { BookOpen, ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -31,16 +31,16 @@ export default async function BlogPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-950 py-16 sm:py-24">
+    <main className="min-h-screen bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16">
-          <div className="mb-4 flex items-center gap-2 text-emerald-400">
-            <FlaskConical className="h-5 w-5" />
+          <div className="mb-4 flex items-center gap-2 text-primary">
+            <BookOpen className="h-5 w-5" />
             <span className="text-sm font-medium uppercase tracking-widest">{t("badge")}</span>
           </div>
-          <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl">{t("pageTitle")}</h1>
-          <p className="max-w-2xl text-lg text-gray-400">{t("pageSubtitle")}</p>
+          <h1 className="mb-4 text-4xl font-bold text-foreground sm:text-5xl">{t("pageTitle")}</h1>
+          <p className="max-w-2xl text-lg text-muted-foreground">{t("pageSubtitle")}</p>
         </div>
 
         {/* Articles */}
@@ -49,29 +49,29 @@ export default async function BlogPage() {
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
-              className="group block rounded-2xl border border-white/10 bg-gray-900/50 p-6 transition-all hover:border-emerald-500/40 hover:bg-gray-900 sm:p-8"
+              className="group block rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:bg-card sm:p-8"
             >
-              <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-gray-500">
+              <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span>{article.date}</span>
                 <span>·</span>
                 <span>{article.readTime} {t("minRead")}</span>
                 <span>·</span>
-                <span className="text-emerald-400">{t("author")}</span>
+                <span className="text-primary">{t("author")}</span>
               </div>
 
-              <h2 className="mb-3 text-xl font-bold text-white transition-colors group-hover:text-emerald-400 sm:text-2xl">
+              <h2 className="mb-3 text-xl font-bold text-foreground transition-colors group-hover:text-primary sm:text-2xl">
                 {article.title}
               </h2>
 
-              <p className="mb-5 text-gray-400">{article.excerpt}</p>
+              <p className="mb-5 text-muted-foreground">{article.excerpt}</p>
 
               <div className="flex flex-wrap items-center gap-3">
                 {article.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">
+                  <span key={tag} className="rounded-full border border-border bg-muted px-3 py-1 text-xs text-muted-foreground">
                     {tag}
                   </span>
                 ))}
-                <span className="ml-auto flex items-center gap-1 text-sm font-medium text-emerald-400">
+                <span className="ml-auto flex items-center gap-1 text-sm font-medium text-primary">
                   {t("readArticle")} <ArrowRight className="h-4 w-4" />
                 </span>
               </div>
@@ -80,12 +80,12 @@ export default async function BlogPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center">
-          <p className="mb-2 text-lg font-semibold text-white">{t("ctaTitle")}</p>
-          <p className="mb-6 text-gray-400">{t("ctaSubtitle")}</p>
+        <div className="mt-16 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
+          <p className="mb-2 text-lg font-semibold text-foreground">{t("ctaTitle")}</p>
+          <p className="mb-6 text-muted-foreground">{t("ctaSubtitle")}</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
           >
             {t("ctaButton")} <ArrowRight className="h-4 w-4" />
           </Link>
