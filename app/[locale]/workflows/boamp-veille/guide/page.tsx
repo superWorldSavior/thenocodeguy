@@ -33,9 +33,9 @@ export default async function BoampGuidePage() {
   }));
 
   return (
-    <main className="min-h-screen bg-gray-950 py-16 print:bg-white print:text-black">
+    <main className="min-h-screen bg-background py-16 print:bg-white print:text-black">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <Link href="/workflows" className="mb-10 inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-emerald-400 print:hidden">
+        <Link href="/workflows" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary print:hidden">
           <ArrowLeft className="h-4 w-4" /> {tc("backToWorkflows")}
         </Link>
 
@@ -44,22 +44,22 @@ export default async function BoampGuidePage() {
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
               <Search className="h-6 w-6 text-blue-400" />
             </div>
-            <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300">
+            <span className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">
               {t("tag")}
             </span>
           </div>
-          <h1 className="mb-3 text-3xl font-bold text-white print:text-black sm:text-4xl">{t("title")}</h1>
-          <p className="text-lg text-gray-400 print:text-gray-700">{t("intro")}</p>
+          <h1 className="mb-3 text-3xl font-bold text-foreground print:text-black sm:text-4xl">{t("title")}</h1>
+          <p className="text-lg text-muted-foreground print:text-gray-700">{t("intro")}</p>
         </div>
 
         {/* Results */}
         <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-white print:text-black">{t("resultsTitle")}</h2>
+          <h2 className="mb-6 text-xl font-bold text-foreground print:text-black">{t("resultsTitle")}</h2>
           <div className="grid gap-4 sm:grid-cols-3">
             {metrics.map((item) => (
               <div key={item.label} className="rounded-xl border border-blue-500/20 bg-blue-500/5 p-5 text-center print:border-gray-300">
                 <div className="mb-1 text-3xl font-bold text-blue-400 print:text-blue-700">{item.metric}</div>
-                <div className="text-sm text-gray-400 print:text-gray-600">{item.label}</div>
+                <div className="text-sm text-muted-foreground print:text-gray-600">{item.label}</div>
               </div>
             ))}
           </div>
@@ -67,8 +67,8 @@ export default async function BoampGuidePage() {
 
         {/* Architecture */}
         <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-white print:text-black">{t("archTitle")}</h2>
-          <div className="rounded-xl border border-white/10 bg-gray-900/60 p-6 print:border-gray-300 print:bg-gray-50">
+          <h2 className="mb-6 text-xl font-bold text-foreground print:text-black">{t("archTitle")}</h2>
+          <div className="rounded-xl border border-border bg-card/60 p-6 print:border-gray-300 print:bg-gray-50">
             <div className="flex flex-col gap-3">
               {archSteps.map((s) => (
                 <div key={s.step} className="flex items-start gap-4">
@@ -76,8 +76,8 @@ export default async function BoampGuidePage() {
                     {s.step}
                   </div>
                   <div>
-                    <div className="font-semibold text-white print:text-black">{s.title}</div>
-                    <div className="text-sm text-gray-400 print:text-gray-600">{s.desc}</div>
+                    <div className="font-semibold text-foreground print:text-black">{s.title}</div>
+                    <div className="text-sm text-muted-foreground print:text-gray-600">{s.desc}</div>
                   </div>
                 </div>
               ))}
@@ -87,10 +87,10 @@ export default async function BoampGuidePage() {
 
         {/* Prerequisites */}
         <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-white print:text-black">{t("prereqTitle")}</h2>
+          <h2 className="mb-6 text-xl font-bold text-foreground print:text-black">{t("prereqTitle")}</h2>
           <ul className="space-y-3">
             {prereqs.map((req) => (
-              <li key={req} className="flex items-start gap-3 text-gray-300 print:text-gray-700">
+              <li key={req} className="flex items-start gap-3 text-muted-foreground print:text-gray-700">
                 <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-blue-400" />
                 {req}
               </li>
@@ -100,13 +100,13 @@ export default async function BoampGuidePage() {
 
         {/* Code */}
         <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-white print:text-black">{t("codeTitle")}</h2>
-          <div className="rounded-xl border border-white/10 bg-gray-900 p-5 print:border-gray-300">
-            <div className="mb-3 flex items-center gap-2 text-xs text-gray-500">
+          <h2 className="mb-6 text-xl font-bold text-foreground print:text-black">{t("codeTitle")}</h2>
+          <div className="rounded-xl border border-border bg-muted p-5 print:border-gray-300">
+            <div className="mb-3 flex items-center gap-2 text-xs text-muted-foreground">
               <Terminal className="h-4 w-4" />
               <span>{t("codeCaption")}</span>
             </div>
-            <pre className="overflow-x-auto text-sm text-gray-300 print:text-gray-800">
+            <pre className="overflow-x-auto text-sm text-muted-foreground print:text-gray-800">
 {`const HIGH_VALUE = [
   "intelligence artificielle", "agent ia", "agentic", "mcp",
   "knowledge management", "knowledge graph", "rag",
@@ -172,27 +172,27 @@ export async function main() {
 }`}
             </pre>
           </div>
-          <p className="mt-3 text-sm text-gray-500">{t("codeNote")}</p>
+          <p className="mt-3 text-sm text-muted-foreground">{t("codeNote")}</p>
         </section>
 
         {/* Adapt */}
         <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-white print:text-black">{t("adaptTitle")}</h2>
+          <h2 className="mb-6 text-xl font-bold text-foreground print:text-black">{t("adaptTitle")}</h2>
           <div className="space-y-4">
             {adaptItems.map((item) => (
-              <div key={item.title} className="rounded-xl border border-white/5 bg-gray-900/50 p-5 print:border-gray-200">
-                <div className="mb-1 font-semibold text-white print:text-black">{item.title}</div>
-                <div className="text-sm text-gray-400 print:text-gray-600">{item.desc}</div>
+              <div key={item.title} className="rounded-xl border border-border bg-card/50 p-5 print:border-gray-200">
+                <div className="mb-1 font-semibold text-foreground print:text-black">{item.title}</div>
+                <div className="text-sm text-muted-foreground print:text-gray-600">{item.desc}</div>
               </div>
             ))}
           </div>
         </section>
 
         {/* CTA */}
-        <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center print:hidden">
-          <p className="mb-2 text-lg font-semibold text-white">{t("ctaTitle")}</p>
-          <p className="mb-6 text-sm text-gray-400">{t("ctaSubtitle")}</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400">
+        <div className="rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center print:hidden">
+          <p className="mb-2 text-lg font-semibold text-foreground">{t("ctaTitle")}</p>
+          <p className="mb-6 text-sm text-muted-foreground">{t("ctaSubtitle")}</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
             {t("ctaButton")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

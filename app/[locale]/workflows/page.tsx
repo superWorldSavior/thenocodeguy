@@ -12,19 +12,19 @@ const colorMap: Record<string, { border: string; bg: string; icon: string; tag: 
     border: "border-blue-500/30 hover:border-blue-400/60",
     bg: "bg-blue-500/10",
     icon: "text-blue-400",
-    tag: "border-blue-500/20 bg-blue-500/10 text-blue-300",
+    tag: "border-blue-500/20 bg-blue-500/10 text-blue-300 dark:text-blue-300 text-blue-700",
   },
   emerald: {
-    border: "border-emerald-500/30 hover:border-emerald-400/60",
-    bg: "bg-emerald-500/10",
-    icon: "text-emerald-400",
-    tag: "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
+    border: "border-primary/30 hover:border-primary/60",
+    bg: "bg-primary/10",
+    icon: "text-primary",
+    tag: "border-primary/20 bg-primary/10 text-primary",
   },
   purple: {
     border: "border-purple-500/30 hover:border-purple-400/60",
     bg: "bg-purple-500/10",
     icon: "text-purple-400",
-    tag: "border-purple-500/20 bg-purple-500/10 text-purple-300",
+    tag: "border-purple-500/20 bg-purple-500/10 text-purple-300 dark:text-purple-300 text-purple-700",
   },
 };
 
@@ -110,16 +110,16 @@ export default function WorkflowsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-950 py-16 sm:py-24">
+    <main className="min-h-screen bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16">
-          <div className="mb-4 flex items-center gap-2 text-emerald-400">
+          <div className="mb-4 flex items-center gap-2 text-primary">
             <Zap className="h-5 w-5" />
             <span className="text-sm font-medium uppercase tracking-widest">{t("badge")}</span>
           </div>
-          <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl">{t("pageTitle")}</h1>
-          <p className="max-w-2xl text-lg text-gray-400">{t("pageSubtitle")}</p>
+          <h1 className="mb-4 text-4xl font-bold text-foreground sm:text-5xl">{t("pageTitle")}</h1>
+          <p className="max-w-2xl text-lg text-muted-foreground">{t("pageSubtitle")}</p>
         </div>
 
         {/* Workflow cards */}
@@ -130,21 +130,21 @@ export default function WorkflowsPage() {
             return (
               <div
                 key={wf.slug}
-                className={`group rounded-2xl border ${colors.border} bg-gray-900/60 p-6 transition-all sm:p-8`}
+                className={`group rounded-2xl border ${colors.border} bg-card/60 p-6 transition-all sm:p-8`}
               >
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
                   <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${colors.bg}`}>
                     <Icon className={`h-7 w-7 ${colors.icon}`} />
                   </div>
                   <div className="flex-1">
-                    <h2 className="mb-1 text-xl font-bold text-white">{wf.title}</h2>
-                    <p className="mb-3 text-sm font-medium text-gray-400">{wf.tagline}</p>
-                    <p className="mb-5 text-gray-400">{wf.description}</p>
+                    <h2 className="mb-1 text-xl font-bold text-foreground">{wf.title}</h2>
+                    <p className="mb-3 text-sm font-medium text-muted-foreground">{wf.tagline}</p>
+                    <p className="mb-5 text-muted-foreground">{wf.description}</p>
                     <div className="mb-5 grid grid-cols-3 gap-3">
                       {wf.metrics.map((m) => (
-                        <div key={m.label} className="rounded-lg border border-white/5 bg-gray-800/60 p-3 text-center">
+                        <div key={m.label} className="rounded-lg border border-border bg-muted/60 p-3 text-center">
                           <div className={`text-lg font-bold ${colors.icon}`}>{m.value}</div>
-                          <div className="mt-0.5 text-xs text-gray-500">{m.label}</div>
+                          <div className="mt-0.5 text-xs text-muted-foreground">{m.label}</div>
                         </div>
                       ))}
                     </div>
@@ -154,7 +154,7 @@ export default function WorkflowsPage() {
                       ))}
                       <button
                         onClick={() => setModal({ slug: wf.slug, title: wf.title })}
-                        className="ml-auto flex items-center gap-2 rounded-lg bg-white/10 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/20"
+                        className="ml-auto flex items-center gap-2 rounded-lg bg-foreground/10 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/20"
                       >
                         {t("getGuide")} <ArrowRight className="h-4 w-4" />
                       </button>
@@ -167,12 +167,12 @@ export default function WorkflowsPage() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center">
-          <p className="mb-2 text-lg font-semibold text-white">{t("ctaTitle")}</p>
-          <p className="mb-6 text-gray-400">{t("ctaSubtitle")}</p>
+        <div className="mt-16 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
+          <p className="mb-2 text-lg font-semibold text-foreground">{t("ctaTitle")}</p>
+          <p className="mb-6 text-muted-foreground">{t("ctaSubtitle")}</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("ctaButton")} <ArrowRight className="h-4 w-4" />
           </Link>
@@ -182,38 +182,38 @@ export default function WorkflowsPage() {
       {/* Modal */}
       {modal && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/80 px-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 px-4 backdrop-blur-sm"
           onClick={closeModal}
         >
           <div
-            className="relative w-full max-w-md rounded-2xl border border-white/10 bg-gray-900 p-8"
+            className="relative w-full max-w-md rounded-2xl border border-border bg-card p-8"
             onClick={(e) => e.stopPropagation()}
           >
-            <button onClick={closeModal} className="absolute right-4 top-4 text-gray-500 transition-colors hover:text-white">
+            <button onClick={closeModal} className="absolute right-4 top-4 text-muted-foreground transition-colors hover:text-foreground">
               <X className="h-5 w-5" />
             </button>
 
             {done ? (
               <div className="text-center">
-                <CheckCircle className="mx-auto mb-4 h-12 w-12 text-emerald-400" />
-                <h3 className="mb-2 text-xl font-bold text-white">{t("modalSuccessTitle")}</h3>
-                <p className="mb-6 text-gray-400">{t("modalSuccessSubtitle")}</p>
+                <CheckCircle className="mx-auto mb-4 h-12 w-12 text-primary" />
+                <h3 className="mb-2 text-xl font-bold text-foreground">{t("modalSuccessTitle")}</h3>
+                <p className="mb-6 text-muted-foreground">{t("modalSuccessSubtitle")}</p>
                 <Link
                   href={`/workflows/${modal.slug}/guide`}
                   onClick={closeModal}
-                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   {t("modalSuccessButton")} <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             ) : (
               <>
-                <div className="mb-2 flex items-center gap-2 text-emerald-400">
+                <div className="mb-2 flex items-center gap-2 text-primary">
                   <Clock className="h-4 w-4" />
                   <span className="text-xs font-medium uppercase tracking-widest">{t("modalFreeGuide")}</span>
                 </div>
-                <h3 className="mb-1 text-xl font-bold text-white">{modal.title}</h3>
-                <p className="mb-6 text-sm text-gray-400">{t("modalEmailLabel")}</p>
+                <h3 className="mb-1 text-xl font-bold text-foreground">{modal.title}</h3>
+                <p className="mb-6 text-sm text-muted-foreground">{t("modalEmailLabel")}</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <input
                     type="email"
@@ -221,18 +221,18 @@ export default function WorkflowsPage() {
                     placeholder={t("modalEmailPlaceholder")}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-lg border border-white/10 bg-gray-800 px-4 py-3 text-white placeholder-gray-500 focus:border-emerald-500/50 focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
+                    className="w-full rounded-lg border border-border bg-muted px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary/50 focus:outline-none focus:ring-1 focus:ring-primary/50"
                   />
                   <button
                     type="submit"
                     disabled={loading}
-                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400 disabled:opacity-60"
+                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-60"
                   >
                     {loading ? t("modalSending") : t("modalAccessButton")}
                     {!loading && <ArrowRight className="h-4 w-4" />}
                   </button>
                 </form>
-                <p className="mt-4 text-center text-xs text-gray-600">{t("modalNoSpam")}</p>
+                <p className="mt-4 text-center text-xs text-muted-foreground">{t("modalNoSpam")}</p>
               </>
             )}
           </div>

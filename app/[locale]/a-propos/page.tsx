@@ -40,23 +40,23 @@ export default async function AProposPage() {
               {t("heroHighlight")}
             </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-400">{t("heroSubtitle")}</p>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">{t("heroSubtitle")}</p>
         </div>
 
         {/* Story */}
         <div className="mb-20 grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="mb-4 text-2xl font-bold sm:text-3xl">{t("storyTitle")}</h2>
-            <div className="space-y-4 text-gray-400">
+            <div className="space-y-4 text-muted-foreground">
               <p>
                 {t("storyP1")}{" "}
-                <strong className="text-white">{t("storyP1Bold")}</strong>
+                <strong className="text-foreground">{t("storyP1Bold")}</strong>
                 {t("storyP1End")}
               </p>
               <p>{t("storyP2")}</p>
               <p>
                 {t("storyP3")}{" "}
-                <strong className="text-white">{t("storyP3Bold")}</strong>
+                <strong className="text-foreground">{t("storyP3Bold")}</strong>
                 {t("storyP3End")}
               </p>
             </div>
@@ -70,17 +70,17 @@ export default async function AProposPage() {
                 height={400}
                 className="w-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-950/90 to-transparent p-4">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-sm font-semibold text-white">Erwan Poiraud</div>
-                    <div className="text-xs text-gray-400">{t("founderRole" as Key)}</div>
+                    <div className="text-sm font-semibold text-foreground">Erwan Poiraud</div>
+                    <div className="text-xs text-muted-foreground">{t("founderRole" as Key)}</div>
                   </div>
                   <a
                     href="https://www.linkedin.com/in/erwanpoiraud/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors hover:bg-emerald-500/20 hover:text-emerald-400"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-muted-foreground transition-colors hover:bg-emerald-500/20 hover:text-emerald-400"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="h-4 w-4" />
@@ -92,7 +92,7 @@ export default async function AProposPage() {
               {stats.map((s) => (
                 <div key={s.label} className="rounded-xl border border-white/10 bg-white/5 p-5 text-center">
                   <div className="mb-1 text-3xl font-bold text-emerald-400">{s.value}</div>
-                  <div className="text-xs text-gray-400">{s.label}</div>
+                  <div className="text-xs text-muted-foreground">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -109,7 +109,7 @@ export default async function AProposPage() {
                   <e.icon className="h-5 w-5 text-emerald-400" />
                 </div>
                 <h3 className="mb-2 text-base font-semibold">{e.title}</h3>
-                <p className="text-sm text-gray-400">{e.description}</p>
+                <p className="text-sm text-muted-foreground">{e.description}</p>
               </div>
             ))}
           </div>
@@ -118,7 +118,7 @@ export default async function AProposPage() {
         {/* What we don't do */}
         <div className="mb-20 rounded-xl border border-white/10 bg-white/5 p-8">
           <h2 className="mb-6 text-xl font-bold">{t("notTitle")}</h2>
-          <ul className="space-y-3 text-gray-400">
+          <ul className="space-y-3 text-muted-foreground">
             {notItems.map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <span className="mt-1 text-red-400">✕</span>
@@ -131,10 +131,10 @@ export default async function AProposPage() {
         {/* CTA */}
         <div className="text-center">
           <h2 className="mb-4 text-2xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mb-8 text-gray-400">{t("ctaSubtitle")}</p>
+          <p className="mb-8 text-muted-foreground">{t("ctaSubtitle")}</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 font-semibold text-gray-950 transition-colors hover:bg-emerald-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 font-semibold text-background transition-colors hover:bg-emerald-400"
           >
             {t("ctaButton")}
             <ArrowRight className="h-4 w-4" />
