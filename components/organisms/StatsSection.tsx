@@ -13,7 +13,7 @@ export default async function StatsSection() {
   const t = await getTranslations('stats')
 
   return (
-    <section className="stats-gradient px-4 py-12 sm:px-6">
+    <section className="bg-linear-to-br from-[#05004b] to-[#1a1570] px-4 py-12 sm:px-6">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 lg:grid-cols-4">
         {stats.map((stat, i) => (
           <div key={i} className="text-center">

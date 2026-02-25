@@ -15,7 +15,7 @@ export default async function MissionsSection() {
         </div>
 
         {/* Case study card */}
-        <div className="card-hover overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="overflow-hidden rounded-2xl border border-border bg-card transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_12px_40px_-8px_rgba(5,0,75,0.15)] dark:hover:shadow-[0_12px_40px_-8px_rgba(255,222,89,0.15)]">
           <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr]">
             {/* Image */}
             <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[360px]">

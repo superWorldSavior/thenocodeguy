@@ -63,7 +63,7 @@ export default async function DomainesSection() {
             return (
               <div
                 key={domaine.id}
-                className={`card-hover group relative overflow-hidden rounded-2xl border bg-card ${
+                className={`group relative overflow-hidden rounded-2xl border bg-card transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_12px_40px_-8px_rgba(5,0,75,0.15)] dark:hover:shadow-[0_12px_40px_-8px_rgba(255,222,89,0.15)] ${
                   domaine.featured
                     ? 'border-primary/30 ring-1 ring-primary/10 sm:col-span-2 lg:col-span-1 lg:row-span-1'
                     : 'border-border'

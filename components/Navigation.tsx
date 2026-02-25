@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname, useParams } from "next/navigation";
+import NextLink from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname } from "@/navigation";
 
 const LOCALES = [
   { code: "fr", label: "FR" },
@@ -17,58 +17,30 @@ const LOCALES = [
 export default function Navigation() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
   const pathname = usePathname();
-  const params = useParams();
-  const currentLocale = (params?.locale as string) ?? "fr";
-
-  const getCleanPath = () => {
-    if (currentLocale === "fr") return pathname || "/";
-    const prefix = `/${currentLocale}`;
-    if (pathname.startsWith(prefix)) {
-      return pathname.slice(prefix.length) || "/";
-    }
-    return pathname || "/";
-  };
-
-  const buildLocaleUrl = (locale: string) => {
-    const clean = getCleanPath();
-    if (locale === "fr") return clean || "/";
-    return `/${locale}${clean === "/" ? "" : clean}`;
-  };
-
-  const prefixHref = (href: string) =>
-    href.startsWith("#")
-      ? href
-      : currentLocale === "fr"
-        ? href
-        : `/${currentLocale}${href === "/" ? "" : href}`;
 
   const links = [
-    { href: "/", label: t("home") },
-    { href: "#domaines", label: t("ourAgents") },
-    { href: "/contact", label: t("contact") },
+    { href: "/" as const, label: t("home") },
+    { href: "/contact" as const, label: t("contact") },
   ];
-
-  const prefixedLinks = links.map((l) => ({ ...l, href: prefixHref(l.href) }));
-
-  const contactHref = prefixHref("/contact");
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link
-          href={currentLocale === "fr" ? "/" : `/${currentLocale}`}
+          href="/"
           className="flex items-center gap-2 text-xl font-bold"
         >
           <Image src="/favicon_io/favicon-32x32.png" alt="TNCG" width={28} height={28} className="rounded-sm" />
           <span className="text-foreground">
-            TheNoCode<span className="text-brand-yellow">Guy</span>
+            TheNoCode<span className="text-primary">Guy</span>
           </span>
         </Link>
 
         {/* Desktop */}
         <div className="hidden items-center gap-6 md:flex">
-          {prefixedLinks.map((l) => (
+          {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
@@ -77,8 +49,14 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
+          <NextLink
+            href="#domaines"
+            className="text-sm text-muted-foreground transition-colors hover:text-primary"
+          >
+            {t("ourAgents")}
+          </NextLink>
           <Link
-            href={contactHref}
+            href="/contact"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-primary"
           >
             {t("startProject")}
@@ -89,9 +67,10 @@ export default function Navigation() {
             {LOCALES.map((loc, idx) => (
               <span key={loc.code} className="flex items-center">
                 <Link
-                  href={buildLocaleUrl(loc.code)}
+                  href={pathname}
+                  locale={loc.code}
                   className={`px-1.5 py-0.5 text-xs font-medium rounded transition-colors ${
-                    currentLocale === loc.code
+                    locale === loc.code
                       ? "text-primary bg-primary/10"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
@@ -119,7 +98,7 @@ export default function Navigation() {
       {/* Mobile menu */}
       {open && (
         <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
-          {prefixedLinks.map((l) => (
+          {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
@@ -129,8 +108,15 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
+          <NextLink
+            href="#domaines"
+            onClick={() => setOpen(false)}
+            className="block py-3 text-foreground transition-colors hover:text-primary"
+          >
+            {t("ourAgents")}
+          </NextLink>
           <Link
-            href={contactHref}
+            href="/contact"
             onClick={() => setOpen(false)}
             className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
@@ -142,10 +128,11 @@ export default function Navigation() {
             {LOCALES.map((loc) => (
               <Link
                 key={loc.code}
-                href={buildLocaleUrl(loc.code)}
+                href={pathname}
+                locale={loc.code}
                 onClick={() => setOpen(false)}
                 className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
-                  currentLocale === loc.code
+                  locale === loc.code
                     ? "border-primary/50 bg-primary/10 text-primary"
                     : "border-border text-muted-foreground hover:text-foreground"
                 }`}

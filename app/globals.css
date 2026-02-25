@@ -169,30 +169,6 @@
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out both;
 }
-.animate-delay-100 {
-  animation-delay: 100ms;
-}
-.animate-delay-200 {
-  animation-delay: 200ms;
-}
-.animate-delay-300 {
-  animation-delay: 300ms;
-}
-.animate-delay-400 {
-  animation-delay: 400ms;
-}
-
-/* Card hover lift */
-.card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px -8px rgba(5, 0, 75, 0.15);
-}
-.dark .card-hover:hover {
-  box-shadow: 0 12px 40px -8px rgba(255, 222, 89, 0.15);
-}
 
 /* Hero mesh gradient background */
 .hero-mesh-gradient {
@@ -208,19 +184,3 @@
     radial-gradient(ellipse 50% 50% at 50% 80%, rgba(255, 222, 89, 0.05), transparent);
 }
 
-/* Stats gradient band */
-.stats-gradient {
-  background: linear-gradient(135deg, #05004b, #1a1570);
-}
-
-/* CTA section gradient */
-.cta-gradient {
-  background: linear-gradient(135deg, #05004b, #0f0055);
-}
-.dark .cta-gradient {
-  background: linear-gradient(135deg, #ffde59, #ffd633);
-}
-.dark .cta-gradient h2,
-.dark .cta-gradient p {
-  color: #05004b;
-}

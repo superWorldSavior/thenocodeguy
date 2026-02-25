@@ -45,7 +45,7 @@ export default async function HeroSection() {
             </div>
 
             {/* Trust badges */}
-            <div className="flex flex-wrap gap-3 pt-2 animate-fade-in-up animate-delay-200">
+            <div className="flex flex-wrap gap-3 pt-2 animate-fade-in-up [animation-delay:200ms]">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground">
                 <Clock className="h-3.5 w-3.5 text-primary" />
                 {t('trustBadge1')}
@@ -62,7 +62,7 @@ export default async function HeroSection() {
           </div>
 
           {/* Right column — hero image */}
-          <div className="relative animate-fade-in-up animate-delay-300">
+          <div className="relative animate-fade-in-up [animation-delay:300ms]">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border/50 shadow-2xl shadow-primary/10">
               <Image
                 src="/images/homepage/hero-main.webp"

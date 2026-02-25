@@ -28,7 +28,7 @@ export default async function TestimonialsSection() {
           {testimonials.map((item) => (
             <div
               key={item.nameKey}
-              className="card-hover relative rounded-2xl border border-border bg-card p-8"
+              className="relative rounded-2xl border border-border bg-card p-8 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_12px_40px_-8px_rgba(5,0,75,0.15)] dark:hover:shadow-[0_12px_40px_-8px_rgba(255,222,89,0.15)]"
             >
               {/* Decorative quote */}
               <Quote className="absolute right-6 top-6 h-10 w-10 text-primary/10" />
