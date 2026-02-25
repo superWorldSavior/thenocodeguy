@@ -14,16 +14,18 @@ interface Task {
 }
 
 const TASKS: Task[] = [
-  { id: "emails",     icon: "📧", labelKey: "taskEmails",     automationLevel: "Low",    recoveryRate: 0.7 },
-  { id: "reporting",  icon: "📊", labelKey: "taskReporting",  automationLevel: "Medium", recoveryRate: 0.7 },
-  { id: "planning",   icon: "📅", labelKey: "taskPlanning",   automationLevel: "Medium", recoveryRate: 0.7 },
-  { id: "veille",     icon: "🔍", labelKey: "taskVeille",     automationLevel: "Low",    recoveryRate: 0.7 },
-  { id: "devis",      icon: "💼", labelKey: "taskDevis",      automationLevel: "Medium", recoveryRate: 0.7 },
-  { id: "saisie",     icon: "📦", labelKey: "taskSaisie",     automationLevel: "High",   recoveryRate: 0.9 },
-  { id: "social",     icon: "📱", labelKey: "taskSocial",     automationLevel: "Medium", recoveryRate: 0.7 },
-  { id: "sync",       icon: "🔄", labelKey: "taskSync",       automationLevel: "High",   recoveryRate: 0.9 },
-  { id: "onboarding", icon: "📋", labelKey: "taskOnboarding", automationLevel: "Medium", recoveryRate: 0.7 },
-  { id: "autre",      icon: "🤖", labelKey: "taskAutre",      automationLevel: "Low",    recoveryRate: 0.7, hasTextInput: true },
+  // Multi-domaines
+  { id: "emails",       icon: "📧", labelKey: "taskEmails",       automationLevel: "High",   recoveryRate: 0.85 },
+  { id: "relances",     icon: "💸", labelKey: "taskRelances",     automationLevel: "High",   recoveryRate: 0.9  },
+  { id: "veille",       icon: "🔍", labelKey: "taskVeille",       automationLevel: "High",   recoveryRate: 0.9  },
+  { id: "prospection",  icon: "🎯", labelKey: "taskProspection",  automationLevel: "High",   recoveryRate: 0.85 },
+  { id: "reporting",    icon: "📊", labelKey: "taskReporting",    automationLevel: "Medium", recoveryRate: 0.7  },
+  { id: "planning",     icon: "📅", labelKey: "taskPlanning",     automationLevel: "Medium", recoveryRate: 0.7  },
+  { id: "saisie",       icon: "📦", labelKey: "taskSaisie",       automationLevel: "High",   recoveryRate: 0.9  },
+  { id: "compta",       icon: "🧾", labelKey: "taskCompta",       automationLevel: "Medium", recoveryRate: 0.75 },
+  { id: "social",       icon: "📱", labelKey: "taskSocial",       automationLevel: "High",   recoveryRate: 0.85 },
+  { id: "monitoring",   icon: "🖥️", labelKey: "taskMonitoring",   automationLevel: "High",   recoveryRate: 0.9  },
+  { id: "autre",        icon: "🤖", labelKey: "taskAutre",        automationLevel: "Medium", recoveryRate: 0.7, hasTextInput: true },
 ];
 
 const HOURLY_RATE = 150;
