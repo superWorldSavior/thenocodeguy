@@ -18,7 +18,7 @@ export default async function BlogPage() {
       excerpt: t("article0Excerpt"),
       date: t("article0Date"),
       readTime: t("article0ReadTime"),
-      tags: ["Email", "GPT-4o", "Windmill", "Graph API"],
+      tags: ["Email", "IA", "BTP", "Productivite"],
     },
     {
       slug: "windmill-vs-n8n",
@@ -26,7 +26,7 @@ export default async function BlogPage() {
       excerpt: t("article1Excerpt"),
       date: t("article1Date"),
       readTime: t("article1ReadTime"),
-      tags: ["Windmill", "n8n", "Automatisation", "Agents IA"],
+      tags: ["Productivite", "IA", "Automatisation", "PME"],
     },
   ];
 
