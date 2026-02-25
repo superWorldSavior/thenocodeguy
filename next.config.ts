@@ -43,11 +43,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/umami/script.js",
-        destination: "http://164.132.207.187:3002/script.js",
+        destination: "https://analytics.casys.ai/script.js",
       },
       {
         source: "/umami/api/send",
-        destination: "http://164.132.207.187:3002/api/send",
+        destination: "https://analytics.casys.ai/api/send",
       },
     ];
   },
