@@ -114,7 +114,7 @@ export default async function DomainesSection() {
 
                   {/* CTA */}
                   <Link
-                    href="/contact"
+                    href={`/domaines/${domaine.id}`}
                     className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
                   >
                     {t('ctaButton')}

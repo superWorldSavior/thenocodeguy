@@ -22,6 +22,7 @@ export default function Navigation() {
 
   const links = [
     { href: "/" as const, label: t("home") },
+    { href: "/blog" as const, label: t("blog") },
     { href: "/contact" as const, label: t("contact") },
   ];
 

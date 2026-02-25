@@ -14,7 +14,7 @@ export default async function ContactPage() {
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold sm:text-5xl">{t("pageTitle")}</h1>
-          <p style={{ color: "var(--muted-foreground)" }}>{t("pageSubtitle")}</p>
+          <p className="text-muted-foreground">{t("pageSubtitle")}</p>
         </div>
         <ContactForm />
       </div>

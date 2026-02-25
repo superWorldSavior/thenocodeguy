@@ -4,12 +4,12 @@ import { FlaskConical, ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("lab");
+  const t = await getTranslations("blog");
   return { title: t("metaTitle") };
 }
 
-export default async function LabPage() {
-  const t = await getTranslations("lab");
+export default async function BlogPage() {
+  const t = await getTranslations("blog");
 
   const articles = [
     {
@@ -48,7 +48,7 @@ export default async function LabPage() {
           {articles.map((article) => (
             <Link
               key={article.slug}
-              href={`/lab/${article.slug}`}
+              href={`/blog/${article.slug}`}
               className="group block rounded-2xl border border-white/10 bg-gray-900/50 p-6 transition-all hover:border-emerald-500/40 hover:bg-gray-900 sm:p-8"
             >
               <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-gray-500">

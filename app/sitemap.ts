@@ -10,7 +10,7 @@ const PAGES = [
   "/a-propos",
   "/legal",
   "/privacy",
-  "/lab",
+  "/blog",
   "/workflows",
 ];
 

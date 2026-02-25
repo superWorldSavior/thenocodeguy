@@ -23,8 +23,8 @@ export default function Footer() {
             <Link href="/" className="transition-colors hover:text-primary">
               {t("home")}
             </Link>
-            <Link href="/lab" className="transition-colors hover:text-primary">
-              {t("lab")}
+            <Link href="/blog" className="transition-colors hover:text-primary">
+              {t("blog")}
             </Link>
             <Link href="/contact" className="transition-colors hover:text-primary">
               {t("contact")}
@@ -44,14 +44,6 @@ export default function Footer() {
             <span className="text-muted-foreground/40">·</span>
             <Link href="/confidentialite" className="transition-colors hover:text-primary">
               {t("confidentialite")}
-            </Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link href="/legal" className="transition-colors hover:text-primary">
-              {t("legal")}
-            </Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link href="/privacy" className="transition-colors hover:text-primary">
-              {t("privacy")}
             </Link>
           </div>
           <p>&copy; {new Date().getFullYear()} TheNoCodeGuy. {t("rights")}</p>

@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("metaTitle"),
     openGraph: {
       title: t("title"),
-      url: "https://thenocodeguy.com/lab/comment-automatiser-veille-email",
+      url: "https://thenocodeguy.com/blog/comment-automatiser-veille-email",
     },
   };
 }
@@ -44,7 +44,7 @@ export default async function VeilleEmailPage() {
   return (
     <main className="min-h-screen bg-gray-950 py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <Link href="/lab" className="mb-10 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-emerald-400">
+        <Link href="/blog" className="mb-10 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-emerald-400">
           <ArrowLeft className="h-4 w-4" /> {t("breadcrumb")}
         </Link>
 
@@ -331,7 +331,7 @@ Preview: {email['bodyPreview'][:500]}
         </article>
 
         <div className="mt-16 flex flex-col items-center gap-6 border-t border-white/10 pt-12 sm:flex-row sm:justify-between">
-          <Link href="/lab" className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-emerald-400">
+          <Link href="/blog" className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-emerald-400">
             <ArrowLeft className="h-4 w-4" /> {t("bottomNavBack")}
           </Link>
           <Link href="/contact" className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-medium text-gray-950 transition-colors hover:bg-emerald-400">

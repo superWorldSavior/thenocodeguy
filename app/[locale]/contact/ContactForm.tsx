@@ -37,10 +37,10 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <div className="flex flex-col items-center justify-center rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 p-12 text-center">
-        <CheckCircle className="mb-4 h-12 w-12" style={{ color: "var(--primary)" }} />
+      <div className="flex flex-col items-center justify-center rounded-xl border border-primary/30 bg-primary/10 p-12 text-center">
+        <CheckCircle className="mb-4 h-12 w-12 text-primary" />
         <h3 className="mb-2 text-xl font-bold">{t("successTitle")}</h3>
-        <p style={{ color: "var(--muted-foreground)" }}>{t("successSubtitle")}</p>
+        <p className="text-muted-foreground">{t("successSubtitle")}</p>
       </div>
     );
   }
@@ -78,9 +78,10 @@ export default function ContactForm() {
             id="role"
             name="role"
             required
-            className="flex h-9 w-full rounded-md border border-[var(--input)] bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[var(--muted-foreground)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--ring)] disabled:cursor-not-allowed disabled:opacity-50"
+            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
           >
             <option value="">{t("selectDefault")}</option>
+            <option value="btp">{t("roleBtp")}</option>
             <option value="commercial">{t("roleCommercial")}</option>
             <option value="administratif">{t("roleAdmin")}</option>
             <option value="webmaster">{t("roleWebmaster")}</option>
@@ -118,7 +119,7 @@ export default function ContactForm() {
             <select
               id="timeline"
               name="timeline"
-              className="flex h-9 w-full rounded-md border border-[var(--input)] bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-[var(--muted-foreground)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--ring)] disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
             >
               <option value="">{t("selectDefault")}</option>
               <option value="asap">{t("timelineAsap")}</option>
