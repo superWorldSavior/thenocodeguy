@@ -3,6 +3,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import CalPopupButton from '@/components/molecules/CalPopupButton'
 import Autoplay from 'embla-carousel-autoplay'
 import { ArrowRight, Clock, Shield, Zap } from 'lucide-react'
 import {
@@ -25,6 +26,7 @@ type HeroCarouselProps = {
   slides: HeroSlide[]
   ctaPrimary: string
   ctaSecondary: string
+  trustLine: string
   trustBadge1: string
   trustBadge2: string
   trustBadge3: string
@@ -41,6 +43,7 @@ export default function HeroCarousel({
   slides,
   ctaPrimary,
   ctaSecondary,
+  trustLine,
   trustBadge1,
   trustBadge2,
   trustBadge3,
@@ -91,13 +94,12 @@ export default function HeroCarousel({
 
                   {/* CTAs */}
                   <div className="flex flex-wrap gap-3">
-                    <Link
-                      href="/contact"
+                    <CalPopupButton
                       className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
                     >
                       {ctaPrimary}
                       <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    </CalPopupButton>
                     <Link
                       href="#how-it-works"
                       className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-6 py-3 text-base font-semibold text-foreground transition-colors hover:bg-muted"
@@ -105,6 +107,8 @@ export default function HeroCarousel({
                       {ctaSecondary}
                     </Link>
                   </div>
+
+                  <p className="text-sm text-muted-foreground">{trustLine}</p>
 
                   {/* Trust badges */}
                   <div className="flex flex-wrap gap-3 pt-2">

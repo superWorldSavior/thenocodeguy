@@ -1,4 +1,8 @@
 {
+  "booking": {
+    "trustLine": "与 Erwan 进行 30 分钟咨询 — 完全免费，无任何承诺",
+    "trustLineTech": "无需任何技术背景"
+  },
   "common": {
     "startProject": "启动项目",
     "freeAudit": "免费审计 →",
@@ -92,10 +96,10 @@
     "statsValue2": "< 48小时",
     "ctaSectionTitle": "准备好自动化您的行政工作了吗？",
     "ctaSectionSubtitle": "描述您的重复性任务。我们为您展示 AI 代理能在 48 小时内处理什么 — 无需承诺。",
-    "ctaSectionButton": "预约演示 — 15 分钟",
+    "ctaSectionButton": "预约免费咨询",
     "pricingTeaser": "按需定制",
     "pricingTeaserPrice": "定制报价",
-    "pricingTeaserCta": "预约演示"
+    "pricingTeaserCta": "预约免费咨询"
   },
   "agents": {
     "metaTitle": "AI 智能代理 — The No Code Guys",
@@ -109,7 +113,7 @@
     "ctaHire": "了解此代理",
     "ctaTitle": "准备好自动化了吗？",
     "ctaSubtitle": "合理使用，无需承诺。您的 AI 代理 48 小时内即可上线。",
-    "ctaButton": "预约演示",
+    "ctaButton": "预约免费咨询",
     "commercial": {
       "name": "The No Code Commercial",
       "role": "开发客户与销售",
@@ -191,7 +195,7 @@
     "starterFeature3": "电子邮件支持",
     "starterFeature4": "48 小时内完成部署",
     "starterFeature5": "无需承诺 — 随时取消",
-    "starterCta": "预约演示",
+    "starterCta": "预约免费咨询",
     "fairUseTitle": "什么是合理使用？",
     "fairUseDesc": "无配额。无计数器。正常使用您的代理 — 客户开发、行政管理、网站管理。如果您的使用量大大超出正常范围（转售、为第三方进行大规模自动化），我们一起协商。就这么简单。",
     "fairUseItem0": "WhatsApp 消息无限制",
@@ -209,7 +213,7 @@
     "faq3A": "是的。您的数据通过加密连接传输。我们仅访问工作流程运作所需的数据。基础设施托管于欧洲。",
     "ctaTitle": "准备好自动化了吗？",
     "ctaSubtitle": "描述您的重复性任务。我们为您展示 AI 代理能在 48 小时内处理什么 — 无需承诺。",
-    "ctaButton": "预约演示 — 15 分钟",
+    "ctaButton": "预约免费咨询",
     "securityTitle": "安全性与 GDPR 合规",
     "securityDesc": "您的数据受到严格的安全标准保护，完全符合欧洲法规。",
     "securityItem0Title": "端到端加密",
@@ -333,7 +337,7 @@
     "author": "TheNoCodeGuy",
     "ctaTitle": "这些问题听起来熟悉吗？",
     "ctaSubtitle": "我们在24小时内识别您可自动化的任务。无需承诺。",
-    "ctaButton": "提交需求",
+    "ctaButton": "预约免费咨询",
     "article0Title": "AI 代理如何每天为建筑公司处理 200 封邮件",
     "article0Excerpt": "您的行政助理每天花 3 小时整理邮件。紧急事项遗漏、跟进遗忘、无用的电子报。AI 代理每天早上只需 30 秒就能解决。",
     "article0Date": "2026年2月25日",
@@ -387,6 +391,10 @@
     "metaTitle": "联系我们 — 谈谈您的项目",
     "pageTitle": "谈谈您的项目",
     "pageSubtitle": "描述您的挑战。我们将在 24 小时内提供具体方案。",
+    "bookingTitle": "预约与 Erwan 的免费咨询",
+    "bookingSubtitle": "30 分钟深入了解您的需求 — 完全免费，无任何承诺",
+    "formFallback": "更喜欢文字沟通？",
+    "formFallbackSubtitle": "描述您的需求，我们将在 24 小时内回复您。",
     "emailCardTitle": "直接邮件",
     "emailCardEmail": "hello@thenocodeguy.com",
     "responseCardTitle": "响应时间",
@@ -596,10 +604,10 @@
       "roiP2": "AI 代理的成本只是临时工的一小部分——而且全天候工作，无假期，无错误。",
       "ctaTitle": "找出您最耗时的 3 项任务",
       "ctaP1": "发送需求给我们。我们分析您的日常运营，为您打造量身定制的 AI 代理，48 小时内可部署。",
-      "ctaButton": "提交需求",
+      "ctaButton": "预约免费咨询",
       "ctaSubtext": "24小时内回复 · 无需承诺 · 48小时部署",
       "bottomNavBack": "返回博客",
-      "bottomNavNext": "提交需求",
+      "bottomNavNext": "预约免费咨询",
       "signatureName": "TheNoCodeGuy",
       "signatureRole": "AI 人力派遣机构"
     },
@@ -647,10 +655,10 @@
       "testimonialAuthor": "老板，45 人建筑公司——巴黎地区",
       "ctaTitle": "您也可以每周释放 15 小时",
       "ctaP1": "这个邮件代理可以在 48 小时内部署。无需培训，无需更换工具。它适应您现有的邮件系统。",
-      "ctaButton": "提交需求",
+      "ctaButton": "预约免费咨询",
       "ctaSubtext": "24小时内回复 · 无需承诺 · 48小时部署",
       "bottomNavBack": "返回博客",
-      "bottomNavNext": "提交需求",
+      "bottomNavNext": "预约免费咨询",
       "signatureName": "TheNoCodeGuy",
       "signatureRole": "AI 人力派遣机构"
     }
@@ -736,7 +744,7 @@
   "ctaSection": {
     "title": "准备好自动化您的行政工作了吗？",
     "subtitle": "描述您的重复性任务。我们向您展示AI代理在48小时内能处理什么——无需承诺。",
-    "button": "预约演示 — 15分钟"
+    "button": "预约免费咨询"
   },
   "profiles": {
     "title": "可用档案",
@@ -806,7 +814,7 @@
     "badge": "建筑行业",
     "title": "您的建筑行政全自动运行",
     "subtitle": "催收、合规、记账、标案——AI代理接手那些占满您整天的任务。48小时内部署。",
-    "ctaTop": "预约演示 — 15分钟",
+    "ctaTop": "与我们聊聊您的施工行政",
     "section1Title": "行政与合规",
     "section1Before1": "您手动催收供应商发票",
     "section1After1": "代理在第30、45、60天自动催收——通过邮件和WhatsApp",
@@ -859,7 +867,7 @@
     "referenceStat1Label": "每周节省",
     "referenceStat2Value": "< 48小时",
     "referenceStat2Label": "部署时间",
-    "cta": "预约演示 — 15分钟",
+    "cta": "与我们聊聊您的标案需求",
     "ctaSubtext": "免费，无需承诺。我们向您展示可以为您自动化什么。"
   },
   "domainesCommerce": {
@@ -868,7 +876,7 @@
     "badge": "商业与销售",
     "title": "您的销售流程自动运转",
     "subtitle": "开发、评估、CRM、跟进——AI代理在您成交的同时持续填充您的销售管道。48小时内部署。",
-    "ctaTop": "预约演示 — 15分钟",
+    "ctaTop": "与我们聊聊您的业务拓展",
     "section1Title": "LinkedIn开发",
     "section1Before1": "您每天花2小时在LinkedIn上搜索潜在客户",
     "section1After1": "代理识别目标档案并每天发送个性化连接请求",
@@ -912,7 +920,7 @@
     "referenceStat1Label": "合格潜在客户/月",
     "referenceStat2Value": "< 48小时",
     "referenceStat2Label": "部署时间",
-    "cta": "预约演示 — 15分钟",
+    "cta": "与我们聊聊您的业务拓展",
     "ctaSubtext": "免费，无需承诺。我们向您展示可以为您自动化什么。"
   },
   "domainesAdmin": {
@@ -921,7 +929,7 @@
     "badge": "行政与运营",
     "title": "您的后台无需您也能运转",
     "subtitle": "邮件、日历、记账、人资、供应商——AI代理在您决策的同时管理行政事务。48小时内部署。",
-    "ctaTop": "预约演示 — 15分钟",
+    "ctaTop": "与我们聊聊您的行政管理",
     "section1Title": "邮件与信件分类",
     "section1Before1": "您每天早上花1小时分类电子邮件和实体信件",
     "section1After1": "代理按优先级、类别和收件人自动分类——紧急优先",
@@ -965,7 +973,7 @@
     "referenceStat1Label": "每周节省",
     "referenceStat2Value": "12",
     "referenceStat2Label": "管理据点",
-    "cta": "预约演示 — 15分钟",
+    "cta": "与我们聊聊您的后台管理",
     "ctaSubtext": "免费，无需承诺。我们向您展示可以为您自动化什么。"
   },
   "domainesWeb": {
@@ -974,7 +982,7 @@
     "badge": "网站与数字",
     "title": "您的线上运营全自动驾驶",
     "subtitle": "监控、SEO、部署、分析、维护——AI代理在您创作的同时管理您的网站。48小时内部署。",
-    "ctaTop": "预约演示 — 15分钟",
+    "ctaTop": "与我们聊聊您的网站",
     "section1Title": "监控与警报",
     "section1Before1": "您在客户打电话来时才发现网站挂了",
     "section1After1": "代理监控运行时间、响应速度和SSL——2分钟内发出警报",
@@ -1018,7 +1026,7 @@
     "referenceStat1Label": "解决时间",
     "referenceStat2Value": "30+",
     "referenceStat2Label": "监控网站",
-    "cta": "预约演示 — 15分钟",
+    "cta": "与我们聊聊您的网站",
     "ctaSubtext": "免费，无需承诺。我们向您展示可以为您自动化什么。"
   },
   "mentionsLegales": {

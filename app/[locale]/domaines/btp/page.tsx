@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import CalPopupButton from "@/components/molecules/CalPopupButton";
 import { ArrowRight, HardHat, X, Check } from "lucide-react";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,6 +25,7 @@ type SectionKey = (typeof sections)[number]["key"];
 
 export default async function BtpPage() {
   const t = await getTranslations("domainesBtp");
+  const tBooking = await getTranslations("booking");
 
   return (
     <>
@@ -44,13 +45,13 @@ export default async function BtpPage() {
               <p className="mb-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 {t("subtitle")}
               </p>
-              <Link
-                href="/contact"
+              <CalPopupButton
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
               >
                 {t("ctaTop")}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </CalPopupButton>
+              <p className="mt-2 text-sm text-muted-foreground">{tBooking("trustLineTech")}</p>
             </div>
 
             <div className="relative animate-fade-in-up [animation-delay:200ms]">
@@ -146,13 +147,12 @@ export default async function BtpPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/contact"
+            <CalPopupButton
               className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-all hover:bg-brand-yellow hover:text-primary hover:shadow-xl hover:shadow-brand-yellow/30"
             >
               {t("cta")}
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </CalPopupButton>
             <p className="mt-3 text-sm text-muted-foreground">{t("ctaSubtext")}</p>
           </div>
         </div>

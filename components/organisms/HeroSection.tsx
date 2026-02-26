@@ -10,6 +10,7 @@ const SLIDE_IMAGES = [
 
 export default async function HeroSection() {
   const t = await getTranslations('hero')
+  const tBooking = await getTranslations('booking')
 
   const slides: HeroSlide[] = SLIDE_IMAGES.map((s, i) => ({
     badge: t(`slide${i}Badge`),
@@ -29,6 +30,7 @@ export default async function HeroSection() {
           slides={slides}
           ctaPrimary={t('ctaPrimary')}
           ctaSecondary={t('ctaSecondary')}
+          trustLine={tBooking('trustLine')}
           trustBadge1={t('trustBadge1')}
           trustBadge2={t('trustBadge2')}
           trustBadge3={t('trustBadge3')}

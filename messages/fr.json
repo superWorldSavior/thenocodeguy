@@ -1,4 +1,8 @@
 {
+  "booking": {
+    "trustLine": "30 min avec Erwan — gratuit, sans engagement",
+    "trustLineTech": "Pas besoin d'être technique"
+  },
   "common": {
     "startProject": "Démarrer un projet",
     "freeAudit": "Audit gratuit →",
@@ -92,10 +96,10 @@
     "statsValue2": "< 48h",
     "ctaSectionTitle": "Prêt à automatiser votre admin ?",
     "ctaSectionSubtitle": "Décrivez vos tâches répétitives. On vous montre ce qu'un agent IA peut gérer en 48h — sans engagement.",
-    "ctaSectionButton": "Demander une démo — 15 min",
+    "ctaSectionButton": "Réserver un appel découverte",
     "pricingTeaser": "Mission sur mesure",
     "pricingTeaserPrice": "Sur devis",
-    "pricingTeaserCta": "Demander une démo"
+    "pricingTeaserCta": "Réserver un appel découverte"
   },
   "agents": {
     "metaTitle": "Agents IA — The No Code Guys",
@@ -109,7 +113,7 @@
     "ctaHire": "Découvrir cet agent",
     "ctaTitle": "Prêt à automatiser ?",
     "ctaSubtitle": "Fair use, sans engagement. Votre agent IA est opérationnel sous 48 heures.",
-    "ctaButton": "Demander une démo",
+    "ctaButton": "Réserver un appel découverte",
     "commercial": {
       "name": "The No Code Commercial",
       "role": "Prospection & ventes",
@@ -191,7 +195,7 @@
     "starterFeature3": "Support par email",
     "starterFeature4": "Mise en place sous 48h",
     "starterFeature5": "Sans engagement — annulez quand vous voulez",
-    "starterCta": "Demander une démo",
+    "starterCta": "Réserver un appel découverte",
     "fairUseTitle": "Fair use, c'est quoi ?",
     "fairUseDesc": "Pas de quotas. Pas de compteurs. Utilisez votre agent normalement — prospection, administration, gestion web. Si votre usage dépasse largement la norme (revente, automatisation massive pour tiers), on en discute ensemble. C'est tout.",
     "fairUseItem0": "Pas de limite de messages WhatsApp",
@@ -209,7 +213,7 @@
     "faq3A": "Oui. Vos données transitent via des connexions chiffrées. Nous n'accédons qu'aux données nécessaires au fonctionnement de vos workflows. Infrastructure hébergée en Europe.",
     "ctaTitle": "Prêt à automatiser ?",
     "ctaSubtitle": "Décrivez vos tâches répétitives. On vous montre ce qu'un agent IA peut gérer en 48h — sans engagement.",
-    "ctaButton": "Demander une démo — 15 min",
+    "ctaButton": "Réserver un appel découverte",
     "securityTitle": "Sécurité & conformité RGPD",
     "securityDesc": "Vos données sont protégées par des standards de sécurité stricts. Conformité totale avec la réglementation européenne.",
     "securityItem0Title": "Chiffrement de bout en bout",
@@ -266,7 +270,7 @@
     "service2D2": "Messages personnalisés par IA",
     "service2D3": "Séquences de relance multi-canal",
     "service2Price": "À partir de 1 200 €/mois",
-    "service2Cta": "Voir une démo",
+    "service2Cta": "Réserver un appel découverte",
     "service3Title": "Maintenance & évolution",
     "service3Tagline": "Vos flows toujours en prod",
     "service3Desc": "Les APIs changent, les process évoluent. On assure la maintenance proactive de vos workflows : monitoring, corrections, mises à jour, et évolutions au fil de vos besoins.",
@@ -333,7 +337,7 @@
     "author": "TheNoCodeGuy",
     "ctaTitle": "Vous reconnaissez ces problèmes ?",
     "ctaSubtitle": "On identifie vos tâches automatisables en 24h. Sans engagement.",
-    "ctaButton": "Poster un brief",
+    "ctaButton": "Réserver un appel découverte",
     "article0Title": "Comment un agent IA traite 200 emails/jour pour une entreprise BTP",
     "article0Excerpt": "Votre assistante passe 3h par jour à trier les emails. Urgences perdues, relances oubliées, newsletters inutiles. Un agent IA règle ça en 30 secondes chaque matin.",
     "article0Date": "25 février 2026",
@@ -387,6 +391,10 @@
     "metaTitle": "Contact — Parlons de votre projet",
     "pageTitle": "Parlons de votre projet",
     "pageSubtitle": "Décrivez votre challenge. On répond sous 24h avec une proposition concrète.",
+    "bookingTitle": "Réservez un appel découverte avec Erwan",
+    "bookingSubtitle": "30 minutes pour comprendre vos besoins — gratuit, sans engagement",
+    "formFallback": "Vous préférez écrire ?",
+    "formFallbackSubtitle": "Décrivez votre besoin et on vous répond sous 24h.",
     "emailCardTitle": "Email direct",
     "emailCardEmail": "hello@thenocodeguy.com",
     "responseCardTitle": "Temps de réponse",
@@ -596,10 +604,10 @@
       "roiP2": "Un agent IA coûte une fraction d'un intérimaire — et il travaille 24h/24, 7j/7, sans congés, sans erreurs.",
       "ctaTitle": "Identifiez vos 3 tâches les plus chronophages",
       "ctaP1": "Envoyez-nous un brief. On analyse votre quotidien et on vous propose un agent IA sur mesure, déployable en 48h.",
-      "ctaButton": "Poster un brief",
+      "ctaButton": "Réserver un appel découverte",
       "ctaSubtext": "Réponse sous 24h · Sans engagement · Déployé en 48h",
       "bottomNavBack": "Retour au blog",
-      "bottomNavNext": "Poster un brief",
+      "bottomNavNext": "Réserver un appel découverte",
       "signatureName": "TheNoCodeGuy",
       "signatureRole": "Agence d'intérim IA"
     },
@@ -647,10 +655,10 @@
       "testimonialAuthor": "Dirigeant, entreprise BTP 45 salariés — Île-de-France",
       "ctaTitle": "Vous aussi, libérez 15h par semaine",
       "ctaP1": "Cet agent email est déployable en 48h. Pas de formation, pas de changement d'outil. Il s'adapte à votre messagerie existante.",
-      "ctaButton": "Poster un brief",
+      "ctaButton": "Réserver un appel découverte",
       "ctaSubtext": "Réponse sous 24h · Sans engagement · Déployé en 48h",
       "bottomNavBack": "Retour au blog",
-      "bottomNavNext": "Poster un brief",
+      "bottomNavNext": "Réserver un appel découverte",
       "signatureName": "TheNoCodeGuy",
       "signatureRole": "Agence d'intérim IA"
     }
@@ -759,7 +767,7 @@
   "ctaSection": {
     "title": "Prêt à automatiser votre admin ?",
     "subtitle": "Décrivez vos tâches répétitives. On vous montre ce qu'un agent IA peut gérer en 48h — sans engagement.",
-    "button": "Demander une démo — 15 min"
+    "button": "Réserver un appel découverte"
   },
   "mentionsLegales": {
     "metaTitle": "Mentions légales — TheNoCodeGuy",
@@ -864,7 +872,7 @@
     "badge": "Secteur BTP",
     "title": "Votre admin BTP tourne en pilote automatique",
     "subtitle": "Relances, conformité, compta, AO — un agent IA prend le relais sur les tâches qui mangent vos journées. Déployé en 48h.",
-    "ctaTop": "Demander une démo — 15 min",
+    "ctaTop": "Parlez-nous de votre admin BTP",
     "section1Title": "Administration & Conformité",
     "section1Before1": "Vous relancez les factures fournisseurs à la main",
     "section1After1": "L'agent relance automatiquement à J+30, J+45, J+60 — par email et WhatsApp",
@@ -917,7 +925,7 @@
     "referenceStat1Label": "économisées / semaine",
     "referenceStat2Value": "< 48h",
     "referenceStat2Label": "mise en place",
-    "cta": "Demander une démo — 15 min",
+    "cta": "Parlez-nous de vos appels d'offres",
     "ctaSubtext": "Gratuit, sans engagement. On vous montre ce qu'on peut automatiser chez vous."
   },
   "domainesCommerce": {
@@ -926,7 +934,7 @@
     "badge": "Commerce & Ventes",
     "title": "Votre pipeline commercial tourne tout seul",
     "subtitle": "Prospection, qualification, CRM, relances — un agent IA alimente votre pipeline pendant que vous closez. Déployé en 48h.",
-    "ctaTop": "Demander une démo — 15 min",
+    "ctaTop": "Parlez-nous de votre prospection",
     "section1Title": "Prospection LinkedIn",
     "section1Before1": "Vous passez 2h par jour à chercher des prospects sur LinkedIn",
     "section1After1": "L'agent identifie les profils cibles et envoie des demandes de connexion personnalisées chaque jour",
@@ -970,7 +978,7 @@
     "referenceStat1Label": "leads qualifiés / mois",
     "referenceStat2Value": "< 48h",
     "referenceStat2Label": "mise en place",
-    "cta": "Demander une démo — 15 min",
+    "cta": "Parlez-nous de votre prospection",
     "ctaSubtext": "Gratuit, sans engagement. On vous montre ce qu'on peut automatiser chez vous."
   },
   "domainesAdmin": {
@@ -979,7 +987,7 @@
     "badge": "Administration & Ops",
     "title": "Votre back-office tourne sans vous",
     "subtitle": "Courrier, agendas, compta, RH, fournisseurs — un agent IA gère l'administratif pendant que vous pilotez. Déployé en 48h.",
-    "ctaTop": "Demander une démo — 15 min",
+    "ctaTop": "Parlez-nous de votre admin",
     "section1Title": "Tri courrier & emails",
     "section1Before1": "Vous passez 1h chaque matin à trier vos emails et courriers entrants",
     "section1After1": "L'agent classe automatiquement par priorité, catégorie et destinataire — urgent en premier",
@@ -1023,7 +1031,7 @@
     "referenceStat1Label": "économisées / semaine",
     "referenceStat2Value": "12",
     "referenceStat2Label": "sites gérés",
-    "cta": "Demander une démo — 15 min",
+    "cta": "Parlez-nous de votre back-office",
     "ctaSubtext": "Gratuit, sans engagement. On vous montre ce qu'on peut automatiser chez vous."
   },
   "domainesWeb": {
@@ -1032,7 +1040,7 @@
     "badge": "Web & Digital",
     "title": "Votre présence en ligne tourne en pilote automatique",
     "subtitle": "Monitoring, SEO, déploiements, analytics, maintenance — un agent IA gère votre web pendant que vous créez. Déployé en 48h.",
-    "ctaTop": "Demander une démo — 15 min",
+    "ctaTop": "Parlez-nous de votre site",
     "section1Title": "Monitoring & alertes",
     "section1Before1": "Vous découvrez qu'un site est tombé quand un client vous appelle",
     "section1After1": "L'agent monitore uptime, temps de réponse et SSL — alerte en moins de 2 minutes",
@@ -1076,7 +1084,7 @@
     "referenceStat1Label": "temps de résolution",
     "referenceStat2Value": "30+",
     "referenceStat2Label": "sites monitorés",
-    "cta": "Demander une démo — 15 min",
+    "cta": "Parlez-nous de votre site",
     "ctaSubtext": "Gratuit, sans engagement. On vous montre ce qu'on peut automatiser chez vous."
   }
 }

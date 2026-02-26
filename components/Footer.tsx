@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Zap } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
@@ -10,8 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div>
-            <div className="flex items-center gap-2 text-lg font-bold">
-              <Zap className="h-5 w-5 text-primary" />
+            <div className="text-lg font-bold">
               <span className="text-foreground">
                 TheNoCode<span className="text-primary">Guy</span>
               </span>

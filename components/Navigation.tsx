@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import NextLink from "next/link";
-import Image from "next/image";
 import { Menu, X, Globe, Check } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/navigation";
+import CalPopupButton from "@/components/molecules/CalPopupButton";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -39,7 +39,6 @@ export default function Navigation() {
           href="/"
           className="flex items-center gap-2 text-xl font-bold"
         >
-          <Image src="/favicon_io/favicon-32x32.png" alt="TNCG" width={28} height={28} className="rounded-sm" />
           <span className="text-foreground">
             TheNoCode<span className="text-primary">Guy</span>
           </span>
@@ -62,12 +61,11 @@ export default function Navigation() {
           >
             {t("ourAgents")}
           </NextLink>
-          <Link
-            href="/contact"
+          <CalPopupButton
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-primary"
           >
             {t("startProject")}
-          </Link>
+          </CalPopupButton>
 
           {/* Locale switcher */}
           <DropdownMenu>
@@ -124,13 +122,11 @@ export default function Navigation() {
           >
             {t("ourAgents")}
           </NextLink>
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          <CalPopupButton
+            className="mt-2 block w-full rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("startProject")}
-          </Link>
+          </CalPopupButton>
 
           {/* Mobile locale switcher */}
           <div className="mt-4 border-t border-border pt-4">

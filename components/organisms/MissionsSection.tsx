@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import CalPopupButton from '@/components/molecules/CalPopupButton'
 
 export default async function MissionsSection() {
   const t = await getTranslations('missions')
@@ -65,13 +65,12 @@ export default async function MissionsSection() {
                 </div>
               </div>
 
-              <Link
-                href="/contact"
+              <CalPopupButton
                 className="inline-flex w-fit items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90"
               >
                 {t('studyCta')}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </CalPopupButton>
             </div>
           </div>
         </div>

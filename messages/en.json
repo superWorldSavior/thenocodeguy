@@ -1,4 +1,8 @@
 {
+  "booking": {
+    "trustLine": "30 min with Erwan — free, no commitment",
+    "trustLineTech": "No technical skills needed"
+  },
   "common": {
     "startProject": "Start a project",
     "freeAudit": "Free audit →",
@@ -92,10 +96,10 @@
     "statsValue2": "< 48h",
     "ctaSectionTitle": "Ready to automate your admin?",
     "ctaSectionSubtitle": "Describe your repetitive tasks. We'll show you what an AI agent can handle in 48h — no commitment.",
-    "ctaSectionButton": "Request a demo — 15 min",
+    "ctaSectionButton": "Book a discovery call",
     "pricingTeaser": "Tailored mission",
     "pricingTeaserPrice": "Custom quote",
-    "pricingTeaserCta": "Request a demo"
+    "pricingTeaserCta": "Book a discovery call"
   },
   "agents": {
     "metaTitle": "AI Agents — The No Code Guys",
@@ -109,7 +113,7 @@
     "ctaHire": "Discover this agent",
     "ctaTitle": "Ready to automate?",
     "ctaSubtitle": "Fair use, no commitment. Your AI agent is live within 48 hours.",
-    "ctaButton": "Request a demo",
+    "ctaButton": "Book a discovery call",
     "commercial": {
       "name": "The No Code Commercial",
       "role": "Prospecting & sales",
@@ -191,7 +195,7 @@
     "starterFeature3": "Email support",
     "starterFeature4": "Setup within 48h",
     "starterFeature5": "No commitment — cancel anytime",
-    "starterCta": "Request a demo",
+    "starterCta": "Book a discovery call",
     "fairUseTitle": "What is fair use?",
     "fairUseDesc": "No quotas. No counters. Use your agent normally — prospecting, administration, web management. If your usage significantly exceeds the norm (resale, massive automation for third parties), we discuss it together. That's it.",
     "fairUseItem0": "No WhatsApp message limits",
@@ -209,7 +213,7 @@
     "faq3A": "Yes. Your data flows through encrypted connections. We only access the data necessary for your workflows to function. Infrastructure hosted in Europe.",
     "ctaTitle": "Ready to automate?",
     "ctaSubtitle": "Describe your repetitive tasks. We'll show you what an AI agent can handle in 48h — no commitment.",
-    "ctaButton": "Request a demo — 15 min",
+    "ctaButton": "Book a discovery call",
     "securityTitle": "Security & GDPR compliance",
     "securityDesc": "Your data is protected by strict security standards. Full compliance with European regulations.",
     "securityItem0Title": "End-to-end encryption",
@@ -333,7 +337,7 @@
     "author": "TheNoCodeGuy",
     "ctaTitle": "Do these problems sound familiar?",
     "ctaSubtitle": "We identify your automatable tasks within 24h. No commitment.",
-    "ctaButton": "Post a brief",
+    "ctaButton": "Book a discovery call",
     "article0Title": "How an AI Agent Processes 200 Emails/Day for a Construction Company",
     "article0Excerpt": "Your admin assistant spends 3 hours a day sorting emails. Lost urgencies, forgotten follow-ups, useless newsletters. An AI agent solves this in 30 seconds every morning.",
     "article0Date": "February 25, 2026",
@@ -387,6 +391,10 @@
     "metaTitle": "Contact — Let's talk about your project",
     "pageTitle": "Let's talk about your project",
     "pageSubtitle": "Describe your challenge. We respond within 24 hours with a concrete proposal.",
+    "bookingTitle": "Book a discovery call with Erwan",
+    "bookingSubtitle": "30 minutes to understand your needs — free, no commitment",
+    "formFallback": "Prefer to write?",
+    "formFallbackSubtitle": "Describe your needs and we'll get back to you within 24h.",
     "emailCardTitle": "Direct email",
     "emailCardEmail": "hello@thenocodeguy.com",
     "responseCardTitle": "Response time",
@@ -596,10 +604,10 @@
       "roiP2": "An AI agent costs a fraction of a temp worker — and it works 24/7, no holidays, no errors.",
       "ctaTitle": "Identify Your 3 Most Time-Consuming Tasks",
       "ctaP1": "Send us a brief. We analyze your daily operations and propose a custom AI agent, deployable in 48h.",
-      "ctaButton": "Post a brief",
+      "ctaButton": "Book a discovery call",
       "ctaSubtext": "Response within 24h · No commitment · Deployed in 48h",
       "bottomNavBack": "Back to blog",
-      "bottomNavNext": "Post a brief",
+      "bottomNavNext": "Book a discovery call",
       "signatureName": "TheNoCodeGuy",
       "signatureRole": "AI Staffing Agency"
     },
@@ -647,10 +655,10 @@
       "testimonialAuthor": "CEO, 45-employee construction company — Paris area",
       "ctaTitle": "Free Up 15 Hours Per Week",
       "ctaP1": "This email agent can be deployed in 48 hours. No training, no tool change. It adapts to your existing email system.",
-      "ctaButton": "Post a brief",
+      "ctaButton": "Book a discovery call",
       "ctaSubtext": "Response within 24h · No commitment · Deployed in 48h",
       "bottomNavBack": "Back to blog",
-      "bottomNavNext": "Post a brief",
+      "bottomNavNext": "Book a discovery call",
       "signatureName": "TheNoCodeGuy",
       "signatureRole": "AI Staffing Agency"
     }
@@ -759,7 +767,7 @@
   "ctaSection": {
     "title": "Ready to automate your admin?",
     "subtitle": "Describe your repetitive tasks. We show you what an AI agent can handle in 48h — no commitment.",
-    "button": "Request a demo — 15 min"
+    "button": "Book a discovery call"
   },
   "mentionsLegales": {
     "metaTitle": "Legal Notice — TheNoCodeGuy",
@@ -864,7 +872,7 @@
     "badge": "Construction Sector",
     "title": "Your construction admin runs on autopilot",
     "subtitle": "Follow-ups, compliance, bookkeeping, tenders — an AI agent takes over the tasks eating up your days. Deployed in 48h.",
-    "ctaTop": "Request a demo — 15 min",
+    "ctaTop": "Tell us about your construction admin",
     "section1Title": "Administration & Compliance",
     "section1Before1": "You chase supplier invoices manually",
     "section1After1": "The agent follows up automatically at D+30, D+45, D+60 — by email and WhatsApp",
@@ -917,7 +925,7 @@
     "referenceStat1Label": "saved / week",
     "referenceStat2Value": "< 48h",
     "referenceStat2Label": "setup time",
-    "cta": "Request a demo — 15 min",
+    "cta": "Tell us about your tenders",
     "ctaSubtext": "Free, no commitment. We show you what we can automate for you."
   },
   "domainesCommerce": {
@@ -926,7 +934,7 @@
     "badge": "Sales & Commerce",
     "title": "Your sales pipeline runs on its own",
     "subtitle": "Prospecting, qualification, CRM, follow-ups — an AI agent feeds your pipeline while you close deals. Deployed in 48h.",
-    "ctaTop": "Request a demo — 15 min",
+    "ctaTop": "Tell us about your prospecting",
     "section1Title": "LinkedIn Prospecting",
     "section1Before1": "You spend 2 hours a day searching for prospects on LinkedIn",
     "section1After1": "The agent identifies target profiles and sends personalized connection requests daily",
@@ -970,7 +978,7 @@
     "referenceStat1Label": "qualified leads / month",
     "referenceStat2Value": "< 48h",
     "referenceStat2Label": "setup time",
-    "cta": "Request a demo — 15 min",
+    "cta": "Tell us about your prospecting",
     "ctaSubtext": "Free, no commitment. We show you what we can automate for you."
   },
   "domainesAdmin": {
@@ -979,7 +987,7 @@
     "badge": "Administration & Ops",
     "title": "Your back-office runs without you",
     "subtitle": "Mail, calendars, accounting, HR, suppliers — an AI agent manages admin while you lead. Deployed in 48h.",
-    "ctaTop": "Request a demo — 15 min",
+    "ctaTop": "Tell us about your admin",
     "section1Title": "Mail & Email Sorting",
     "section1Before1": "You spend 1 hour every morning sorting emails and incoming mail",
     "section1After1": "The agent sorts automatically by priority, category and recipient — urgent first",
@@ -1023,7 +1031,7 @@
     "referenceStat1Label": "saved / week",
     "referenceStat2Value": "12",
     "referenceStat2Label": "sites managed",
-    "cta": "Request a demo — 15 min",
+    "cta": "Tell us about your back-office",
     "ctaSubtext": "Free, no commitment. We show you what we can automate for you."
   },
   "domainesWeb": {
@@ -1032,7 +1040,7 @@
     "badge": "Web & Digital",
     "title": "Your online presence runs on autopilot",
     "subtitle": "Monitoring, SEO, deployments, analytics, maintenance — an AI agent manages your web while you create. Deployed in 48h.",
-    "ctaTop": "Request a demo — 15 min",
+    "ctaTop": "Tell us about your website",
     "section1Title": "Monitoring & Alerts",
     "section1Before1": "You find out a site is down when a client calls you",
     "section1After1": "The agent monitors uptime, response time and SSL — alerts in under 2 minutes",
@@ -1076,7 +1084,7 @@
     "referenceStat1Label": "resolution time",
     "referenceStat2Value": "30+",
     "referenceStat2Label": "sites monitored",
-    "cta": "Request a demo — 15 min",
+    "cta": "Tell us about your website",
     "ctaSubtext": "Free, no commitment. We show you what we can automate for you."
   }
 }
