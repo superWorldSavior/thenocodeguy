@@ -28,6 +28,14 @@ export default async function BlogPage() {
       readTime: t("article1ReadTime"),
       tags: ["Productivite", "IA", "Automatisation", "PME"],
     },
+    {
+      slug: "facturation-electronique-btp-2026",
+      title: t("article2Title"),
+      excerpt: t("article2Excerpt"),
+      date: t("article2Date"),
+      readTime: t("article2ReadTime"),
+      tags: ["Facturation", "BTP", "IA", "2026", "Conformite"],
+    },
   ];
 
   return (

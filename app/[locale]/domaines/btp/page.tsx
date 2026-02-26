@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import CalPopupButton from "@/components/molecules/CalPopupButton";
-import { ArrowRight, HardHat, X, Check } from "lucide-react";
+import { Link } from "@/navigation";
+import { ArrowRight, HardHat, X, Check, FileText } from "lucide-react";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("domainesBtp");
@@ -119,6 +120,34 @@ export default async function BtpPage() {
           </div>
         </section>
       ))}
+
+      {/* Facturation electronique */}
+      <section className="px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-4xl">
+          <div className="rounded-2xl border border-primary/20 bg-primary/5 p-8 sm:p-10">
+            <div className="flex items-start gap-4">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <FileText className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h2 className="mb-3 text-xl font-bold text-foreground sm:text-2xl">
+                  {t("factureTitle")}
+                </h2>
+                <p className="mb-5 text-muted-foreground">
+                  {t("factureDesc")}
+                </p>
+                <Link
+                  href="/domaines/btp/facturation-electronique"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-brand-yellow"
+                >
+                  {t("factureCta")}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Client reference + stats */}
       <section className="px-4 py-20 sm:px-6">
