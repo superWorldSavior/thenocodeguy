@@ -1,0 +1,89 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { routing } from "@/routing";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
+import { ThemeProvider } from "@/components/theme-provider";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export const metadata: Metadata = {
+  title: {
+    default: "The No Code Guy",
+    template: "%s | The No Code Guy",
+  },
+  description:
+    "The No Code Guy (EURL) — société éditrice de Casys. Atelier d'ingénierie logicielle indépendant, Clermont-Ferrand.",
+  metadataBase: new URL("https://thenocodeguy.com"),
+  icons: {
+    icon: [
+      { url: "/favicon_io/favicon.ico", sizes: "any" },
+      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/favicon_io/apple-touch-icon.png",
+  },
+  manifest: "/favicon_io/site.webmanifest",
+  openGraph: {
+    siteName: "The No Code Guy",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
+
+const localeToHtmlLang: Record<string, string> = {
+  fr: "fr",
+  en: "en",
+  "zh-TW": "zh-TW",
+  "zh-CN": "zh-CN",
+};
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (!(routing.locales as readonly string[]).includes(locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+
+  return (
+    <html lang={localeToHtmlLang[locale] ?? locale} suppressHydrationWarning>
+      <body className={`${inter.className} bg-background text-foreground antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <main>{children}</main>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
+        <Script
+          src="/umami/script.js"
+          data-website-id="1df87a17-4ae1-42cd-8f61-ce1e7a4650b3"
+          data-api="/umami/api/send"
+          strategy="afterInteractive"
+        />
+      </body>
+    </html>
+  );
+}

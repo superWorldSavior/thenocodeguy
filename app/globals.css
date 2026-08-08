@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-brand-yellow: var(--brand-yellow);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* ============================================
+   LIGHT MODE (default)
+   Brand: #05004b (navy) + #ffde59 (yellow)
+   ============================================ */
+:root {
+  --radius: 0.625rem;
+
+  /* Brand accent */
+  --brand-yellow: #ffde59;
+
+  /* Surfaces */
+  --background: oklch(0.984 0.003 247);    /* slate-50 */
+  --foreground: #05004b;                    /* brand-blue */
+  --card: oklch(1 0 0);                     /* white */
+  --card-foreground: #05004b;
+  --popover: oklch(1 0 0);
+  --popover-foreground: #05004b;
+
+  /* Brand — Navy blue #05004b */
+  --primary: #05004b;
+  --primary-foreground: oklch(1 0 0);
+
+  /* Neutral */
+  --secondary: oklch(0.968 0.007 247);      /* slate-100 */
+  --secondary-foreground: #05004b;
+  --muted: oklch(0.968 0.007 247);          /* slate-100 */
+  --muted-foreground: oklch(0.554 0.046 257);  /* slate-500 */
+  --accent: #ffde59;                        /* brand-yellow */
+  --accent-foreground: #05004b;
+
+  /* System */
+  --destructive: oklch(0.577 0.245 27);
+  --border: oklch(0.929 0.013 255);         /* slate-200 */
+  --input: oklch(0.929 0.013 255);          /* slate-200 */
+  --ring: #05004b;
+
+  /* Charts */
+  --chart-1: #05004b;
+  --chart-2: #1a1570;
+  --chart-3: #3730a3;
+  --chart-4: #ffde59;
+  --chart-5: #ffe88a;
+}
+
+/* ============================================
+   DARK MODE (variant)
+   ============================================ */
+.dark {
+  --brand-yellow: #ffde59;
+
+  --background: #0a0040;                    /* darker navy */
+  --foreground: oklch(0.984 0.003 247);     /* slate-50 */
+  --card: #0f0055;                          /* deep navy */
+  --card-foreground: oklch(0.984 0.003 247);
+  --popover: #0f0055;
+  --popover-foreground: oklch(0.984 0.003 247);
+
+  --primary: #ffde59;                       /* yellow becomes primary in dark */
+  --primary-foreground: #05004b;
+
+  --secondary: #1a0066;
+  --secondary-foreground: oklch(0.984 0.003 247);
+  --muted: #1a0066;
+  --muted-foreground: oklch(0.704 0.040 256);
+  --accent: #ffde59;
+  --accent-foreground: #05004b;
+
+  --destructive: oklch(0.577 0.245 27);
+  --border: rgba(255, 222, 89, 0.15);
+  --input: rgba(255, 222, 89, 0.15);
+  --ring: #ffde59;
+
+  --chart-1: #ffde59;
+  --chart-2: #ffe88a;
+  --chart-3: #05004b;
+  --chart-4: #3730a3;
+  --chart-5: #1a1570;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ============================================
+   CUSTOM UTILITIES — Homepage redesign
+   ============================================ */
+
+/* Gradient text utility */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #05004b, #3730a3, #ffde59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark .text-gradient-primary {
+  background: linear-gradient(135deg, #ffde59, #ffe88a, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Hero mesh gradient background */
+.hero-mesh-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(255, 222, 89, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(5, 0, 75, 0.06), transparent),
+    radial-gradient(ellipse 50% 50% at 50% 80%, rgba(255, 222, 89, 0.08), transparent);
+}
+.dark .hero-mesh-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(255, 222, 89, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(5, 0, 75, 0.3), transparent),
+    radial-gradient(ellipse 50% 50% at 50% 80%, rgba(255, 222, 89, 0.05), transparent);
+}
+

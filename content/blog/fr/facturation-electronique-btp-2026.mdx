@@ -1,0 +1,88 @@
+---
+title: "Facturation électronique BTP 2026 : le guide complet pour les assistantes administratives"
+description: "Tout ce que les assistantes administratives BTP doivent savoir sur la facturation électronique obligatoire. Calendrier, PA, spécificités BTP, et mise en place d'un assistant IA supervisé."
+date: 2026-02-26
+tags: [Facturation, BTP, IA, 2026, Conformite]
+author: TheNoCodeGuy
+readTime: "8 min de lecture"
+badge: "Guide complet"
+featured: false
+draft: false
+---
+
+{/* Hook */}
+<section>
+<p className="text-xl font-medium leading-relaxed text-foreground">
+En septembre 2026, toutes les entreprises françaises devront recevoir des factures électroniques. Pour le BTP, c'est un casse-tête : situations de travaux, retenue de garantie, auto-liquidation TVA… Voici tout ce qu'il faut savoir.
+</p>
+<p className="mt-4 leading-relaxed">Si vous êtes assistante administrative dans le BTP, cet article est pour vous. On va décortiquer le calendrier, les plateformes, les spécificités métier, et surtout : comment une mise en place bien cadrée peut vous éviter des semaines de formation dispersée.</p>
+</section>
+
+{/* Calendrier */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Le calendrier : ce qui change et quand</h2>
+<p className="leading-relaxed">La réforme se déploie en deux temps :</p>
+<div className="mt-6 space-y-4">
+<CalendarEvent date="1er septembre 2026" description="Réception obligatoire pour toutes les entreprises + émission pour les grandes entreprises et ETI" />
+<CalendarEvent date="1er septembre 2027" description="Émission obligatoire pour les PME et micro-entreprises" />
+</div>
+<p className="mt-4 leading-relaxed">Concrètement, dès septembre 2026, même si votre PME BTP n'est pas encore obligée d'émettre, vos clients grands comptes (Bouygues, Vinci, Eiffage…) vous enverront des factures électroniques. Vous devez être prêts à les recevoir.</p>
+</section>
+
+{/* Plateformes Agréées */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Les Plateformes Agréées : le nouveau passage obligé</h2>
+<p className="leading-relaxed">Oubliez les PDP — depuis juillet 2025, on parle de « Plateformes Agréées » (PA). Ce sont les intermédiaires obligatoires pour émettre et recevoir des factures électroniques entre entreprises.</p>
+<p className="mt-4 leading-relaxed">Le Portail Public de Facturation (PPF) ne sert plus à échanger des factures B2B. Son rôle est réduit à l'annuaire central et au concentrateur fiscal. Pour tout le reste, vous passez par une PA.</p>
+<p className="mt-4 leading-relaxed">Au 10 février 2026, plus de 110 Plateformes Agréées sont immatriculées. Le problème ? Chaque client, fournisseur, comptable peut choisir une PA différente.</p>
+</section>
+
+{/* Spécificités BTP */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Les spécificités BTP : pourquoi c'est plus compliqué pour vous</h2>
+<p className="leading-relaxed">Le BTP est l'un des secteurs les plus impactés. Pas parce que la réglementation est différente, mais parce que vos factures sont plus complexes que dans les autres secteurs.</p>
+<div className="mt-6 space-y-4">
+<BtpSpecCard title="Les situations de travaux" description="Vous facturez à l'avancement : chaque facture de situation inclut le pourcentage du mois précédent, le cumul, les déductions. Tout ça doit être codifié dans un format électronique structuré (Factur-X, UBL ou CII)." />
+<BtpSpecCard title="La retenue de garantie 5%" description="Ce n'est plus juste une ligne en bas de facture. La retenue de garantie doit être correctement codifiée dans le format électronique. Une erreur = rejet automatique de la facture par la PA du client." />
+<BtpSpecCard title="L'auto-liquidation TVA" description="En sous-traitance BTP, vous facturez HT sans TVA. Le code régime TVA spécifique doit être correctement renseigné dans le fichier structuré. Toutes les PA ne supportent pas nativement cette spécificité." />
+<BtpSpecCard title="Les acomptes et le DGD" description="Les factures d'acompte et le Decompte Général Définitif en fin de chantier doivent aussi passer en électronique. C'est autant de documents à formater correctement." />
+</div>
+</section>
+
+{/* Douleurs */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Les 6 problèmes concrets que vous allez rencontrer</h2>
+<PainList items={[
+  "Jongler entre 3 à 5 Plateformes Agréées différentes au quotidien",
+  "Apprendre de nouvelles interfaces alors que vous avez déjà 15 tâches en parallèle",
+  "Gérer les rejets automatiques de factures mal formatées (code TVA, retenue de garantie, cumuls)",
+  "Suivre les statuts de chaque facture sur chaque PA (déposée, reçue, acceptée, rejetée, payée)",
+  "Période de double saisie pendant la transition (ancien système + électronique)",
+  "Multiplier les interlocuteurs : éditeur logiciel, PA, expert-comptable, banque, fournisseurs"
+]} />
+</section>
+
+{/* Solution */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">La solution : un assistant IA supervisé qui fait le pont</h2>
+<p className="leading-relaxed">Et si, au lieu de jongler entre vos outils métier et votre Plateforme Agréée, vous mettiez en place un assistant IA supervisé par votre équipe ?</p>
+<p className="mt-4 leading-relaxed">L'assistant IA TheNoCodeGuy se branche sur votre PA et prend en charge ce qu'elle ne fait pas :</p>
+<div className="mt-6">
+<SolutionList items={[
+  "Extraction automatique : l'agent lit vos factures (PDF, scan, email) et les convertit au bon format réglementaire",
+  "Règles métier BTP intégrées : auto-liquidation TVA, retenue de garantie 5%, situations de travaux — appliquées automatiquement",
+  "Validation avant envoi : l'agent vérifie la conformité, détecte les erreurs et alerte votre assistante avant que la facture parte",
+  "Suivi et relances : statut de chaque facture en temps réel, relances automatiques sur les impayés"
+]} />
+</div>
+<p className="mt-6 leading-relaxed">Notre solution s'appuie sur <a href="https://casys.ai/use-cases/mcp-einvoice" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-foreground">MCP eInvoice</a>, un connecteur open source conçu pour s'intégrer nativement aux Plateformes Agréées via le protocole MCP.</p>
+</section>
+
+{/* CTA */}
+<CTASection
+  title="Septembre 2026, c'est dans 6 mois"
+  description="Parlez-nous de votre facturation BTP, on vous montre comment un assistant IA supervisé simplifie le flux et la montée en main."
+  buttonText="Réserver un appel découverte"
+  subtext="30 min avec Erwan — gratuit, sans engagement"
+  useCal={true}
+/>

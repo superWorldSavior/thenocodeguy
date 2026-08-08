@@ -1,0 +1,145 @@
+---
+title: "Facturation électronique : 108 plateformes agréées, et toujours pas de documentation"
+description: "On a testé API First (Dougs) et TIIME. Résultat : des noms marketing, pas de doc API publique. Ce que ça veut dire pour les assistantes admin et PME du BTP."
+subtitle: "Septembre 2026, c'est dans 6 mois. 108 plateformes ont été immatriculées par la DGFiP. On a testé celles qui se disent \"ouvertes\" et \"API first\". Spoiler : la promesse marketing dépasse largement la réalité technique."
+date: 2026-02-26
+tags: [Facturation, API, BTP, 2026, Opinion]
+author: TheNoCodeGuy
+readTime: "7 min de lecture"
+badge: "Opinion"
+featured: false
+draft: false
+---
+
+{/* Hook */}
+<section>
+<p className="text-xl font-medium leading-relaxed text-foreground">
+En septembre 2026, toutes les entreprises françaises devront recevoir des factures électroniques. 108 Plateformes Agréées sont immatriculées. Les commerciaux vous appellent déjà. Mais est-ce que ces plateformes sont réellement prêtes ?
+</p>
+<p className="mt-4 leading-relaxed">On a voulu vérifier. On a pris deux cas concrets — API First by Dougs et TIIME — parce qu'elles ciblent exactement notre audience : les TPE, PME, assistantes administratives, freelances. Et parce que l'une d'entre elles s'appelle littéralement "API First".</p>
+</section>
+
+{/* Contexte */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Le contexte en 30 secondes</h2>
+<p className="leading-relaxed">À partir du 1er septembre 2026, toutes les entreprises françaises devront recevoir des factures électroniques via une Plateforme Agréée. Les grandes entreprises et ETI devront aussi émettre. Les PME et micro-entreprises suivront en septembre 2027.</p>
+<p className="mt-4 leading-relaxed">108 plateformes sont immatriculées par la DGFiP. Le marché est en ébullition. Tout le monde promet la simplicité.</p>
+<p className="mt-4 font-medium leading-relaxed text-foreground">Mais une question persiste : est-ce que ces plateformes sont réellement prêtes à s'intégrer dans votre écosystème ?</p>
+</section>
+
+{/* API First */}
+<section>
+<h2 className="mb-6 text-2xl font-bold text-foreground">API First by Dougs : le nom le plus trompeur de 2026</h2>
+<p className="leading-relaxed">Commençons par l'éléphant dans la pièce. Vous avez une plateforme qui s'appelle "API First". Le nom promet une chose : l'API d'abord, le reste ensuite. C'est un terme technique précis — l'interface de programmation est la fondation du produit, documentée, publique, testable. Voici ce qu'on trouve en réalité :</p>
+
+<div className="mt-6">
+<Checklist items={[
+  { ok: true, text: "Un site marketing propre, rassurant, bien fait" },
+  { ok: true, text: "Des promesses : \"Simple, gratuit, automatisé\"" },
+  { ok: true, text: "Le badge Plateforme Agréée immatriculée" },
+  { ok: false, text: "Aucune documentation API publique" },
+  { ok: false, text: "Aucun endpoint visible, aucun Swagger ni OpenAPI" },
+  { ok: false, text: "Aucun lien \"Développeurs\" ni espace d'intégration" }
+]} />
+</div>
+
+<div className="mt-6">
+<BlockQuote label="Sur la page API de Dougs (maison-mère)">
+<p>"Utilisez l'API REST de Dougs pour interagir directement avec vos opérations bancaires et votre comptabilité."</p>
+<p>"Demandez dès aujourd'hui votre accès à la beta privée." — avec un formulaire Google Forms pour s'inscrire sur liste d'attente.</p>
+</BlockQuote>
+</div>
+
+<p className="mt-6 leading-relaxed">On résume : une plateforme qui s'appelle "API First" n'a pas d'API publique. Elle a un nom marketing qui emprunte un terme technique qu'elle ne respecte pas.</p>
+<p className="mt-4 leading-relaxed">C'est comme ouvrir un restaurant qui s'appelle "Bio d'Abord" et découvrir que le menu est 100% surgelé. Le nom n'est pas une erreur — c'est un choix.</p>
+</section>
+
+{/* TIIME */}
+<section>
+<h2 className="mb-6 text-2xl font-bold text-foreground">TIIME : 300 000 clients, zéro doc publique</h2>
+<p className="leading-relaxed">TIIME, c'est un autre calibre. 300 000 clients revendiqués. Plateforme Agréée immatriculée. Suite complète : facturation, compta, compte pro, notes de frais. L'app est bien notée partout — Google, Trustpilot, App Store. Côté API, voici ce qu'on apprend sur leur page de support :</p>
+
+<div className="mt-6">
+<BlockQuote label='Page support TIIME — "Proposez-vous une API ?"'>
+<p>"Notre API est exclusivement disponible sur demande pour les éditeurs de logiciels. Vous commercialisez un logiciel et vous souhaitez vous connecter avec Tiime dans le cadre d'un partenariat ? Écrivez à support@tiime.fr."</p>
+</BlockQuote>
+</div>
+
+<p className="mt-6 leading-relaxed">Traduction : si vous êtes développeur, intégrateur, ou simplement une entreprise qui veut connecter TIIME à son système — envoyez un mail et priez. Pas de documentation publique. Pas de sandbox. Pas de "essayez en 5 minutes".</p>
+<p className="mt-4 leading-relaxed">Le comble ? Leur roadmap publique liste la "mise à disposition de l'API" comme déjà disponible. Disponible pour qui ? Pas pour vous. Pour les partenaires qui ont passé le filtre commercial.</p>
+</section>
+
+{/* Pourquoi ça pose problème */}
+<section>
+<h2 className="mb-6 text-2xl font-bold text-foreground">Pourquoi ça pose problème (et pas qu'aux développeurs)</h2>
+<p className="mb-6 italic text-muted-foreground">"OK, mais moi je suis assistante admin, pas développeuse. Pourquoi je devrais m'en soucier ?"</p>
+
+<div className="space-y-6">
+<ProblemCard icon="layers" title="Vous allez jongler entre les PA" description="Vos clients utilisent Pennylane. Votre fournisseur est sur Sage. Votre comptable préfère Cegid. Et vous, on vous a mis sur TIIME parce que c'est gratuit. Résultat : chaque facture passe par une plateforme différente. Pas d'API publique = pas de connecteur = pas d'automatisation = tout à la main." />
+<ProblemCard icon="shield-alert" title="L'automatisation, c'est pas un luxe" description="Quand vous gérez 200 factures par mois dans le BTP (situations de travaux, acomptes, retenues de garantie, auto-liquidation TVA), vous ne pouvez pas vous connecter manuellement à 4 plateformes. Il vous faut un outil qui fait le pont. Et cet outil a besoin d'une API pour fonctionner." />
+<ProblemCard icon="lock" title="Les plateformes sans doc verrouillent leurs clients" description="Pas d'API publique = pas de possibilité de changer facilement. Pas de backup automatisé. Pas d'intégration avec votre ERP ou votre tableur. Vous êtes captif. Et quand la plateforme décide de devenir payante (parce qu'elle le fera), vous n'aurez pas d'alternative prête." />
+</div>
+</section>
+
+{/* Bons élèves */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Les bons élèves existent</h2>
+<p className="mb-6 leading-relaxed">Pour être juste, tout le monde ne fait pas ça. Quelques plateformes jouent le jeu de la transparence technique :</p>
+
+<GoodStudentList items={[
+  { name: "Chorus Pro", description: "documentation complète sur api.gouv.fr, accès via PISTE, sandbox, exemples de code. C'est l'État qui montre l'exemple — ce qui devrait faire réfléchir le privé." },
+  { name: "B2Brouter", description: "documentation API publique, REST, sandbox, mode white-label pour éditeurs. Ce qu'on attend d'une PA en 2026." },
+  { name: "IOPOLE", description: "approche réellement API-first (pas juste le nom), sandbox disponible, formats UBL/CII/Factur-X/JSON. Matricule PA 0018." }
+]} />
+
+<p className="mt-6 font-medium leading-relaxed text-foreground">La différence ? Ces plateformes comprennent que l'interopérabilité n'est pas un bonus — c'est le cœur du mandat réglementaire.</p>
+</section>
+
+{/* 3 questions */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">3 questions à poser avant de choisir votre PA</h2>
+<p className="mb-6 leading-relaxed">Si vous êtes assistante administrative, office manager, ou dirigeant de TPE/PME dans le BTP :</p>
+
+<div className="space-y-4">
+<QuestionCard number={1} question="Votre documentation API est-elle publique ?" redFlag='Si la réponse est "contactez notre service partenaires", fuyez.' />
+<QuestionCard number={2} question="Avez-vous une sandbox de test ?" redFlag="Si non, comment voulez-vous tester avant septembre ?" />
+<QuestionCard number={3} question="Puis-je exporter mes données sans vous ?" redFlag="Si la réponse est floue, vous avez votre réponse." />
+</div>
+</section>
+
+{/* Solution agent IA */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Et si un agent IA faisait le travail à votre place ?</h2>
+<p className="leading-relaxed">C'est exactement ce qu'on fait chez TheNoCodeGuy. Notre agent IA se branche sur votre Plateforme Agréée et prend en charge ce qu'elle ne fait pas :</p>
+<div className="mt-6">
+<FeatureList items={[
+  "Extraction automatique : l'agent lit vos factures (PDF, scan, email) et les convertit au bon format réglementaire",
+  "Règles métier intégrées : auto-liquidation TVA, retenue de garantie 5%, situations de travaux — appliquées automatiquement",
+  "Validation avant envoi : l'agent vérifie la conformité, détecte les erreurs et vous alerte avant que la facture parte",
+  "Suivi et relances : statut de chaque facture en temps réel, relances automatiques sur les impayés"
+]} />
+</div>
+<p className="mt-6 leading-relaxed">Pas de double saisie. Pas d'erreurs de format. Juste un agent qui gère la plomberie technique pendant que vous faites votre vrai métier.</p>
+<p className="mt-4 leading-relaxed">Notre solution s'appuie sur <a href="https://casys.ai/use-cases/mcp-einvoice" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-foreground">MCP eInvoice</a>, un connecteur open source conçu pour s'intégrer nativement aux Plateformes Agréées via le protocole MCP.</p>
+</section>
+
+{/* CTA */}
+<CTASection
+  title="Septembre 2026, c'est dans 6 mois"
+  description={"Pas le moment de découvrir que votre \"plateforme agréée\" est un site vitrine avec un joli logo."}
+  buttonText="Réserver un appel découverte"
+  subtext="30 min avec Erwan — gratuit, sans engagement"
+  useCal={true}
+/>
+
+{/* Sources */}
+<SourcesList title="Sources" sources={[
+  { label: "DGFiP — Liste des Plateformes Agréées immatriculées (février 2026)", href: "https://www.impots.gouv.fr/liste-des-plateformes-de-dematerialisation-partenaires-immatriculees" },
+  { label: "API First by Dougs — page d'accueil consultée le 26/02/2026", href: "https://apifirst.fr/" },
+  { label: "TIIME — \"Proposez-vous une API ?\"", href: "https://support.tiime.fr/fr/articles/10353689-proposez-vous-une-api" },
+  { label: "TIIME — roadmap publique", href: "https://portal.productboard.com/tiime" },
+  { label: "Chorus Pro — documentation API", href: "https://api.gouv.fr/les-api/api-chorus-pro" },
+  { label: "B2Brouter — documentation API publique", href: "https://developer.b2brouter.net/docs/getting-started" },
+  { label: "IOPOLE — Sandbox", href: "https://labs.iopole.io/" },
+  { label: "Comparateur facturation électronique — fiches PA comparatives", href: "https://comparateur-facturation-electronique.fr/" }
+]} />

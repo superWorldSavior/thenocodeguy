@@ -1,0 +1,91 @@
+---
+title: "Comment un agent IA traite 200 emails/jour pour une entreprise BTP"
+description: "Votre assistante passe 3h par jour à trier les emails. Urgences perdues, relances oubliées, newsletters inutiles. Un agent IA règle ça en 30 secondes chaque matin."
+date: 2026-02-25
+tags: [Email, IA, BTP, Productivite]
+author: TheNoCodeGuy
+readTime: "5 min de lecture"
+badge: "Blog"
+featured: false
+draft: false
+---
+
+{/* Hook */}
+<section>
+<p className="text-xl font-medium leading-relaxed text-foreground">
+Votre assistante administrative passe 3 heures par jour à trier les emails. Les urgences se perdent entre les newsletters, les devis fournisseurs et les relances Qualibat. Résultat : des clients qui attendent, des échéances qui passent, et du stress en permanence.
+</p>
+<p className="mt-4 leading-relaxed">C'est exactement le problème que nous avons résolu pour une entreprise BTP de 45 salariés en Île-de-France.</p>
+</section>
+
+{/* Le problème */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Le problème : 200 emails/jour, 1 assistante</h2>
+<p className="leading-relaxed">L'assistante administrative de cette entreprise BTP recevait en moyenne 200 emails par jour sur la boîte principale. Devis fournisseurs, relances clients, notifications Qualibat, newsletters, spam, demandes internes... Tout arrivait au même endroit.</p>
+
+<PainList title="Résultat quotidien :" items={[
+  "3h/jour de tri email manuel",
+  "2-3 urgences manquées par semaine",
+  "Relances fournisseurs en retard systématique",
+  "Zéro visibilité pour le dirigeant"
+]} />
+
+<p className="mt-4 leading-relaxed">Elle passait ses matinées entières à trier, transférer, et répondre. Les urgences étaient parfois découvertes à 16h. Deux relances Qualibat ont été manquées en 6 mois.</p>
+</section>
+
+{/* La solution */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">La solution : un agent IA email déployé en 48h</h2>
+<p className="leading-relaxed">Nous avons déployé un agent IA qui se connecte à la boîte email de l'entreprise et traite chaque message en temps réel. Pas de changement d'outil, pas de formation — l'agent travaille en arrière-plan.</p>
+<p className="mt-4 leading-relaxed">L'agent se connecte à votre messagerie existante et fait le tri automatiquement. Chaque matin, vous recevez un digest WhatsApp avec les actions prioritaires.</p>
+</section>
+
+{/* Comment ça marche */}
+<section>
+<h2 className="mb-6 text-2xl font-bold text-foreground">Comment ça marche</h2>
+<StepCards steps={[
+  { icon: "mail", label: "Étape 1", title: "Connexion à votre messagerie", description: "L'agent se connecte à votre boîte mail existante (Outlook, Gmail, etc.). Aucun changement pour vos collaborateurs." },
+  { icon: "brain", label: "Étape 2", title: "Classification intelligente", description: "Chaque email est lu et classé automatiquement : urgent, à traiter, newsletter, spam. Les pièces jointes sont identifiées." },
+  { icon: "message-circle", label: "Étape 3", title: "Digest WhatsApp chaque matin", description: "À 7h30, vous recevez un résumé sur WhatsApp avec les actions prioritaires. Vous décidez, l'agent exécute." }
+]} />
+</section>
+
+{/* WhatsApp digest */}
+<section>
+<h2 className="mb-4 text-2xl font-bold text-foreground">Exemple de digest quotidien</h2>
+<p className="mb-4 leading-relaxed">Voici ce que le dirigeant reçoit chaque matin à 7h30 :</p>
+<WhatsAppDigest items={[
+  { priority: "urgent", title: "🔴 Appel d'offres Mairie de Créteil", detail: "Date limite demain 18h — dossier incomplet (manque DC4)" },
+  { priority: "urgent", title: "🔴 Relance URSSAF — 3e rappel", detail: "Montant : 12 400 € — pénalités à partir du 28/02" },
+  { priority: "action", title: "🟡 Devis Plomberie Martin accepté", detail: "Signature reçue — à transmettre au conducteur de travaux" }
+]} footer="12 newsletters archivées · 34 spams supprimés · 8 emails transférés automatiquement" />
+</section>
+
+{/* Avant/Après */}
+<section>
+<h2 className="mb-6 text-2xl font-bold text-foreground">Avant / Après : les chiffres</h2>
+<BeforeAfterStats items={[
+  { label: "Temps de tri email", before: "3h / jour", after: "15 min / jour" },
+  { label: "Urgences manquées", before: "2-3 / semaine", after: "0" },
+  { label: "Réactivité client", before: "24-48h", after: "< 2h" }
+]} />
+<div className="mt-6">
+<HighlightBox>L'assistante a récupéré 12h par semaine. Elle se concentre maintenant sur la gestion de chantier et la relation client.</HighlightBox>
+</div>
+</section>
+
+{/* Testimonial */}
+<Testimonial
+  title="Ce que dit le dirigeant"
+  quote="Je sais chaque matin à 7h30 ce qui m'attend. Plus besoin de demander à mon assistante de me faire un point — l'agent le fait automatiquement. Et elle, elle peut enfin se concentrer sur les tâches à valeur ajoutée."
+  initials="JM"
+  author="Jean-Michel R."
+  role="Dirigeant, entreprise BTP 45 salariés — Île-de-France"
+/>
+
+{/* CTA */}
+<CTASection
+  title="Vous aussi, libérez 15h par semaine"
+  description="Cet agent email est déployable en 48h. Pas de formation, pas de changement d'outil. Il s'adapte à votre messagerie existante."
+  buttonText="Réserver un appel découverte"
+/>
